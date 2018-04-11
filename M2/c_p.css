@@ -1,0 +1,156 @@
+path {
+  stroke-width:2px;
+}
+.red path.c1 {
+  fill: #cf0d0d;
+  stroke:#cf0d0d;
+}
+.red path.c2 {
+  fill: #d30e0e;
+  stroke:#d30e0e;
+}
+
+.red path.c3 {
+  fill: #cd4246;
+  stroke:#cd4246;
+}
+
+.red path.c4 {
+  fill: #892324;
+  stroke:#892324;
+}
+
+/* 2) ---------------  Light Green ---------------- */
+.lightgreen path.c1 {
+  fill: #cad297;
+  stroke:#c8d097;
+}
+.lightgreen path.c2 {
+  fill: #c8d097;
+  stroke:#c8d097;
+}
+
+.lightgreen path.c3 {
+  fill: #e0dab2;
+  stroke:#e0dab2;
+}
+
+.lightgreen path.c4 {
+  fill: #7e8a55;
+  stroke:#7e8a55;
+}
+/* 3) ---------------  Dark Green ---------------- */
+.darkgreen path.c1 {
+  fill: #273734;
+  stroke:#2e3d3b;
+}
+.darkgreen path.c2 {
+  fill: #2e3d3b;
+  stroke:#2e3d3b;
+}
+
+.darkgreen path.c3 {
+  fill: #47865f;
+  stroke:#47865f;
+}
+
+.darkgreen path.c4 {
+  fill: #0d0e0d;
+  stroke:#0d0e0d;
+}
+
+/* 4) --------------- Orange ---------------- */
+.orange path.c1 {
+  fill: #f07a51;
+  stroke:#f07c55;
+}
+.orange path.c2 {
+  fill: #f07c55;
+  stroke:#f07c55;
+}
+
+.orange path.c3 {
+  fill: #b04a29;
+  stroke:#b04a29;
+}
+
+.orange path.c4 {
+  fill: #652b1b;
+  stroke:#652b1b;
+}
+
+/* 5) --------------- Yellow ---------------- */
+.yellow path.c1 {
+  fill: #f1e051;
+  stroke: #f1e051;
+}
+.yellow path.c2 {
+  fill:#ecdb5c ;
+  stroke:#ecdb5c;
+}
+
+.yellow path.c3 {
+  fill: #e9b746;
+  stroke: #e9b746;
+}
+.yellow path.c4 {
+  fill: #976403;
+  stroke: #976403;
+}
+
+/* 6) --------------- Dark red ---------------- */
+.darkred path.c1 {
+  fill: #8e2f3a;
+  stroke: #8e2f3a;
+}
+.darkred path.c2 {
+  fill:#90363c;
+  stroke:#90363c;
+}
+
+.darkred path.c3 {
+  fill: #592021;
+  stroke: #592021;
+}
+
+.darkred path.c4 {
+  fill: #501c1d;
+  stroke: #501c1d;
+}
+/* 7) --------------- Magenta ---------------- */
+.magenta path.c1 {
+  fill: #da4e8b;
+  stroke: #bb215d;
+}
+.magenta path.c2 {
+  fill: #bb215d;
+  stroke:#bb215d;
+}
+
+.magenta path.c3 {
+  fill:  #d23679;
+  stroke:  #d23679;
+}
+.magenta path.c4 {
+  fill:  #4a0510;
+  stroke:  #4a0510;
+}
+
+/* 8) --------------- Purple ---------------- */
+.purple path.c1 {
+  fill: #776e87;
+  stroke: #897c9d;
+}
+.purple path.c2 {
+  fill: #897c9d;
+  stroke:#897c9d;
+}
+
+.purple path.c3 {
+  fill: #74697d;
+  stroke: #74697d;
+}
+.purple path.c4 {
+  fill: #4b3448;
+  stroke: #4b3448;
+}

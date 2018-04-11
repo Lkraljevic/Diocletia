@@ -1,0 +1,970 @@
+#overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.dialog {
+  position: absolute;
+    font-size: 10px;
+    display: block;
+    background: #d3c6c6a6;
+    padding: 15px 15px 25px;
+    border-radius: 15px;
+    opacity: 0.88;
+}
+.hidden {
+  display: none;
+}
+
+/* COLOR PALETE */
+.color_palete {
+  
+  width: 200px;
+}
+.color_palete .p_row {
+  display: flex;
+  justify-content: space-between;
+}
+    
+.color_palete .red.burst-12:before, .color_palete .red.burst-12:after { background: red; }
+.color_palete .green_light.burst-12:before, .color_palete .green_light.burst-12:after { background: lightgreen; }
+.color_palete .green_dark.burst-12:before, .color_palete .green_dark.burst-12:after { background: darkgreen; }
+.color_palete .orange.burst-12:before, .color_palete .orange.burst-12:after { background: orange; }
+.color_palete .yellow.burst-12:before, .color_palete .yellow.burst-12:after { background: yellow; }
+.color_palete .crimson.burst-12:before, .color_palete .crimson.burst-12:after { background: crimson; }
+.color_palete .purple.burst-12:before, .color_palete .purple.burst-12:after { background: purple; }
+.color_palete .cyclamen.burst-12:before, .color_palete .cyclamen.burst-12:after { background: rgb(245, 111, 161); }
+.color_palete .orange.burst-12:before, .color_palete .orange.burst-12:after { background: orange; }
+
+.burst-12 {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+}
+.burst-12:before, .burst-12:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+}
+.burst-12:before {
+    -webkit-transform: rotate(30deg);
+       -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+         -o-transform: rotate(30deg);
+}
+.burst-12:after {
+    -webkit-transform: rotate(60deg);
+       -moz-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+         -o-transform: rotate(60deg);
+}
+
+
+
+/*
+
+1) Crvena - red
+2) Bordo -crimson
+3) Žuta - yellow
+4) Narančasta - orange
+5) Ljubičasta - purple
+6) Ciklama - cyclamen
+7) Svijetlo Zelena - green_light
+8) Tamno Zelena - green_dark
+
+*/
+/* ---------------------------------------------------------*/
+/* ------------------****--- t1_1 --****----------------- */
+/* ---------------------------------------------------------*/
+/* 1) --------------- Red ---------------- */
+.red#t1_1  path.c1 {
+  fill: #d50606;
+  stroke:#d90e0e;
+}
+.red#t1_1  path.c2 {
+  fill: #d50f0f;
+  stroke:#d90e0e;
+}
+
+.red#t1_1  path.c3 {
+  fill: #e61212;
+  stroke:#d90e0e;
+}
+/* 2) ---------------  Light Green ---------------- */
+.green_light#t1_1  path.c1 {
+  fill: #1aa51a;
+  stroke:#1aa51a;
+}
+.green_light#t1_1  path.c2 {
+  fill: #22a322;
+  stroke:#1aa51a;
+}
+
+.green_light#t1_1  path.c3 {
+  fill: #027f02;
+  stroke:#027f02;
+}
+
+/* 3) ---------------  Dark Green ---------------- */
+.green_dark#t1_1  path.c1 {
+  fill: #1f801f;
+  stroke:#1e821e;
+}
+.green_dark#t1_1  path.c2 {
+  fill: #1e821e;
+  stroke:#1e821e;
+}
+
+.green_dark#t1_1  path.c3 {
+  fill: #18bd18;
+  stroke:#027f02;
+}
+
+/* 4) --------------- Orange ---------------- */
+.orange#t1_1  path.c1 {
+  fill: #fd9914;
+  stroke:#fd9f14;
+}
+.orange#t1_1  path.c2 {
+  fill: #fd9f14;
+  stroke:#fd9f14;
+}
+
+.orange#t1_1  path.c3 {
+  fill: #ffb400;
+  stroke:#de9d02;
+}
+
+/* 5) --------------- Yellow ---------------- */
+.yellow#t1_1  path.c1 {
+  fill: rgb(237, 222, 109);
+  stroke: rgb(240, 223, 114);
+}
+.yellow#t1_1  path.c2 {
+  fill: rgb(240, 223, 114);
+  stroke:rgb(240, 223, 114);
+}
+
+.yellow#t1_1  path.c3 {
+  fill: rgb(227, 189, 84);
+  stroke: rgb(227, 189, 84);
+}
+
+/* 6) --------------- Crimson ---------------- */
+.crimson#t1_1  path.c1 {
+  fill: #bb1010;
+  stroke: #c12342;
+}
+.crimson#t1_1  path.c2 {
+  fill:#c12342;
+  stroke:#c12342;
+}
+
+.crimson#t1_1  path.c3 {
+  fill: #ce1d1d;
+  stroke: #ce1d1d;
+}
+
+/* 7) --------------- Cyclamen ---------------- */
+.cyclamen#t1_1  path.c1 {
+  fill: rgb(210, 57, 120);
+  stroke: rgb(210, 57, 120);
+}
+.cyclamen#t1_1  path.c2 {
+  fill: rgb(210, 57, 120);
+  stroke:rgb(210, 57, 120);
+}
+
+.cyclamen#t1_1  path.c3 {
+  fill:  rgb(168, 37, 70);
+  stroke:  rgb(168, 37, 70);
+}
+
+/* 8) --------------- Purple ---------------- */
+.purple#t1_1  path.c1 {
+  fill: #840484;
+  stroke: #8e058e;
+}
+.purple#t1_1  path.c2 {
+  fill: #8e058e;
+  stroke:#8e058e;
+}
+
+.purple#t1_1  path.c3 {
+  fill: #a207a2;
+  stroke: #a207a2;
+}
+
+
+/* ---------------------------------------------------------*/
+/* ------------*****------- t1_2 --------****-------------- */
+/* ---------------------------------------------------------*/
+
+.red#t1_2  path.c1 {
+  fill: #d50606;
+  stroke:#d90e0e;
+}
+.red#t1_2  path.c2 {
+  fill: #d50f0f;
+  stroke:#d90e0e;
+}
+
+.red#t1_2  path.c3 {
+  fill: #e61212;
+  stroke:#d90e0e;
+}
+/* 2) ---------------  Light Green ---------------- */
+.green_light#t1_2  path.c1 {
+  fill: #1aa51a;
+  stroke:#1aa51a;
+}
+.green_light#t1_2  path.c2 {
+  fill: #22a322;
+  stroke:#1aa51a;
+}
+
+.green_light#t1_2  path.c3 {
+  fill: #027f02;
+  stroke:#027f02;
+}
+
+/* 3) ---------------  Dark Green ---------------- */
+.green_dark#t1_2  path.c1 {
+  fill: #1f801f;
+  stroke:#1e821e;
+}
+.green_dark#t1_2  path.c2 {
+  fill: #1e821e;
+  stroke:#1e821e;
+}
+
+.green_dark#t1_2  path.c3 {
+  fill: #18bd18;
+  stroke:#027f02;
+}
+
+/* 4) --------------- Orange ---------------- */
+.orange#t1_2  path.c1 {
+  fill: #fd9914;
+  stroke:#fd9f14;
+}
+.orange#t1_2  path.c2 {
+  fill: #fd9f14;
+  stroke:#fd9f14;
+}
+
+.orange#t1_2  path.c3 {
+  fill: #ffb400;
+  stroke:#de9d02;
+}
+
+/* 5) --------------- Yellow ---------------- */
+.yellow#t1_2  path.c1 {
+  fill: rgb(237, 222, 109);
+  stroke: rgb(240, 223, 114);
+}
+.yellow#t1_2  path.c2 {
+  fill: rgb(240, 223, 114);
+  stroke:rgb(240, 223, 114);
+}
+
+.yellow#t1_2  path.c3 {
+  fill: rgb(227, 189, 84);
+  stroke: rgb(227, 189, 84);
+}
+
+/* 6) --------------- Crimson ---------------- */
+.crimson#t1_2  path.c1 {
+  fill: #bb1010;
+  stroke: #c12342;
+}
+.crimson#t1_2  path.c2 {
+  fill:#c12342;
+  stroke:#c12342;
+}
+
+.crimson#t1_2  path.c3 {
+  fill: #ce1d1d;
+  stroke: #ce1d1d;
+}
+
+/* 7) --------------- Cyclamen ---------------- */
+.cyclamen#t1_2  path.c1 {
+  fill: rgb(210, 57, 120);
+  stroke: rgb(210, 57, 120);
+}
+.cyclamen#t1_2  path.c2 {
+  fill: rgb(210, 57, 120);
+  stroke:rgb(210, 57, 120);
+}
+
+.cyclamen#t1_2  path.c3 {
+  fill:  rgb(168, 37, 70);
+  stroke:  rgb(168, 37, 70);
+}
+
+/* 8) --------------- Purple ---------------- */
+.purple#t1_2  path.c1 {
+  fill: #840484;
+  stroke: #8e058e;
+}
+.purple#t1_2  path.c2 {
+  fill: #8e058e;
+  stroke:#8e058e;
+}
+
+.purple#t1_2  path.c3 {
+  fill: #a207a2;
+  stroke: #a207a2;
+}
+
+/* ---------------------------------------------------------*/
+/* ------------*****------- t1_3 --------****-------------- */
+/* ---------------------------------------------------------*/
+
+.red#t1_3  path.c1 {
+  fill: #d50606;
+  stroke:#d90e0e;
+}
+.red#t1_3  path.c2 {
+  fill: #d50f0f;
+  stroke:#d90e0e;
+}
+
+.red#t1_3  path.c3 {
+  fill: #e61212;
+  stroke:#d90e0e;
+}
+/* 2) ---------------  Light Green ---------------- */
+.green_light#t1_3  path.c1 {
+  fill: #1aa51a;
+  stroke:#1aa51a;
+}
+.green_light#t1_3  path.c2 {
+  fill: #22a322;
+  stroke:#1aa51a;
+}
+
+.green_light#t1_3  path.c3 {
+  fill: #027f02;
+  stroke:#027f02;
+}
+
+/* 3) ---------------  Dark Green ---------------- */
+.green_dark#t1_3  path.c1 {
+  fill: #1f801f;
+  stroke:#1e821e;
+}
+.green_dark#t1_3  path.c2 {
+  fill: #1e821e;
+  stroke:#1e821e;
+}
+
+.green_dark#t1_3  path.c3 {
+  fill: #18bd18;
+  stroke:#027f02;
+}
+
+/* 4) --------------- Orange ---------------- */
+.orange#t1_3  path.c1 {
+  fill: #fd9914;
+  stroke:#fd9f14;
+}
+.orange#t1_3  path.c2 {
+  fill: #fd9f14;
+  stroke:#fd9f14;
+}
+
+.orange#t1_3  path.c3 {
+  fill: #ffb400;
+  stroke:#de9d02;
+}
+
+/* 5) --------------- Yellow ---------------- */
+.yellow#t1_3  path.c1 {
+  fill: rgb(237, 222, 109);
+  stroke: rgb(240, 223, 114);
+}
+.yellow#t1_3  path.c2 {
+  fill: rgb(240, 223, 114);
+  stroke:rgb(240, 223, 114);
+}
+
+.yellow#t1_3  path.c3 {
+  fill: rgb(227, 189, 84);
+  stroke: rgb(227, 189, 84);
+}
+
+/* 6) --------------- Crimson ---------------- */
+.crimson#t1_3  path.c1 {
+  fill: #bb1010;
+  stroke: #c12342;
+}
+.crimson#t1_3  path.c2 {
+  fill:#c12342;
+  stroke:#c12342;
+}
+
+.crimson#t1_3  path.c3 {
+  fill: #ce1d1d;
+  stroke: #ce1d1d;
+}
+
+/* 7) --------------- Cyclamen ---------------- */
+.cyclamen#t1_3  path.c1 {
+  fill: rgb(210, 57, 120);
+  stroke: rgb(210, 57, 120);
+}
+.cyclamen#t1_3  path.c2 {
+  fill: rgb(210, 57, 120);
+  stroke:rgb(210, 57, 120);
+}
+
+.cyclamen#t1_3  path.c3 {
+  fill:  rgb(168, 37, 70);
+  stroke:  rgb(168, 37, 70);
+}
+
+/* 8) --------------- Purple ---------------- */
+.purple#t1_3  path.c1 {
+  fill: #840484;
+  stroke: #8e058e;
+}
+.purple#t1_3  path.c2 {
+  fill: #8e058e;
+  stroke:#8e058e;
+}
+
+.purple#t1_3  path.c3 {
+  fill: #a207a2;
+  stroke: #a207a2;
+}
+
+/* ---------------------------------------------------------*/
+/* ------------*****------- t1_4 --------****-------------- */
+/* ---------------------------------------------------------*/
+
+.red#t1_4  path.c1 {
+  fill: #d50606;
+  stroke:#d90e0e;
+}
+.red#t1_4  path.c2 {
+  fill: #d50f0f;
+  stroke:#d90e0e;
+}
+
+.red#t1_4  path.c3 {
+  fill: #e61212;
+  stroke:#d90e0e;
+}
+
+.red#t1_4  path.c4 {
+  fill: #b52323;
+  stroke:#b52323;
+}
+
+/* 2) ---------------  Light Green ---------------- */
+.green_light#t1_4  path.c1 {
+  fill: #1aa51a;
+  stroke:#1aa51a;
+}
+.green_light#t1_4  path.c2 {
+  fill: #22a322;
+  stroke:#1aa51a;
+}
+
+.green_light#t1_4  path.c3 {
+  fill: #027f02;
+  stroke:#027f02;
+}
+
+.green_light#t1_4  path.c4 {
+  fill: #156d15;
+  stroke:#156d15;
+}
+/* 3) ---------------  Dark Green ---------------- */
+.green_dark#t1_4  path.c1 {
+  fill: #1f801f;
+  stroke:#1e821e;
+}
+.green_dark#t1_4  path.c2 {
+  fill: #1e821e;
+  stroke:#1e821e;
+}
+
+.green_dark#t1_4  path.c3 {
+  fill: #18bd18;
+  stroke:#027f02;
+}
+
+.green_dark#t1_4  path.c4 {
+  fill: #1d7f1d;
+  stroke:#1d7f1d;
+}
+
+/* 4) --------------- Orange ---------------- */
+.orange#t1_4  path.c1 {
+  fill: #fd9914;
+  stroke:#fd9f14;
+}
+.orange#t1_4  path.c2 {
+  fill: #fd9f14;
+  stroke:#fd9f14;
+}
+
+.orange#t1_4  path.c3 {
+  fill: #ffb400;
+  stroke:#de9d02;
+}
+
+.orange#t1_4  path.c4 {
+  fill: #de9d02;
+  stroke:#de9d02;
+}
+
+/* 5) --------------- Yellow ---------------- */
+.yellow#t1_4  path.c1 {
+  fill: rgb(237, 222, 109);
+  stroke: rgb(240, 223, 114);
+}
+.yellow#t1_4  path.c2 {
+  fill: rgb(240, 223, 114);
+  stroke:rgb(240, 223, 114);
+}
+
+.yellow#t1_4  path.c3 {
+  fill: rgb(227, 189, 84);
+  stroke: rgb(227, 189, 84);
+}
+.yellow#t1_4  path.c4 {
+  fill: #a16f0d;
+  stroke: #a16f0d;
+}
+
+/* 6) --------------- Crimson ---------------- */
+.crimson#t1_4  path.c1 {
+  fill: #bb1010;
+  stroke: #c12342;
+}
+.crimson#t1_4  path.c2 {
+  fill:#c12342;
+  stroke:#c12342;
+}
+
+.crimson#t1_4  path.c3 {
+  fill: #ce1d1d;
+  stroke: #ce1d1d;
+}
+
+.crimson#t1_4  path.c4 {
+  fill: #961616;
+  stroke: #961616;
+}
+/* 7) --------------- Cyclamen ---------------- */
+.cyclamen#t1_4  path.c1 {
+  fill: rgb(210, 57, 120);
+  stroke: rgb(210, 57, 120);
+}
+.cyclamen#t1_4  path.c2 {
+  fill: rgb(210, 57, 120);
+  stroke:rgb(210, 57, 120);
+}
+
+.cyclamen#t1_4  path.c3 {
+  fill:  rgb(168, 37, 70);
+  stroke:  rgb(168, 37, 70);
+}
+.cyclamen#t1_4  path.c4 {
+  fill:  #92294d;
+  stroke:  #92294d;
+}
+
+/* 8) --------------- Purple ---------------- */
+.purple#t1_4  path.c1 {
+  fill: #840484;
+  stroke: #8e058e;
+}
+.purple#t1_4  path.c2 {
+  fill: #8e058e;
+  stroke:#8e058e;
+}
+
+.purple#t1_4  path.c3 {
+  fill: #a207a2;
+  stroke: #a207a2;
+}
+.purple#t1_4  path.c4 {
+  fill: #831d84;
+  stroke: #831d84;
+}
+
+/* ---------------------------------------------------------*/
+/* ------------*****------- t1_5 --------****-------------- */
+/* ---------------------------------------------------------*/
+
+.red#t1_5  path.c1 {
+  fill: #d50606;
+  stroke:#d90e0e;
+}
+.red#t1_5  path.c2 {
+  fill: #d50f0f;
+  stroke:#d90e0e;
+}
+
+.red#t1_5  path.c3 {
+  fill: #e61212;
+  stroke:#d90e0e;
+}
+
+.red#t1_5  path.c4 {
+  fill: #b52323;
+  stroke:#b52323;
+}
+
+/* 2) ---------------  Light Green ---------------- */
+.green_light#t1_5  path.c1 {
+  fill: #1aa51a;
+  stroke:#1aa51a;
+}
+.green_light#t1_5  path.c2 {
+  fill: #22a322;
+  stroke:#1aa51a;
+}
+
+.green_light#t1_5  path.c3 {
+  fill: #027f02;
+  stroke:#027f02;
+}
+
+.green_light#t1_5  path.c4 {
+  fill: #156d15;
+  stroke:#156d15;
+}
+/* 3) ---------------  Dark Green ---------------- */
+.green_dark#t1_5  path.c1 {
+  fill: #1f801f;
+  stroke:#1e821e;
+}
+.green_dark#t1_5  path.c2 {
+  fill: #1e821e;
+  stroke:#1e821e;
+}
+
+.green_dark#t1_5  path.c3 {
+  fill: #18bd18;
+  stroke:#027f02;
+}
+
+.green_dark#t1_5  path.c4 {
+  fill: #1d7f1d;
+  stroke:#1d7f1d;
+}
+
+/* 4) --------------- Orange ---------------- */
+.orange#t1_5  path.c1 {
+  fill: #fd9914;
+  stroke:#fd9f14;
+}
+.orange#t1_5  path.c2 {
+  fill: #fd9f14;
+  stroke:#fd9f14;
+}
+
+.orange#t1_5  path.c3 {
+  fill: #ffb400;
+  stroke:#de9d02;
+}
+
+.orange#t1_5  path.c4 {
+  fill: #de9d02;
+  stroke:#de9d02;
+}
+
+/* 5) --------------- Yellow ---------------- */
+.yellow#t1_5  path.c1 {
+  fill: rgb(237, 222, 109);
+  stroke: rgb(240, 223, 114);
+}
+.yellow#t1_5  path.c2 {
+  fill: rgb(240, 223, 114);
+  stroke:rgb(240, 223, 114);
+}
+
+.yellow#t1_5  path.c3 {
+  fill: rgb(227, 189, 84);
+  stroke: rgb(227, 189, 84);
+}
+.yellow#t1_5  path.c4 {
+  fill: #a16f0d;
+  stroke: #a16f0d;
+}
+
+/* 6) --------------- Crimson ---------------- */
+.crimson#t1_5  path.c1 {
+  fill: #bb1010;
+  stroke: #c12342;
+}
+.crimson#t1_5  path.c2 {
+  fill:#c12342;
+  stroke:#c12342;
+}
+
+.crimson#t1_5  path.c3 {
+  fill: #ce1d1d;
+  stroke: #ce1d1d;
+}
+
+.crimson#t1_5  path.c4 {
+  fill: #961616;
+  stroke: #961616;
+}
+/* 7) --------------- Cyclamen ---------------- */
+.cyclamen#t1_5  path.c1 {
+  fill: rgb(210, 57, 120);
+  stroke: rgb(210, 57, 120);
+}
+.cyclamen#t1_5  path.c2 {
+  fill: rgb(210, 57, 120);
+  stroke:rgb(210, 57, 120);
+}
+
+.cyclamen#t1_5  path.c3 {
+  fill:  rgb(168, 37, 70);
+  stroke:  rgb(168, 37, 70);
+}
+.cyclamen#t1_5  path.c4 {
+  fill:  #92294d;
+  stroke:  #92294d;
+}
+
+/* 8) --------------- Purple ---------------- */
+.purple#t1_5  path.c1 {
+  fill: #840484;
+  stroke: #8e058e;
+}
+.purple#t1_5  path.c2 {
+  fill: #8e058e;
+  stroke:#8e058e;
+}
+
+.purple#t1_5  path.c3 {
+  fill: #a207a2;
+  stroke: #a207a2;
+}
+.purple#t1_5  path.c4 {
+  fill: #831d84;
+  stroke: #831d84;
+}
+
+/* ---------------------------------------------------------*/
+/* ------------*****------- t1_6 --------****-------------- */
+/* ---------------------------------------------------------*/
+
+.red#t1_6  path.c1 {
+  fill: #d50606;
+  stroke:#d90e0e;
+}
+.red#t1_6  path.c2 {
+  fill: #d50f0f;
+  stroke:#d90e0e;
+}
+
+.red#t1_6  path.c3 {
+  fill: #e61212;
+  stroke:#d90e0e;
+}
+
+.red#t1_6  path.c4 {
+  fill: #b52323;
+  stroke:#b52323;
+}
+
+/* 2) ---------------  Light Green ---------------- */
+.green_light#t1_6  path.c1 {
+  fill: #1aa51a;
+  stroke:#1aa51a;
+}
+.green_light#t1_6  path.c2 {
+  fill: #22a322;
+  stroke:#1aa51a;
+}
+
+.green_light#t1_6  path.c3 {
+  fill: #027f02;
+  stroke:#027f02;
+}
+
+.green_light#t1_6  path.c4 {
+  fill: #156d15;
+  stroke:#156d15;
+}
+/* 3) ---------------  Dark Green ---------------- */
+.green_dark#t1_6  path.c1 {
+  fill: #1f801f;
+  stroke:#1e821e;
+}
+.green_dark#t1_6  path.c2 {
+  fill: #1e821e;
+  stroke:#1e821e;
+}
+
+.green_dark#t1_6  path.c3 {
+  fill: #18bd18;
+  stroke:#027f02;
+}
+
+.green_dark#t1_6  path.c4 {
+  fill: #1d7f1d;
+  stroke:#1d7f1d;
+}
+
+/* 4) --------------- Orange ---------------- */
+.orange#t1_6  path.c1 {
+  fill: #fd9914;
+  stroke:#fd9f14;
+}
+.orange#t1_6  path.c2 {
+  fill: #fd9f14;
+  stroke:#fd9f14;
+}
+
+.orange#t1_6  path.c3 {
+  fill: #ffb400;
+  stroke:#de9d02;
+}
+
+.orange#t1_6  path.c4 {
+  fill: #de9d02;
+  stroke:#de9d02;
+}
+
+/* 5) --------------- Yellow ---------------- */
+.yellow#t1_6  path.c1 {
+  fill: rgb(237, 222, 109);
+  stroke: rgb(240, 223, 114);
+}
+.yellow#t1_6  path.c2 {
+  fill: rgb(240, 223, 114);
+  stroke:rgb(240, 223, 114);
+}
+
+.yellow#t1_6  path.c3 {
+  fill: rgb(227, 189, 84);
+  stroke: rgb(227, 189, 84);
+}
+.yellow#t1_6  path.c4 {
+  fill: #a16f0d;
+  stroke: #a16f0d;
+}
+
+/* 6) --------------- Crimson ---------------- */
+.crimson#t1_6  path.c1 {
+  fill: #bb1010;
+  stroke: #c12342;
+}
+.crimson#t1_6  path.c2 {
+  fill:#c12342;
+  stroke:#c12342;
+}
+
+.crimson#t1_6  path.c3 {
+  fill: #ce1d1d;
+  stroke: #ce1d1d;
+}
+
+.crimson#t1_6  path.c4 {
+  fill: #961616;
+  stroke: #961616;
+}
+/* 7) --------------- Cyclamen ---------------- */
+.cyclamen#t1_6  path.c1 {
+  fill: rgb(210, 57, 120);
+  stroke: rgb(210, 57, 120);
+}
+.cyclamen#t1_6  path.c2 {
+  fill: rgb(210, 57, 120);
+  stroke:rgb(210, 57, 120);
+}
+
+.cyclamen#t1_6  path.c3 {
+  fill:  rgb(168, 37, 70);
+  stroke:  rgb(168, 37, 70);
+}
+.cyclamen#t1_6  path.c4 {
+  fill:  #92294d;
+  stroke:  #92294d;
+}
+
+/* 8) --------------- Purple ---------------- */
+.purple#t1_6  path.c1 {
+  fill: #840484;
+  stroke: #8e058e;
+}
+.purple#t1_6  path.c2 {
+  fill: #8e058e;
+  stroke:#8e058e;
+}
+
+.purple#t1_6  path.c3 {
+  fill: #a207a2;
+  stroke: #a207a2;
+}
+.purple#t1_6  path.c4 {
+  fill: #831d84;
+  stroke: #831d84;
+}
+/* ---------------------------------------------------------*/
+/* ------------*****------- t1_7 --------****-------------- */
+/* ---------------------------------------------------------*/
+
+.red#t1_7  path.c1 {
+  fill: #e61212;
+  stroke:#d90e0e;
+}
+/* 2) ---------------  Light Green ---------------- */
+.green_light#t1_7  path.c1 {
+  fill: #027f02;
+  stroke:#027f02;
+}
+
+/* 3) ---------------  Dark Green ---------------- */
+.green_dark#t1_7  path.c1 {
+  fill: #18bd18;
+  stroke:#027f02;
+}
+
+/* 4) --------------- Orange ---------------- */
+.orange#t1_7  path.c1 {
+  fill: #ffb400;
+  stroke:#de9d02;
+}
+
+/* 5) --------------- Yellow ---------------- */
+.yellow#t1_7  path.c1 {
+  fill: rgb(227, 189, 84);
+  stroke: rgb(227, 189, 84);
+}
+
+/* 6) --------------- Crimson ---------------- */
+.crimson#t1_7  path.c1 {
+  fill: #ce1d1d;
+  stroke: #ce1d1d;
+}
+
+/* 7) --------------- Cyclamen ---------------- */
+.cyclamen#t1_7  path.c1 {
+  fill:  rgb(168, 37, 70);
+  stroke:  rgb(168, 37, 70);
+}
+
+/* 8) --------------- Purple ---------------- */
+.purple#t1_7  path.c1 {
+  fill: #a207a2;
+  stroke: #a207a2;
+}

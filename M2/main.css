@@ -1,0 +1,71 @@
+#overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.dialog {
+  position: absolute;
+    font-size: 10px;
+    display: block;
+    background: #d3c6c6a6;
+    padding: 15px 15px 25px;
+    border-radius: 15px;
+    opacity: 0.88;
+}
+.hidden {
+  display: none;
+}
+
+/* COLOR PALETE */
+.color_palete {
+  
+  width: 200px;
+}
+.color_palete .p_row {
+  display: flex;
+  justify-content: space-between;
+}
+    
+.color_palete .red.burst-12:before, .color_palete .red.burst-12:after { background: red; }
+.color_palete .lightgreen.burst-12:before, .color_palete .lightgreen.burst-12:after { background: lightgreen; }
+.color_palete .darkgreen.burst-12:before, .color_palete .darkgreen.burst-12:after { background: darkgreen; }
+.color_palete .orange.burst-12:before, .color_palete .orange.burst-12:after { background: orange; }
+.color_palete .yellow.burst-12:before, .color_palete .yellow.burst-12:after { background: yellow; }
+.color_palete .darkred.burst-12:before, .color_palete .darkred.burst-12:after { background: crimson; }
+.color_palete .purple.burst-12:before, .color_palete .purple.burst-12:after { background: purple; }
+.color_palete .magenta.burst-12:before, .color_palete .magenta.burst-12:after { background: rgb(245, 111, 161); }
+.color_palete .orange.burst-12:before, .color_palete .orange.burst-12:after { background: orange; }
+
+.burst-12 {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+}
+.burst-12:before, .burst-12:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+}
+.burst-12:before {
+    -webkit-transform: rotate(30deg);
+       -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+         -o-transform: rotate(30deg);
+}
+.burst-12:after {
+    -webkit-transform: rotate(60deg);
+       -moz-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+         -o-transform: rotate(60deg);
+}
+
+.M1 #t1_1, .M1 #t1_2, .M1 #t1_3, .M1 #t1_4, .M1 #t1_5, .M1 #t1_6, .M1 #t1_7,
+.M1 #t2_1, .M1 #t2_2, .M1 #t2_3, .M1 #t2_4, .M1 #t2_5, .M1 #t2_6, .M1 #t2_7 {
+  cursor: pointer;
+}
