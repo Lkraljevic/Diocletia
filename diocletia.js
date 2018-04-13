@@ -254,12 +254,15 @@ function Cart(cartEl) {
     if (typeof(Storage) !== "undefined") {
       var that = this;
       var cart_items = localStorage.getItem('cart_items');
-      cart_items = JSON.parse(cart_items);
-      cart_items.forEach(function(item){
-        that.items.set(item.id,item);
-      });
+      if(cart_items) {
+        cart_items = JSON.parse(cart_items);
+        cart_items.forEach(function(item){
+          that.items.set(item.id,item);
+        });
+      }
       var amount = localStorage.getItem('cart_amount', JSON.stringify(this.amount));
-      that.amount = JSON.parse(amount);
+      if(amount)
+        that.amount = JSON.parse(amount);
     } else {
         return [];
     }
