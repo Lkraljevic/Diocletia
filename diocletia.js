@@ -365,7 +365,7 @@ function Cart(cartEl) {
       console.log(this.responseText);
       }
   };
-  xhttp.open("POST", "http://diocletia.hr/test_ajax.php", true);
+  xhttp.open("POST", "https://diocletia.hr/test_ajax.php", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send('order='+JSON.stringify({x:2}));
 
