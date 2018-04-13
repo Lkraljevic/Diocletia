@@ -6,7 +6,7 @@
   right: 0;
 }
 .dialog {
-  position: absolute;
+  /*position: absolute;*/
     font-size: 10px;
     display: block;
     background: #d3c6c6a6;
@@ -14,15 +14,8 @@
     border-radius: 15px;
     opacity: 0.88;
 }
-.hidden {
-  display: none;
-}
-
 /* COLOR PALETE */
-.color_palete {
-  
-  width: 200px;
-}
+
 .color_palete .p_row {
   display: flex;
   justify-content: space-between;
@@ -65,7 +58,7 @@
          -o-transform: rotate(60deg);
 }
 
-.M1 #t1_1, .M1 #t1_2, .M1 #t1_3, .M1 #t1_4, .M1 #t1_5, .M1 #t1_6, .M1 #t1_7,
-.M1 #t2_1, .M1 #t2_2, .M1 #t2_3, .M1 #t2_4, .M1 #t2_5, .M1 #t2_6, .M1 #t2_7 {
+.M1 .strips, .M1 .strips, .M1 .strips, .M1 .strips, .M1 .strips, .M1 .strips, .M1 .strips,
+.M1 .strips, .M1 .strips, .M1 .strips, .M1 .strips, .M1 .strips, .M1 .strips, .M1 .strips {
   cursor: pointer;
 }

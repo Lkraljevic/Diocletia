@@ -1,3 +1,17 @@
+svg #root:hover .strips path {
+  opacity: 0.7;
+}
+svg.focused .strips path {
+  opacity: 0.7;
+}
+svg.focused .strips.active path {
+  opacity: 1 !important;
+}
+
+svg .strips:hover > path {
+  opacity: 1 !important;
+}
+
 .red path.c1 {
   fill: #d00505;
   stroke:#d90e0e;
