@@ -972,7 +972,13 @@
               // The payment is complete!
               // You can now show a confirmation message to the customer
           });
+      },
+
+      onCancel: function(data, actions) {
+          console.log(data);
+          console.log(actions);
       }
+
 
     }, '#paypal-button');
 
