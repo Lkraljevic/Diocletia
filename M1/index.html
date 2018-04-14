@@ -958,12 +958,7 @@
       payment: function(data, actions) {
         var that = this;
         return actions.payment.create({
-            payment: {
-                transactions: [{
-                  amount: cart.amount,
-                  item_list: { items: cart.itemsToString() }
-                }]
-            }
+            payment: cart.createPaymentObject()
         });
       },
 

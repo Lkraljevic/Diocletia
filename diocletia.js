@@ -243,13 +243,27 @@ function Cart(cartEl) {
     this.updateDOM();
   }
 
+  this.updateTotal = function() {
+
+    var subtotal = 0;
+    this.items.forEach(function(item){
+      subtotal += item.p.price * Number(item.q);
+      subtotal = Number(subtotal.toPrecision(2));
+    });
+    this.amount.details.subtotal = subtotal; 
+    this.amount.total =  this.amount.details.subtotal + this.amount.details.tax + this.amount.details.shipping;
+
+    this.saveCart();
+  }
+
+  // Save Object to localstorage
   this.saveCart = function() {
     var cart_items = [];
-    cart.items.forEach(function(item){cart_items.push(item)})
+    this.items.forEach(function(item){cart_items.push(item)})
     localStorage.setItem('cart_items', JSON.stringify(cart_items));
     localStorage.setItem('cart_amount', JSON.stringify(this.amount));
   }
-
+  // Load Object object localstorage
   this.loadCart = function() {
     if (typeof(Storage) !== "undefined") {
       var that = this;
@@ -270,17 +284,35 @@ function Cart(cartEl) {
     this.updateDOM();
   }
 
-  this.updateTotal = function() {
 
-    var subtotal = 0;
-    this.items.forEach(function(item){
-      subtotal += item.p.price * item.q;
-    });
-    this.amount.details.subtotal = subtotal; 
-    this.amount.total =  this.amount.details.subtotal + this.amount.details.tax + this.amount.details.shipping;
+  // Save order to server
+  this.saveOrderDB = function(confirmData) {
+    var that = this;
 
-    this.saveCart();
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        console.log(this.responseText);
+      }
+    };
+
+    var cart_items = [];
+    that.items.forEach(function(item){cart_items.push(item)})
+
+    var data = {
+      order: {
+        amount: that.amount,
+        items: cart_items
+      }
+    }
+
+    xhttp.open("POST", "https://diocletia.hr/test_ajax.php", true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send('order='+JSON.stringify({x:2}));
   }
+
+
+  // PREPARE PAYMENT
 
   this.generateItemSKU = function(item_id) {
     var item = this.items.get(item_id);
@@ -299,13 +331,49 @@ function Cart(cartEl) {
         t.quantity = item.q;
         t.currency = item.p.currency;
         t.price = item.p.price;
-        t.description = item.id;
-        t.sku = that.generateItemSKU(item.id);
+        t.description = that.generateItemSKU(item.id),
+        t.sku = item.id, // 'Custom colors',//that.generateItemSKU(item.id)
         items.push(t);
       });
       return items;
   }
 
+  this.orderToString = function() {
+    var description = 'Order description:  \n';
+    var that = this;
+    this.items.forEach(function(item) {
+      description += item.n +' '+item.id+'\n';
+      description +=  'Colors: \n Left: ' + item.c.l.toString() + '\n';
+      description +=  'Right: ' + item.c.r.toString() + '\n';
+      description +=  'Dimensions: \n Left: ' + item.s.l.toString() + item.s.m+ '\n';
+      description +=  'Right: ' + item.s.r.toString() + item.s.m+  '\n';
+    });
+    return description;
+  }
+
+  // This will create PayPal payment object 
+  this.createPaymentObject = function() {
+    // {
+    //     transactions: [{
+    //       amount: cart.amount,
+    //       item_list: { items: cart.itemsToString() }
+    //     }]
+    // }
+    var payment = {
+        transactions: [{
+          amount: this.amount,
+          item_list: {
+            items: this.itemsToString()
+          },
+          //description: this.orderToString(),
+          //soft_descriptor: 'DIOCLETIA_UNIQUE',
+        }]
+    }
+
+    return payment;
+
+
+  }
   // To be removed
 
   this.updateDOM = function() {
@@ -356,22 +424,6 @@ function Cart(cartEl) {
   }
 
   this.currentCart = this.loadCart();
-
-
-  this.saveOrder = function(confirmData) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      console.log(this.responseText);
-      }
-  };
-  xhttp.open("POST", "https://diocletia.hr/test_ajax.php", true);
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send('order='+JSON.stringify({x:2}));
-
-
-
-  }
   
 }
 
