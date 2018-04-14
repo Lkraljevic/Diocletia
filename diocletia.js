@@ -164,7 +164,7 @@ function ColorPicker (model) {
 M1_config = {
   nr_strips: 7,
   sale_price: {
-    price: 0.01,
+    price: 400,
     currency: 'EUR'
   },
   name: 'Model 1',
