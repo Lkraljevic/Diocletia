@@ -284,6 +284,21 @@ function Cart(cartEl) {
     this.updateDOM();
   }
 
+  this.clearCart = function() {
+    this.items =  new Map();
+    this.amount = {
+      total: 0,
+      currency: 'EUR',
+      details: {
+        subtotal: 0,
+        tax: 0,
+        shipping: 0
+      }
+    };
+    this.saveCart();
+    this.loadCart();
+  }
+
 
   // Save order to server
   this.saveOrderDB = function(confirmData) {
@@ -294,10 +309,11 @@ function Cart(cartEl) {
       if (this.readyState == 4 && this.status == 200) {
         console.log(this.responseText);
       }
+      that.clearCart();
     };
 
     var cart_items = [];
-    that.items.forEach(function(item){cart_items.push(item)})
+    that.items.forEach(function(item){cart_items.push(item)});
 
     var data = {
       order: {
@@ -311,7 +327,7 @@ function Cart(cartEl) {
 
 
     console.log(data);
-    
+
     xhttp.open("POST", "https://diocletia.hr/test_ajax.php", true);
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify(data));
@@ -322,8 +338,8 @@ function Cart(cartEl) {
 
   this.generateItemSKU = function(item_id) {
     var item = this.items.get(item_id);
-    var dim = 'l:'+item.s.l.toString()+'r:'+item.s.r.toString()+item.s.m;
-    var col = 'l:'+item.c.l.toString()+'r:'+item.c.r.toString();
+    var dim = 'D_l:'+item.s.l.toString()+'D_r:'+item.s.r.toString();
+    var col = 'C_l:'+item.c.l.toString()+'C_r:'+item.c.r.toString();
 
     return dim+col;
   }
@@ -337,8 +353,8 @@ function Cart(cartEl) {
         t.quantity = item.q;
         t.currency = item.p.currency;
         t.price = item.p.price;
-        t.description = that.generateItemSKU(item.id),
-        t.sku = item.id, // 'Custom colors',//that.generateItemSKU(item.id)
+        t.description = 'DIOCLETIA UNIQUE',
+        t.sku = that.generateItemSKU(item.id), // 'Custom colors',//that.generateItemSKU(item.id)
         items.push(t);
       });
       return items;
@@ -377,8 +393,6 @@ function Cart(cartEl) {
     }
 
     return payment;
-
-
   }
   // To be removed
 

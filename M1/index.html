@@ -964,7 +964,8 @@
 
       onAuthorize: function(data, actions) {
           return actions.payment.execute().then(function(payment) {
-            console.log(payment);
+            if(payment)
+              cart.saveOrderDB(payment);
 
               // The payment is complete!
               // You can now show a confirmation message to the customer
