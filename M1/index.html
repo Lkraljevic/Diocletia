@@ -963,6 +963,8 @@
       },
 
       onAuthorize: function(data, actions) {
+          console.log(data);
+          console.log(actions);
           return actions.payment.execute().then(function(payment) {
             if(payment)
               cart.saveOrderDB(payment);
