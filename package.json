@@ -1,0 +1,22 @@
+{
+  "name": "diocletia",
+  "version": "1.0.0",
+  "description": "Online shoes store",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lkraljevic/Diocletia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lkraljevic/Diocletia/issues"
+  },
+  "homepage": "https://github.com/Lkraljevic/Diocletia#readme",
+  "devDependencies": {
+    "handlebars": "^4.0.11"
+  }
+}
