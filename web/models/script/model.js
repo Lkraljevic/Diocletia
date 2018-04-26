@@ -265,6 +265,7 @@ function locationHashChanged() {
         var models = document.querySelectorAll('.card-model');
         models.forEach(function(m){
           m.onclick = function(e) {
+            location.hash = e.dataset.hash;
             var target = window.activeModel ? window.activeModel.modelEl: null;
             if( target) {
               var scroll = new SmoothScroll();
