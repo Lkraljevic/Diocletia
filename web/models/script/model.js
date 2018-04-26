@@ -228,7 +228,7 @@ function locationHashChanged() {
         });
         break;
         default:
-            console.log("Unknown model");
+            location.hash = "#model-I";
     }
     
     function removeModel() {
