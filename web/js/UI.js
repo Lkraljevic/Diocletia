@@ -62,6 +62,7 @@ window.onscroll = function() {onScroll()};
     // This 100 refers to min height of header before we remove sticky
     var range = 200;
 
+    if(logo && desktopNav)
     if(window.pageYOffset >= header.offsetHeight - 100) {
         logo.classList.remove('sticky');
         desktopNav.classList.remove('sticky');
@@ -71,47 +72,48 @@ window.onscroll = function() {onScroll()};
     }
 
     if(topBG) {
-        if(window.pageYOffset >= header.offsetHeight+150) {
-            topBG.classList.remove('sticky');
-        } else {
-            topBG.classList.add('sticky');
-        }
-      
+        if(window.pageYOffset >= header.offsetHeight+150) topBG.classList.remove('sticky');
+        else topBG.classList.add('sticky');
+    }
+
+    if(headerTitle) {
         offset = header.offsetHeight / 2,
         calc = 1 - (window.pageYOffset - offset + range) / range;
         headerTitle.style.opacity = calc;
           
-        if (calc > 1) {
-            headerTitle.style.opacity = 1;
-        } else if ( calc < 0 ) {
-            headerTitle.style.opacity = 0;
-        }
-    
+        if (calc > 1) headerTitle.style.opacity = 1;
+        else if ( calc < 0 ) headerTitle.style.opacity = 0;
     }
+        
+    
+    
 }
 
 
 
 /* DIV AS LINKS */
 
-document.getElementById("model-I-href").onclick = function() {
+var M1link = ocument.getElementById("model-I-href");
+if(M1link)
+M1link.onclick = function() {
     window.location = "./models/#model-I";
     return false;
 }
-
-
-document.getElementById("model-II-href").onclick = function() {
+var M2link = ocument.getElementById("model-II-href");
+if(M2link)
+M2link.onclick = function() {
     window.location = "./models/#model-II";
     return false;
 }
-
-document.getElementById("model-III-href").onclick = function() {
+var M3link = ocument.getElementById("model-III-href");
+if(M3link)
+M3link.onclick = function() {
     window.location = "./models/#model-III";
     return false;
 }
-
-document.getElementById("model-IV-href").onclick = function() {
+var M4link = ocument.getElementById("model-IV-href");
+if(M4link)
+M4link.onclick = function() {
     window.location = "./models/#model-IV";
     return false;
 }
-
