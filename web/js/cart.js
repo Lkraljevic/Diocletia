@@ -213,10 +213,14 @@ function Cart() {
       var cart_notification = document.getElementById('cart-notification');
       if(cart_notification) {
         cart_notification.dataset.cart = this.items.size;
-        if(this.items.size)
+        if(this.items.size) {
           cart_notification.classList.remove('empty-cart');
-        else
-        cart_notification.classList.add('empty-cart');
+          cart_notification.classList.add('new-item');
+        }
+        else {
+          cart_notification.classList.add('empty-cart');
+          cart_notification.classList.remove('new-item');
+        }
       }
 
       var items = [];

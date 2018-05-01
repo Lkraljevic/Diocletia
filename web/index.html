@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400,500|Alegreya+Sans:300i,400" rel="stylesheet">
+  <title>Document</title>
+
+  <!-- MODELS -->
+  <script type="text/javascript" src="./js/models/m1.js"></script>
+  <script type="text/javascript" src="./js/models/m2.js"></script>
+  <script type="text/javascript" src="./js/models/m3.js"></script>
+  <script type="text/javascript" src="./js/models/m4.js"></script>
+
+  <!-- TEMPLATES -->
+  <script type="text/javascript" src="./js/handlebars.runtime.js"></script>
+  <script type="text/javascript" src="./templates/handlebars-helpers.js"></script>
+  <script type="text/javascript" src="./templates/model-list.js"></script>
+  <script type="text/javascript" src="./templates/cart.js"></script>
+
+  <!-- APP-->
+  <!-- <script type="text/javascript" src="./js/models/model.js"></script> -->
+  <script type="text/javascript" src="./js/cart.js"></script>
+
+  <link rel="stylesheet" href="./css/fix.css">
+  <link rel="stylesheet" href="./css/leather.css">
+  <link rel="stylesheet" href="./css/sticky-header.css">
+  <link rel="stylesheet" href="./css/cb-slideshow.css">
+
+  
+  
+  <!-- Global SCRIPTs-->
+  <script type="text/javascript" src="./js/smooth-scroll.js"></script>
+
+
+
+</head>
+
+<body>
+  <img src="./images/logo.png" class="logo sticky" alt="">
+  <div class="top-background sticky"></div>
+  <header>
+    <nav class="container nav--desktop sticky">
+      <a href="#" class="nav__link">Home</a>
+      <a href="#" class="nav__link">About us</a>
+      <a href="#" class="nav__link">Contact</a>
+      <a href="#" class="nav__link nav__link--logo">
+      </a>
+      <a href="#" class="nav__link">Products</a>
+      <a href="#" class="nav__link">Size guide</a>
+      <a href="#" class="nav__link" id="cart-btn">
+        <button id="cart-notification" class="empty-cart" data-cart="0">
+          <img src="./images/icons/cart_icon.png" alt=""> Cart
+        </button>
+      </a>
+    </nav>
+
+    <nav class="nav--mobile">
+      <div class="nav-mobile__icon js-menu"></div>
+    </nav>
+
+    <div class="menu">
+      <a href="#" class="menu__item">Home</a>
+      <a href="#" class="menu__item">About us</a>
+      <a href="#" class="menu__item">Contact</a>
+      <a href="#" class="menu__item">Products</a>
+      <a href="#" class="menu__item">Size guide</a>
+      <button data-cart="2" class="menu__button">
+        <img src="./images/icons/cart_icon.png" alt=""> Cart
+      </button>
+    </div>
+
+    <h1 class="header__title">
+      <div class="header__title--small">Made in Dalmatia</div>
+      <img src="./images/header.png" alt="">
+      <div class="header__title--small">the Online Store for Women's Shoes</div>
+    </h1>
+    <div class="header__controls"></div>
+    <div class="slider slider--header">
+      <!--<div style="background-image: url('./images/header/slide--third.png')"></div> -->
+      <ul class="cb-slideshow">
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+      </ul>
+
+    </div>
+  </header>
+
+  <section class="container header__hero">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </section>
+
+  <section class="container cards cards--text">
+    <article class="card">
+      <div class="card__text">
+        Model Name
+        <a href="#">more</a>
+      </div>
+      <img class="card__image" src="./images/shoes/M1.png" alt="">
+      <img src="./images/shoes/M1-hover.png" alt="" class="card-image--hover">
+    </article>
+    <article class="card">
+      <div class="card__text">
+        Model Name
+        <a href="#">more</a>
+      </div>
+      <img class="card__image" src="./images/shoes/M2.png" alt="">
+      <img src="./images/shoes/M2-hover.png" alt="" class="card-image--hover">
+    </article>
+    <article class="card">
+      <div class="card__text">
+        Model Name
+        <a href="#">more</a>
+      </div>
+      <img class="card__image" src="./images/shoes/M3.png" alt="">
+      <img src="./images/shoes/M3-hover.png" alt="" class="card-image--hover">
+    </article>
+    <article class="card">
+      <div class="card__text">
+        Model Name
+        <a href="#">more</a>
+      </div>
+      <img class="card__image" src="./images/shoes/M4.png" alt="">
+      <img src="./images/shoes/M4-hover.png" alt="" class="card-image--hover">
+    </article>
+  </section>
+
+  <section class="slider-wrapper">
+    <div class="slider slider--small">
+      <div style="background-image: url('./images/header/slide--2.png')"></div>
+    </div>
+    <a class="slider__icon slider__icon--left"></a>
+    <a class="slider__icon slider__icon--right"></a>
+  </section>
+
+  <section class="container section--contact">
+    <h3 class="contact__subtitle">Feel free to contact us about any inquery :)</h3>
+    <h2 class="contact__title">Let's Talk! Contact us</h2>
+    <div class="contact__message contact__message--visible">Thank you for contacting us!</div>
+    <form class="container contact">
+      <input type="text" class="input--white" placeholder="Name:" required>
+      <input type="email" class="input--white" placeholder="Email:" required>
+      <input type="text" class="input--white" placeholder="Subject:" required>
+      <textarea placeholder="Message:" class="input--white" required></textarea>
+      <button>
+        send
+      </button>
+    </form>
+    <div class="contact__lists">
+      <div class="contact__list">
+        <a href="#" class="contact__item">
+          <div class="contact-item__icon">
+            <img src="./images/icons/facebook_logo.png" alt="" class="contact-item__image">
+          </div>
+          Facebook @facebook
+        </a>
+        <a href="#" class="contact__item">
+          <div class="contact-item__icon">
+            <img src="./images/icons/instagram_logo.png" alt="" class="contact-item__image">
+          </div> Instagram @facebook
+        </a>
+        <a href="#" class="contact__item">
+          <div class="contact-item__icon">
+            <img src="./images/icons/facebook_logo.png" alt="" class="contact-item__image">
+          </div> Twitter @facebook
+        </a>
+      </div>
+      <div class="contact__list">
+        <a href="#" class="contact__item">
+          <div class="contact-item__icon">
+            <img src="./images/icons/location_icon.png" alt="" class="contact-item__image">
+          </div> Address
+        </a>
+        <a href="#" class="contact__item">
+          <div class="contact-item__icon">
+            <img src="./images/icons/person_icon.png" alt="" class="contact-item__image">
+          </div> Contact name
+        </a>
+        <a href="#" class="contact__item">
+          <div class="contact-item__icon">
+            <img src="./images/icons/gsm_icon.png" alt="" class="contact-item__image">
+          </div> Phone
+        </a>
+        <a href="#" class="contact__item">
+          <div class="contact-item__icon">
+            <img src="./images/icons/email_icon.png" alt="" class="contact-item__image">
+          </div> Mail
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container cards">
+    <article class="card">
+      <img class="card__image" src="./images/shoes/model_4.jpg" alt="">
+    </article>
+    <article class="card">
+      <img class="card__image" src="./images/shoes/model_4.jpg" alt="">
+    </article>
+    <article class="card">
+      <img class="card__image" src="./images/shoes/model_4.jpg" alt="">
+    </article>
+    <article class="card">
+      <img class="card__image" src="./images/shoes/model_4.jpg" alt="">
+    </article>
+    <article class="card">
+      <img class="card__image" src="./images/shoes/model_4.jpg" alt="">
+    </article>
+    <article class="card">
+      <img class="card__image" src="./images/shoes/model_4.jpg" alt="">
+    </article>
+  </section>
+
+  <section class="bottom__hero">
+    View, Follow & Like Diocletia @ Instagram
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__items">
+      <a href="" class="footer__item footer__item--empty"></a>
+      <a href="#" class="footer__item">about us</a>
+      <a href="#" class="footer__item">products</a>
+      <a href="#" class="footer__item">size guide</a>
+      <a href="#" class="footer__item">terms & conditions</a>
+      <a href="" class="footer__item footer__item--empty"></a>
+    </div>
+    <div class="footer__information">
+      MB: 3206190 . OIB: 85167032587 . Žiro račun: 2340009-1100241295 . IBAN: HR1423400091100241295 . SWIFT: PBZGHR2X
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="shadow shadow--cart modal modal-hidden" id="cart-modal">
+    <div class="container cart">
+      <div class="cart__controls">
+        <a href="#" class="cart__back">Continue Shopping</a>
+        <a href="#" class="cart__close"></a>
+      </div>
+      <div class="card__body" id="cart-table">      
+      </div>
+  </div>
+  <script src="./js/UI.js"></script>
+</body>
+
+</html>

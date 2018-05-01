@@ -408,7 +408,14 @@ function initEvents(){
       }
       else
         console.log("Invalid size");
-          
+
+        // Scroll to cart notification
+        var target = document.getElementById('cart-btn');
+        if( target) {
+          var scroll = new SmoothScroll();
+          scroll.init({offset:100})
+          scroll.animateScroll( target );
+        }
 
 
     };

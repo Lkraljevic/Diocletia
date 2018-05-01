@@ -28,89 +28,64 @@ cart_controls.forEach(function(anchor){
 });
 
 function hideCart() {
+    var cart_notification = document.getElementById('cart-notification');
+    if(cart_notification)
+      cart_notification.classList.remove('new-item');
+        
     var cart_modal = document.getElementById('cart-modal');
     if(cart_modal)
         cart_modal.classList.add('modal-hidden');
 } 
 function showCart() {
+    var cart_notification = document.getElementById('cart-notification');
+    if(cart_notification)
+      cart_notification.classList.remove('new-item');
+      
     var cart_modal = document.getElementById('cart-modal');
     if(cart_modal)
         cart_modal.classList.remove('modal-hidden');
 }
 
 
-Handlebars.registerHelper('modelpreview', function() {
-    var item = this;
-    var svg_model = false; 
-    switch(item.code) {
-        case 'M1':
-          svg_model = M1El.cloneNode(true);
-        break;
-        case 'M2':
-          svg_model = M2El.cloneNode(true);
-        break;
-        case 'M3':
-          svg_model = M3El.cloneNode(true);
-        break;
-        case 'M4':
-          svg_model = M4El.cloneNode(true);
-        break;
-        default:
-            svg_model = null;
-    }
-    
-    if(!svg_model) return '';
-    
-    svg_model.querySelectorAll('.strips').forEach(function(el) {
-        data = extractID(el.id);
-        el.classList.forEach(function(className) {
-            if (className != 'strips') el.classList.remove(className)
-        });     
-       el.classList.add(colorParser(item.c[data.side][data.index]));
-    });    
+/* Sticky Header */
+
+// window.onscroll = function() {onScroll()};
   
-    return new Handlebars.SafeString(svg_model.innerHTML);
-});
+//   var header = document.querySelector('header');
+//   var headerTitle = document.querySelectorAll('.header__title')[0];
+//   var logo = document.querySelectorAll('.logo')[0];
+//   var topBG = document.querySelectorAll('.top-background')[0];
+//   var desktopNav = document.querySelectorAll('.container.nav--desktop')[0];
+  
+  
+//   function onScroll() {
+//     // This 100 refers to min height of header before we remove sticky
+//     var range = 200;
 
-Handlebars.registerHelper('modelTotal', function() {
-    return this.p.price * this.q;
-});
+//     if(window.pageYOffset >= header.offsetHeight - 100) {
+//         logo.classList.remove('sticky');
+//         desktopNav.classList.remove('sticky');
+//     } else {
+//       logo.classList.add('sticky');
+//       desktopNav.classList.add('sticky');
+//     }
 
-
-Handlebars.registerHelper('itemSize', function() {
-    return this.p.price * this.q;
-});
-
-
-
-
-
-function colorParser(colors_code) {
-    if (!Array.isArray(colors_code))
-    colors_code = [colors_code];
-    var config = {
-        'r1': 'red',
-        'g1': 'green_light',
-        'g2': 'green_dark',
-        'o1': 'orange',
-        'y1': 'yellow',
-        'c1': 'crimson',
-        'c2': 'cyclamen',
-        'p1': 'purple'
-    }
-
-    var colors_name = colors_code.map(function(color_code) {
-        if (config[color_code]) return config[color_code];
-        else return 'default';
-    });
-    if (colors_name.length > 1) return colors_name;
-    else return colors_name[0];
-}
-
-function extractID(id) {
-    var data = id.split('.');
-    return {
-        side: data[0] == 1 ? 'l' : 'r',
-        index: data[1] - 1,
-    }
-}
+//     if(topBG) {
+//         if(window.pageYOffset >= header.offsetHeight+150) {
+//             topBG.classList.remove('sticky');
+//         } else {
+//             topBG.classList.add('sticky');
+//         }
+      
+//         offset = header.offsetHeight / 2,
+//         calc = 1 - (window.pageYOffset - offset + range) / range;
+//         headerTitle.style.opacity = calc;
+          
+//         if (calc > 1) {
+//             headerTitle.style.opacity = 1;
+//         } else if ( calc < 0 ) {
+//             headerTitle.style.opacity = 0;
+//         }
+    
+//     }
+// }
