@@ -93,25 +93,25 @@ window.onscroll = function() {onScroll()};
 
 /* DIV AS LINKS */
 
-var M1link = ocument.getElementById("model-I-href");
+var M1link = document.getElementById("model-I-href");
 if(M1link)
 M1link.onclick = function() {
     window.location = "./models/#model-I";
     return false;
 }
-var M2link = ocument.getElementById("model-II-href");
+var M2link = document.getElementById("model-II-href");
 if(M2link)
 M2link.onclick = function() {
     window.location = "./models/#model-II";
     return false;
 }
-var M3link = ocument.getElementById("model-III-href");
+var M3link = document.getElementById("model-III-href");
 if(M3link)
 M3link.onclick = function() {
     window.location = "./models/#model-III";
     return false;
 }
-var M4link = ocument.getElementById("model-IV-href");
+var M4link = document.getElementById("model-IV-href");
 if(M4link)
 M4link.onclick = function() {
     window.location = "./models/#model-IV";
