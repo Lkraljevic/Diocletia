@@ -140,8 +140,14 @@ function Cart() {
   
     this.generateItemSKU = function(item_id) {
       var item = this.items.get(item_id);
-      var dim = 'D_l:'+item.s.l.toString()+'D_r:'+item.s.r.toString();
-      var col = 'C_l:'+item.c.l.toString()+'C_r:'+item.c.r.toString();
+      var dim = 'D:';
+
+      if(item.s.size_number) dim += 'N:'+ item.s.size_number;
+      if(item.s.size1 || item.s.size2 || item.s.size3 || item.s.size4 || item.s.size5)
+        size_string += 'CSi:'+ (item.s.size1||'-') + ':'+ (item.s.size2||'-') + ':'+ (item.s.size3||'-') + ':'+ (item.s.size4||'-') + ':'+ (item.s.size5||'-');
+      
+        var col = 'C_l:'+item.c.l.toString()+'C_r:'+item.c.r.toString();
+
   
       return dim+col;
     }
@@ -162,18 +168,18 @@ function Cart() {
         return items;
     }
   
-    this.orderToString = function() {
-      var description = 'Order description:  \n';
-      var that = this;
-      this.items.forEach(function(item) {
-        description += item.n +' '+item.id+'\n';
-        description +=  'Colors: \n Left: ' + item.c.l.toString() + '\n';
-        description +=  'Right: ' + item.c.r.toString() + '\n';
-        description +=  'Dimensions: \n Left: ' + item.s.l.toString() + item.s.m+ '\n';
-        description +=  'Right: ' + item.s.r.toString() + item.s.m+  '\n';
-      });
-      return description;
-    }
+    // this.orderToString = function() {
+    //   var description = 'Order description:  \n';
+    //   var that = this;
+    //   this.items.forEach(function(item) {
+    //     description += item.n +' '+item.id+'\n';
+    //     description +=  'Colors: \n Left: ' + item.c.l.toString() + '\n';
+    //     description +=  'Right: ' + item.c.r.toString() + '\n';
+    //     description +=  'Dimensions: \n Left: ' + item.s.l.toString() + item.s.m+ '\n';
+    //     description +=  'Right: ' + item.s.r.toString() + item.s.m+  '\n';
+    //   });
+    //   return description;
+    // }
   
     // This will create PayPal payment object 
     this.createPaymentObject = function() {
