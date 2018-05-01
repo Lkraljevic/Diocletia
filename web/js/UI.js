@@ -49,43 +49,69 @@ function showCart() {
 
 /* Sticky Header */
 
-// window.onscroll = function() {onScroll()};
+window.onscroll = function() {onScroll()};
   
-//   var header = document.querySelector('header');
-//   var headerTitle = document.querySelectorAll('.header__title')[0];
-//   var logo = document.querySelectorAll('.logo')[0];
-//   var topBG = document.querySelectorAll('.top-background')[0];
-//   var desktopNav = document.querySelectorAll('.container.nav--desktop')[0];
+  var header = document.querySelector('header');
+  var headerTitle = document.querySelectorAll('.header__title')[0];
+  var logo = document.querySelectorAll('.logo')[0];
+  var topBG = document.querySelectorAll('.top-background')[0];
+  var desktopNav = document.querySelectorAll('.container.nav--desktop')[0];
   
   
-//   function onScroll() {
-//     // This 100 refers to min height of header before we remove sticky
-//     var range = 200;
+  function onScroll() {
+    // This 100 refers to min height of header before we remove sticky
+    var range = 200;
 
-//     if(window.pageYOffset >= header.offsetHeight - 100) {
-//         logo.classList.remove('sticky');
-//         desktopNav.classList.remove('sticky');
-//     } else {
-//       logo.classList.add('sticky');
-//       desktopNav.classList.add('sticky');
-//     }
+    if(window.pageYOffset >= header.offsetHeight - 100) {
+        logo.classList.remove('sticky');
+        desktopNav.classList.remove('sticky');
+    } else {
+      logo.classList.add('sticky');
+      desktopNav.classList.add('sticky');
+    }
 
-//     if(topBG) {
-//         if(window.pageYOffset >= header.offsetHeight+150) {
-//             topBG.classList.remove('sticky');
-//         } else {
-//             topBG.classList.add('sticky');
-//         }
+    if(topBG) {
+        if(window.pageYOffset >= header.offsetHeight+150) {
+            topBG.classList.remove('sticky');
+        } else {
+            topBG.classList.add('sticky');
+        }
       
-//         offset = header.offsetHeight / 2,
-//         calc = 1 - (window.pageYOffset - offset + range) / range;
-//         headerTitle.style.opacity = calc;
+        offset = header.offsetHeight / 2,
+        calc = 1 - (window.pageYOffset - offset + range) / range;
+        headerTitle.style.opacity = calc;
           
-//         if (calc > 1) {
-//             headerTitle.style.opacity = 1;
-//         } else if ( calc < 0 ) {
-//             headerTitle.style.opacity = 0;
-//         }
+        if (calc > 1) {
+            headerTitle.style.opacity = 1;
+        } else if ( calc < 0 ) {
+            headerTitle.style.opacity = 0;
+        }
     
-//     }
-// }
+    }
+}
+
+
+
+/* DIV AS LINKS */
+
+document.getElementById("model-I-href").onclick = function() {
+    window.location = "./models/#model-I";
+    return false;
+}
+
+
+document.getElementById("model-II-href").onclick = function() {
+    window.location = "./models/#model-II";
+    return false;
+}
+
+document.getElementById("model-III-href").onclick = function() {
+    window.location = "./models/#model-III";
+    return false;
+}
+
+document.getElementById("model-IV-href").onclick = function() {
+    window.location = "./models/#model-IV";
+    return false;
+}
+
