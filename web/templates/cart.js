@@ -23,7 +23,7 @@ templates['cart'] = template({"1":function(container,depth0,helpers,partials,dat
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, alias1=container.lambda, alias2=container.escapeExpression;
 
-  return "<table class=\"cart__table\">\n    <tr class=\"cart_header\">\n        <th>My Cart ("
+  return "\n    <tr class=\"cart_header\">\n        <th>My Cart ("
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.items : depth0)) != null ? stack1.length : stack1), depth0))
     + ")</th>\n        <th>Price</th>\n        <th>Qty</th>\n        <th>Total</th>\n    </tr>\n\n"
     + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.items : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
@@ -31,6 +31,6 @@ templates['cart'] = template({"1":function(container,depth0,helpers,partials,dat
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.amount : depth0)) != null ? stack1.total : stack1), depth0))
     + "€</td>\n    </tr>\n    <tr class=\"cart__details\">\n        <td class=\"cart__space-left\">Shipping details</td>\n        <td class=\"cart__space\">\n            <textarea name=\"\" id=\"\" cols=\"30\" rows=\"10\" placeholder=\"Enter shipping address\" class=\"cart__textarea\"></textarea>\n        </td>\n    </tr>\n    <tr class=\"cart__total\">\n        <td></td>\n        <td>TOTAL:\n        </td>\n        <td></td>\n        <td>"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.amount : depth0)) != null ? stack1.total : stack1), depth0))
-    + "€</td>\n    </tr>\n\n</table>";
+    + "€</td>\n    </tr>\n";
 },"useData":true});
 })();

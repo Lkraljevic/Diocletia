@@ -56,3 +56,11 @@
 body header {
     z-index: 0;
 }
+
+/* CART */
+
+
+.cart__buttons div {
+    padding-left: 5px;
+    padding-right: 5px;
+}

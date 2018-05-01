@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400,500|Alegreya+Sans:300i,400" rel="stylesheet">
   <title>Document</title>
 
+  <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+
   <!-- MODELS -->
   <script type="text/javascript" src="./js/models/m1.js"></script>
   <script type="text/javascript" src="./js/models/m2.js"></script>
@@ -246,7 +248,15 @@
         <a href="#" class="cart__back">Continue Shopping</a>
         <a href="#" class="cart__close"></a>
       </div>
-      <div class="card__body" id="cart-table">      
+      <div class="card__body">
+          <table class="cart__table" id="cart-table">
+            </table>
+        <div class="cart__buttons">
+          <div>a</div>
+          <div>a</div>
+          <div><button>Send Request</button></div>
+          <div id="paypal-button"></div>
+        </div>           
       </div>
   </div>
   <script src="./js/UI.js"></script>

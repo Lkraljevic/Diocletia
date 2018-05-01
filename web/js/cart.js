@@ -14,15 +14,6 @@ function Cart() {
   
     this.addItem = function(model, size, quantity) {
   
-      // HardCode 
-      // size = {
-      //   l: [20.2, 20.3, 50.6, 20.3],
-      //   r: [20.2, 20.3, 50.6, 20.3],
-      //   m: 'cm' || 'inch'
-      // }
-      //quantity = 1;
-  
-  
       var item = {
         code: model.code,
         id: this.guid(),
@@ -256,12 +247,49 @@ function Cart() {
 
 window.addEventListener("load", function(){
   cart = new Cart();
+
+  paypal.Button.render({
+    env: 'production', // Or 'sandbox'
+
+    client: {
+        sandbox:    'AYZxI2ZTNoLuUiJS8mwsaHtRg55xFZiYwE4DabAU8YaWhH3TSLbBy350Z6juZOwyNntmMweZ-iomFHBJ',
+        production: 'AcitziMGjz82Z9ZnqBhZ5OzuYzkxY3YCge1Ro46HdPpnxT4tnXFGfatYHpnbFE35TMZmFurOv0vZpL9D'
+    },
+    style: {
+      label: 'buynow',
+      fundingicons: true, // optional
+      branding: true, // optional
+      size:  'medium', // small | medium | large | responsive
+      shape: 'rect',   // pill | rect
+      color: 'silver'   // gold | blue | silver | black
+    },
+
+    payment: function(data, actions) {
+      var that = this;
+      return actions.payment.create({
+          payment: cart.createPaymentObject()
+      });
+    },
+
+    onAuthorize: function(data, actions) {
+        console.log(data);
+        console.log(actions);
+        return actions.payment.execute().then(function(payment) {
+          if(payment)
+            cart.saveOrderDB(payment);
+
+            // The payment is complete!
+            // You can now show a confirmation message to the customer
+        });
+    },
+
+    onCancel: function(data, actions) {
+        console.log(data);
+        console.log(actions);
+    }
+
+
+  }, '#paypal-button');
+
+
 });
-
-
-  
-  
-  //import {M1_config} from 'modelConfig';
-
-
-

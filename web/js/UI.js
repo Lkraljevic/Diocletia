@@ -1,20 +1,20 @@
 /* Mobile navigation @Dražen Barić */
-// var clicked = false;
-// var icon = document.getElementsByClassName('nav-mobile__icon')[0];
-// var menu = document.getElementsByClassName('menu')[0];
-// var header = document.getElementsByTagName('header')[0];
-// var hTitle = document.getElementsByClassName('header__title')[0]
+var clicked = false;
+var icon = document.getElementsByClassName('nav-mobile__icon')[0];
+var menu = document.getElementsByClassName('menu')[0];
+var header = document.getElementsByTagName('header')[0];
+var hTitle = document.getElementsByClassName('header__title')[0]
 
-// icon.addEventListener('click', function () {
-//   if (clicked) {
-//     icon.classList.remove('nav-mobile__icon--active')
-//     menu.classList.remove('menu--visible')
-//   } else {
-//     icon.classList.add('nav-mobile__icon--active')
-//     menu.classList.add('menu--visible')
-//   }
-//   clicked = !clicked;
-// });
+icon.addEventListener('click', function () {
+  if (clicked) {
+    icon.classList.remove('nav-mobile__icon--active')
+    menu.classList.remove('menu--visible')
+  } else {
+    icon.classList.add('nav-mobile__icon--active')
+    menu.classList.add('menu--visible')
+  }
+  clicked = !clicked;
+});
 
 
 
