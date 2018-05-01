@@ -341,7 +341,7 @@ function locationHashChanged() {
         
         // Render list
         var listHTML = Handlebars.templates["model-list"]({models:list});
-        document.getElementById('model-list').innerHTML = listHTML;
+        document.getElementById('choose-model').innerHTML = listHTML;
         
         
         // Scroll make up :)

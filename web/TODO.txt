@@ -1,0 +1,13 @@
+"BUGS"
+- Disable sticky header on models page
+- Display Empty cart
+- Contact form - Display sucess || Validation Error
+- Refactor all links
+
+
+"FETURES"
+- Gallery
+- Instagram feed
+
+
+

@@ -7,8 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400,500|Alegreya+Sans:300i,400" rel="stylesheet">
-  <title>Document</title>
+  <title>Homepage</title>
 
+  <!-- PAY PAL-->
   <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 
   <!-- MODELS -->
@@ -16,12 +17,14 @@
   <script type="text/javascript" src="./js/models/m2.js"></script>
   <script type="text/javascript" src="./js/models/m3.js"></script>
   <script type="text/javascript" src="./js/models/m4.js"></script>
+  <script type="text/javascript" src="./js/size-guide/size-models.js"></script>
 
   <!-- TEMPLATES -->
   <script type="text/javascript" src="./js/handlebars.runtime.js"></script>
   <script type="text/javascript" src="./templates/handlebars-helpers.js"></script>
   <script type="text/javascript" src="./templates/model-list.js"></script>
   <script type="text/javascript" src="./templates/cart.js"></script>
+  <script type="text/javascript" src="../templates/size-guide.js"></script>
 
   <!-- APP-->
   <!-- <script type="text/javascript" src="./js/models/model.js"></script> -->
@@ -32,8 +35,8 @@
   <link rel="stylesheet" href="./css/sticky-header.css">
   <link rel="stylesheet" href="./css/cb-slideshow.css">
 
-  
-  
+
+
   <!-- Global SCRIPTs-->
   <script type="text/javascript" src="./js/smooth-scroll.js"></script>
 
@@ -45,36 +48,40 @@
   <img src="./images/logo.png" class="logo sticky" alt="">
   <div class="top-background sticky"></div>
   <header>
+    <!-- Menu Desktop-->
     <nav class="container nav--desktop sticky">
       <a href="#" class="nav__link">Home</a>
-      <a href="#" class="nav__link">About us</a>
-      <a href="#" class="nav__link">Contact</a>
+      <a href="./about" class="nav__link">About us</a>
+      <a href="./contact/" class="nav__link">Contact</a>
       <a href="#" class="nav__link nav__link--logo">
       </a>
-      <a href="#" class="nav__link">Products</a>
-      <a href="#" class="nav__link">Size guide</a>
+      <a href="#" id="products_nav_header_d" class="nav__link">Products</a>
+      <a href="#" class="nav__link size-guide-link">Size guide</a>
       <a href="#" class="nav__link" id="cart-btn">
         <button id="cart-notification" class="empty-cart" data-cart="0">
           <img src="./images/icons/cart_icon.png" alt=""> Cart
         </button>
       </a>
     </nav>
+    <!-- END Menu Desktop-->
 
+    <!-- Menu Mobile-->
     <nav class="nav--mobile">
       <div class="nav-mobile__icon js-menu"></div>
     </nav>
-
     <div class="menu">
       <a href="#" class="menu__item">Home</a>
       <a href="#" class="menu__item">About us</a>
       <a href="#" class="menu__item">Contact</a>
       <a href="#" class="menu__item">Products</a>
-      <a href="#" class="menu__item">Size guide</a>
+      <a href="#" class="menu__item size-guide-link">Size guide</a>
       <button data-cart="2" class="menu__button">
         <img src="./images/icons/cart_icon.png" alt=""> Cart
       </button>
     </div>
+    <!-- END Mobile menu-->
 
+    <!-- SLIDER -->
     <h1 class="header__title">
       <div class="header__title--small">Made in Dalmatia</div>
       <img src="./images/header.png" alt="">
@@ -84,25 +91,35 @@
     <div class="slider slider--header">
       <!--<div style="background-image: url('./images/header/slide--third.png')"></div> -->
       <ul class="cb-slideshow">
-        <li><span></span></li>
-        <li><span></span></li>
-        <li><span></span></li>
-        <li><span></span></li>
-        <li><span></span></li>
-        <li><span></span></li>
+        <li>
+          <span></span>
+        </li>
+        <li>
+          <span></span>
+        </li>
+        <li>
+          <span></span>
+        </li>
+        <li>
+          <span></span>
+        </li>
+        <li>
+          <span></span>
+        </li>
+        <li>
+          <span></span>
+        </li>
       </ul>
 
     </div>
+    <!-- END SLIDER-->
   </header>
 
   <section class="container header__hero">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Step into Diocletia's world of colors and create your very own custom shoes by choosing colors.
   </section>
 
-  <section class="container cards cards--text">
+  <section id="choose-model" class="container cards cards--text">
     <article class="card" id="model-I-href">
       <div class="card__text">
         Model I
@@ -230,10 +247,10 @@
   <footer class="footer">
     <div class="container footer__items">
       <a href="" class="footer__item footer__item--empty"></a>
-      <a href="#" class="footer__item">about us</a>
-      <a href="#" class="footer__item">products</a>
-      <a href="#" class="footer__item">size guide</a>
-      <a href="#" class="footer__item">terms & conditions</a>
+      <a href="#" id="about_nav_footer" class="footer__item">about us</a>
+      <a href="#" id="products_nav_footer" class="footer__item">products</a>
+      <a href="#" class="footer__item size-guide-link">size guide</a>
+      <a href="#" id="terms_nav_footer" class="footer__item">terms & conditions</a>
       <a href="" class="footer__item footer__item--empty"></a>
     </div>
     <div class="footer__information">
@@ -241,7 +258,7 @@
     </div>
   </footer>
 
-  <!-- MODAL -->
+  <!-- MODAL CART -->
   <div class="shadow shadow--cart modal modal-hidden" id="cart-modal">
     <div class="container cart">
       <div class="cart__controls">
@@ -249,17 +266,23 @@
         <a href="#" class="cart__close"></a>
       </div>
       <div class="card__body">
-          <table class="cart__table" id="cart-table">
-            </table>
+        <table class="cart__table" id="cart-table">
+        </table>
         <div class="cart__buttons">
           <div>a</div>
           <div>a</div>
-          <div><button>Send Request</button></div>
+          <div>
+            <button>Send Request</button>
+          </div>
           <div id="paypal-button"></div>
-        </div>           
+        </div>
       </div>
+    </div>
   </div>
-  <script src="./js/UI.js"></script>
+
+
+    <div class="shadow modal modal-hidden" id="size-modal"></div>
+    <script src="./js/UI.js"></script>
 </body>
 
 </html>

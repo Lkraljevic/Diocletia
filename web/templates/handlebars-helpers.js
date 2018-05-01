@@ -46,9 +46,18 @@ Handlebars.registerHelper('itemSize', function() {
 });
 
 
+Handlebars.registerHelper('loadSVG', function(index) {
+    var svgString;
+    if(index ==1 ) svgString = sizemodel1;
+    else if(index == 2 ) svgString = sizemodel2;
+    else if(index == 3 ) svgString = sizemodel3;
+    return new Handlebars.SafeString(svgString);
+});
 
 
 
+
+/* HELPERS */
 function colorParser(colors_code) {
     if (!Array.isArray(colors_code))
     colors_code = [colors_code];
