@@ -1,0 +1,13 @@
+{{!-- Render all models except active one --}}
+{{!-- {name,hash,code}--}}
+
+{{#each models}}
+<article class="card card-model" data-hash="{{hash}}">
+    <div class="card__text">
+        {{name}}
+        <a>more</a>
+    </div>
+    <img class="card__image" src="../images/shoes/{{code}}.png" alt="">
+    <img src="../images/shoes/{{code}}-hover.png" alt="" class="card-image--hover">
+    </article>
+{{/each}}

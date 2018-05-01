@@ -1,0 +1,56 @@
+<table class="cart__table">
+    <tr class="cart_header">
+        <th>My Cart ({{items.length}})</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Total</th>
+    </tr>
+
+    {{#each items}}
+    <tr class="cart__item">
+        <td>
+            <div class="cart-item__image">
+                {{modelpreview item}}
+            </div>
+            <div class="cart-item__content">
+                <div class="cart__model">
+                    {{n}}
+                </div>
+                <div class="cart__size">
+                    Size: 40
+                </div>
+                <a class="cart__remove" href="#" onclick="cart.removeItem('{{id}}')">
+                    Remove
+                </a>
+            </div>
+        </td>
+        <td>{{p.price}}€</td>
+        <td>
+            <input type="number" min="1" max="100" value="{{q}}" onchange="cart.updateItem('{{id}}',{q:this.value})">
+        </td>
+        <td>{{modelTotal}}€</td>
+    </tr>
+    {{/each}}
+    
+    <tr class="cart__stotal">
+        <td></td>
+        <td class="cart__subtitle">Subtotal:
+        </td>
+        <td></td>
+        <td>{{amount.total}}€</td>
+    </tr>
+    <tr class="cart__details">
+        <td class="cart__space-left">Shipping details</td>
+        <td class="cart__space">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Enter shipping address" class="cart__textarea"></textarea>
+        </td>
+    </tr>
+    <tr class="cart__total">
+        <td></td>
+        <td>TOTAL:
+        </td>
+        <td></td>
+        <td>{{amount.total}}€</td>
+    </tr>
+
+</table>
