@@ -1,0 +1,131 @@
+
+/* SIZE GUIDE */
+.size-guide__button--first-one {
+    left: 10%;
+}
+.size-guide__button--second-two {
+    top: 70%;
+    right: 40%;
+}
+.size-guide__button--second-three {
+    bottom: 36%;
+    right: 30%;
+}
+.size-guide__button--second-four {
+    top: 40%;
+    right: 50%;
+}
+.size-guide__button--second-five {
+    top: 33%;
+    right: 14%;
+}
+.size-guide__button--third-two {
+    position: absolute;
+    top: 47%;
+    left: 68%;
+}
+.size-guide__button--third-three {
+    top: 43%;
+    left: 55%;
+}
+.size-guide__button--third-four {
+    top: 46%;
+    left: 15%;
+}
+.size-guide__button--third-five {
+    top: 36%;
+    left: 17%;
+}
+
+@media screen and (max-width:710px){
+
+    .size-guide__button--first-one {
+        left: 0%;
+    }
+    .size-guide__button--second-two {
+        top: 73%;
+        left: 47%;
+    }
+    .size-guide__button--second-three {
+        bottom: 209px;
+        right: 18%;
+    }
+    .size-guide__button--second-four {
+        bottom: 280px;
+        right: 0px;
+    }
+    .size-guide__button--second-five {
+        top: 27%;
+        right: 7px;
+    }
+    .size-guide__button--third-two {
+        position: absolute;
+        top: 47%;
+        left: 72%;
+    }
+    .size-guide__button--third-three {
+        top: 56%;
+        left: 25%;
+    }
+    .size-guide__button--third-four {
+        top: 46%;
+        left: 6%;
+    }
+    .size-guide__button--third-five {
+        top: 31%;
+        left: 8%;
+    }
+
+}
+/* END SIZE GUIDE */
+
+div#model {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 40px;
+}
+.model-parent {
+    position: relative;
+    background-image: url("../images/wireframe.png");
+    background-repeat: no-repeat;
+    -moz-background-size: contain;
+    background-size: contain;
+    background-position: center;
+}
+.model-parent svg {
+    width: auto;
+    height: auto;
+}
+.item__colors {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 10px 50px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: inherit;
+    height: auto;
+}
+.item__color {
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+.item__view {
+    background: none;
+}
+.item__view:before {
+    display: none;
+}
+
+@media screen and (max-width:710px){
+
+    .item__colors {
+        padding: 0;
+    }
+    .item__color {
+        min-width: 20px;
+        min-height: 20px;
+    }
+
+}
