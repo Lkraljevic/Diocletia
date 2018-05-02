@@ -1,19 +1,30 @@
+/* GENERAL */
+path {
+  stroke-width: 2.5;
+}
+
+
 svg #root:hover .strips path {
   opacity: 0.7;
+  transition: .4s;
 }
 svg.focused .strips path {
   opacity: 0.7;
+  transition: .4s;
 }
 svg.focused .strips.active path {
   opacity: 1 !important;
+  transition: .4s;
 }
 
 svg .strips:hover > path {
   opacity: 1 !important;
+  transition: .4s;
 }
 .strips {
   cursor: pointer;
 }
+
 
 /* 1) ----------------- RED --------------- */
 .red path.c1 {

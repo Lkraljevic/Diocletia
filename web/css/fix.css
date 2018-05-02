@@ -58,8 +58,12 @@ body header {
 }
 
 section:nth-of-type(1) {
-        background-image: url(../images/pattern.png);
+    background-image: url(../images/pattern.jpg);
     position: relative;
+}
+
+.nav__link {
+    outline: none;
 }
 
 /* CART */
@@ -82,3 +86,5 @@ section:nth-of-type(1) {
     justify-content: center;
     flex-direction: column;
 }
+
+
