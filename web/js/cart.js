@@ -11,7 +11,11 @@ function Cart() {
         shipping: 0
       }
     };
-  
+    this.discount = {
+      code: '',
+      value: 0
+    },
+    
     this.addItem = function(model, size, quantity) {
   
       var item = {
@@ -241,7 +245,19 @@ function Cart() {
     return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
   }
   
-    this.currentCart = this.loadCart();
+  this.applyDicount = function(discount) {
+    
+    if(!discount.value || !discount.code) return;
+    this.discount = discount;
+    
+    
+      this.items.forEach(function(item){
+        item.p.price += Number(this.discount)
+      });
+
+  }
+
+  this.currentCart = this.loadCart();
     
 }
 
@@ -259,7 +275,7 @@ window.addEventListener("load", function(){
 
     client: {
         sandbox:    'AYZxI2ZTNoLuUiJS8mwsaHtRg55xFZiYwE4DabAU8YaWhH3TSLbBy350Z6juZOwyNntmMweZ-iomFHBJ',
-        production: 'AcitziMGjz82Z9ZnqBhZ5OzuYzkxY3YCge1Ro46HdPpnxT4tnXFGfatYHpnbFE35TMZmFurOv0vZpL9D'
+        production: 'AQfw7Tgyco8BlzVhCXTmhxrs_93hYpR4XQHrV5P9DB8lMd_YcazupdzC2XCT3H-0_jonZZGcc7-TeNyn'
     },
     style: {
       label: 'buynow',
@@ -299,3 +315,13 @@ window.addEventListener("load", function(){
 
 
 });
+
+function validateCoupon(code) {
+  var coupons = {
+     'Test': -200
+   }
+   return {
+     value: coupons[coude],
+     code: code
+   }
+ }

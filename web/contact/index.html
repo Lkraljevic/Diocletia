@@ -17,7 +17,7 @@
   <script type="text/javascript" src="../js/models/m2.js"></script>
   <script type="text/javascript" src="../js/models/m3.js"></script>
   <script type="text/javascript" src="../js/models/m4.js"></script>
-  <script type="text/javascript" src="./js/size-guide/size-models.js"></script>
+  <script type="text/javascript" src="../js/size-guide/size-models.js"></script>
 
   <!-- TEMPLATES -->
   <script type="text/javascript" src="../js/handlebars.runtime.js"></script>
@@ -50,17 +50,15 @@
   <header>
     <!-- Menu Desktop-->
     <nav class="container nav--desktop sticky">
-      <!-- .sticky-->
-      <a href="../" class="nav__link">Home</a>
-      <a href="../about" class="nav__link">About us</a>
-      <a href="../contact/" class="nav__link">Contact</a>
-      <a href="#" class="nav__link nav__link--logo">
-      </a>
-      <a href="#" id="products_nav_header_d" class="nav__link">Products</a>
-      <a href="#" class="nav__link size-guide-link">Size guide</a>
-      <a href="#" class="nav__link" id="cart-btn">
+      <a class="nav-home nav__link">Home</a>
+      <a class="nav-about nav__link">About us</a>
+      <a class="nav-contact nav__link">Contact</a>
+      <a class="nav__link nav__link--logo"></a>
+      <a id="products_nav_header_d" class="nav__link">Products</a>
+      <a class="nav__link size-guide-link">Size guide</a>
+      <a class="nav__link" id="cart-btn">
         <button id="cart-notification" class="empty-cart" data-cart="0">
-          <img src="../images/icons/cart_icon.png" alt=""> Cart
+          <img src="./images/icons/cart_icon.png" alt=""> Cart
         </button>
       </a>
     </nav>

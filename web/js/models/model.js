@@ -151,7 +151,7 @@ M1Config = {
     code: 'M1',
     nr_strips: 7,
     sale_price: {
-      price: 400,
+      price: 65,
       currency: 'EUR'
     },
     name: 'Model I',
@@ -175,7 +175,7 @@ M2Config = {
     code: 'M2',
     nr_strips: 4,
     sale_price: {
-      price: 400,
+      price: 65,
       currency: 'EUR'
     },
     name: 'Model II',
@@ -199,7 +199,7 @@ M3Config = {
   code: 'M3',
   nr_strips: 9,
   sale_price: {
-    price: 400,
+    price: 65,
     currency: 'EUR'
   },
   name: 'Model III',
@@ -223,7 +223,7 @@ M4Config = {
   code: 'M4',
   nr_strips: 6,
   sale_price: {
-    price: 400,
+    price: 65,
     currency: 'EUR'
   },
   name: 'Model IV',

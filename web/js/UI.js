@@ -1,3 +1,6 @@
+const basePath = '/web';
+
+
 /* Mobile navigation @Dražen Barić */
 var clicked = false;
 var icon = document.getElementsByClassName('nav-mobile__icon')[0];
@@ -122,39 +125,39 @@ if (M4link)
 /* NAVIGATION */
 
 /* TO Products JUST SCROLL */
-var productsNavFooter = document.getElementById('products_nav_footer');
-var productsNavHeaderD = document.getElementById('products_nav_header_d');
-var productsNavHeaderM = document.getElementById('products_nav_header_m');
-if (productsNavHeaderD) {
-    productsNavHeaderD.onclick = function () {
-        var target = document.getElementById('choose-model');
-        if (target) {
-            var scroll = new SmoothScroll();
-            scroll.init({ offset: 0 })
-            scroll.animateScroll(target);
-        }
-    }
-}
-if (productsNavHeaderM) {
-    productsNavHeaderM.onclick = function () {
-        var target = document.getElementById('choose-model');
-        if (target) {
-            var scroll = new SmoothScroll();
-            scroll.init({ offset: 0 })
-            scroll.animateScroll(target);
-        }
-    }
-}
-if (productsNavFooter) {
-    productsNavFooter.onclick = function () {
-        var target = document.getElementById('choose-model');
-        if (target) {
-            var scroll = new SmoothScroll();
-            scroll.init({ offset: 0 })
-            scroll.animateScroll(target);
-        }
-    }
-}
+// var productsNavFooter = document.getElementById('products_nav_footer');
+// var productsNavHeaderD = document.getElementById('products_nav_header_d');
+// var productsNavHeaderM = document.getElementById('products_nav_header_m');
+// if (productsNavHeaderD) {
+//     productsNavHeaderD.onclick = function () {
+//         var target = document.getElementById('choose-model');
+//         if (target) {
+//             var scroll = new SmoothScroll();
+//             scroll.init({ offset: 0 })
+//             scroll.animateScroll(target);
+//         }
+//     }
+// }
+// if (productsNavHeaderM) {
+//     productsNavHeaderM.onclick = function () {
+//         var target = document.getElementById('choose-model');
+//         if (target) {
+//             var scroll = new SmoothScroll();
+//             scroll.init({ offset: 0 })
+//             scroll.animateScroll(target);
+//         }
+//     }
+// }
+// if (productsNavFooter) {
+//     productsNavFooter.onclick = function () {
+//         var target = document.getElementById('choose-model');
+//         if (target) {
+//             var scroll = new SmoothScroll();
+//             scroll.init({ offset: 0 })
+//             scroll.animateScroll(target);
+//         }
+//     }
+// }
 
 /* Size guide */
 
@@ -188,6 +191,40 @@ function showSizeGuide() {
         size_modal.classList.remove('modal-hidden');
 }
 
+
+
+
+function goToLocation(location) {
+    return function() {
+        if(window.location.pathname != basePath+location)
+            window.location = basePath+location;
+    }
+}
+
+function onClick(elementSelector, clickHandlert) {
+    document.querySelectorAll(elementSelector).forEach(function(el){
+        el.onclick = clickHandlert;
+    });
+}
+
+
+
+// MENU 
+onClick('.link-home', goToLocation('/'));
+onClick('.link-about', goToLocation('/about/'));
+onClick('.link-contact', goToLocation('/contact/'));
+
+
+function scrollToProducts() {
+    var target = document.getElementById('choose-model');
+        if (target) {
+            var scroll = new SmoothScroll();
+            scroll.init({ offset: 0 })
+            scroll.animateScroll(target);
+        }
+}
+
+onClick('.link-products', scrollToProducts);
 
 
 
