@@ -190,8 +190,8 @@
     </div>
   </footer>
 
-  <!-- MODAL CART -->
-  <div class="shadow shadow--cart modal modal-hidden" id="cart-modal">
+   <!-- MODAL CART -->
+   <div class="shadow shadow--cart modal modal-hidden" id="cart-modal">
     <div class="container cart">
       <div class="cart__controls">
         <a href="#" class="cart__back">Continue Shopping</a>
@@ -201,17 +201,26 @@
         <table class="cart__table" id="cart-table">
         </table>
         <div class="cart__buttons">
-          <div>a</div>
-          <div>a</div>
+          <div class="discount-form">
+            <div>
+              <input id="promo-code" name="promocode" class="promo-code" type="text" placeholder="Enter a promo code" autocomplete="off">
+              <button class="apply-coupon">Apply</button>
+            </div>
+          </div>
           <div>
             <button>Send Request</button>
           </div>
-          <div id="paypal-button"></div>
+          <div><div id="paypal-button"></div></div>
         </div>
       </div>
     </div>
   </div>
+  <!-- END MODAL CART-->
+
+  <!-- MODAL GUIDE-->
   <div class="shadow modal modal-hidden" id="size-modal"></div>
+<!--END MODAL GUIDE-->
+
     <script src="../js/UI.js"></script>
 </body>
 

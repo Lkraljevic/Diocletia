@@ -9,35 +9,31 @@
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400,500|Alegreya+Sans:300i,400" rel="stylesheet">
   <title>Homepage</title>
 
-  <!-- PAY PAL-->
-  <script src="https://www.paypalobjects.com/api/checkout.js"></script>
-
-  <!-- MODELS -->
-  <script type="text/javascript" src="./js/models/m1.js"></script>
-  <script type="text/javascript" src="./js/models/m2.js"></script>
-  <script type="text/javascript" src="./js/models/m3.js"></script>
-  <script type="text/javascript" src="./js/models/m4.js"></script>
-  <script type="text/javascript" src="./js/size-guide/size-models.js"></script>
-
-  <!-- TEMPLATES -->
-  <script type="text/javascript" src="./js/handlebars.runtime.js"></script>
-  <script type="text/javascript" src="./templates/handlebars-helpers.js"></script>
-  <script type="text/javascript" src="./templates/model-list.js"></script>
-  <script type="text/javascript" src="./templates/cart.js"></script>
-  <script type="text/javascript" src="./templates/size-guide.js"></script>
-
-  <!-- APP-->
-  <!-- <script type="text/javascript" src="./js/models/model.js"></script> -->
-  <script type="text/javascript" src="./js/cart.js"></script>
-
+  <!-- CSS -->
   <link rel="stylesheet" href="./css/fix.css">
   <link rel="stylesheet" href="./css/leather.css">
   <link rel="stylesheet" href="./css/sticky-header.css">
   <link rel="stylesheet" href="./css/cb-slideshow.css">
   <link rel="stylesheet" href="./css/style-new.css">
 
-
-
+  <!-- ********* SCRIPTS  ********** -->
+  <!-- PAY PAL-->
+  <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+  <!-- MODELS -->
+  <script type="text/javascript" src="./js/models/m1.js"></script>
+  <script type="text/javascript" src="./js/models/m2.js"></script>
+  <script type="text/javascript" src="./js/models/m3.js"></script>
+  <script type="text/javascript" src="./js/models/m4.js"></script>
+  <script type="text/javascript" src="./js/size-guide/size-models.js"></script>
+  <!-- TEMPLATES -->
+  <script type="text/javascript" src="./js/handlebars.runtime.js"></script>
+  <script type="text/javascript" src="./templates/handlebars-helpers.js"></script>
+  <script type="text/javascript" src="./templates/model-list.js"></script>
+  <script type="text/javascript" src="./templates/cart.js"></script>
+  <script type="text/javascript" src="./templates/size-guide.js"></script>
+  <!-- APP-->
+  <!-- <script type="text/javascript" src="./js/models/model.js"></script> -->
+  <script type="text/javascript" src="./js/cart.js"></script>
   <!-- Global SCRIPTs-->
   <script type="text/javascript" src="./js/smooth-scroll.js"></script>
 
@@ -71,11 +67,11 @@
       <div class="nav-mobile__icon js-menu"></div>
     </nav>
     <div class="menu">
-      <a href="#" class="menu__item">Home</a>
-      <a href="#" class="menu__item">About us</a>
-      <a href="#" class="menu__item">Contact</a>
+      <a class="link-home menu__item">Home</a>
+      <a class="link-about menu__item">About us</a>
+      <a class="link-contact menu__item">Contact</a>
       <a class="link-products menu__item">Products</a>
-      <a href="#" class="menu__item size-guide-link">Size guide</a>
+      <a class="link-sizeguide menu__item size-guide-link">Size guide</a>
       <button data-cart="2" class="menu__button">
         <img src="./images/icons/cart_icon.png" alt=""> Cart
       </button>
@@ -90,26 +86,13 @@
     </h1>
     <div class="header__controls"></div>
     <div class="slider slider--header">
-      <!--<div style="background-image: url('./images/header/slide--third.png')"></div> -->
       <ul class="cb-slideshow">
-        <li>
-          <span></span>
-        </li>
-        <li>
-          <span></span>
-        </li>
-        <li>
-          <span></span>
-        </li>
-        <li>
-          <span></span>
-        </li>
-        <li>
-          <span></span>
-        </li>
-        <li>
-          <span></span>
-        </li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
       </ul>
 
     </div>
@@ -126,7 +109,7 @@
         Model I
         <a href="#">more</a>
       </div>
-      <img class="card__image" srcset="./images/shoes/M1@2x.png 2x, ./images/shoes/M1@1x.png 1x" src="./images/shoes/M1@1x.png" alt="">
+      <img class="card__image" srcset="./images/shoes/M1@2x.png 2x, ./images/shoes/M1@1x.png 1x" src="./images/shoes/M1@1x.png" alt="model-I">
       <img src="./images/shoes/M1-hover.png" alt="" class="card-image--hover">
     </article>
     <article class="card" id="model-II-href">
@@ -134,30 +117,30 @@
         Model II
         <a href="#">more</a>
       </div>
-      <img class="card__image" src="./images/shoes/M2.png" alt="">
-      <img src="./images/shoes/M2-hover.png" alt="" class="card-image--hover">
+      <img class="card__image" srcset="./images/shoes/M2@2x.png 2x, ./images/shoes/M2@1x.png 1x" src="./images/shoes/M2@1x.png" alt="model-II">
+      <img class="card-image--hover" srcset="./images/shoes/M2-hover@2x.png 2x, ./images/shoes/M2-hover@1x.png 1x" src="./images/shoes/M2@1x.png" alt="model-II">
     </article>
     <article class="card" id="model-III-href">
       <div class="card__text">
         Model III
         <a href="#">more</a>
       </div>
-      <img class="card__image" src="./images/shoes/M3.png" alt="">
-      <img src="./images/shoes/M3-hover.png" alt="" class="card-image--hover">
+      <img class="card__image" srcset="./images/shoes/M3@2x.png 2x, ./images/shoes/M3@1x.png 1x" src="./images/shoes/M3@1x.png" alt="model-III">
+      <img class="card-image--hover" srcset="./images/shoes/M3-hover@2x.png 2x, ./images/shoes/M3-hover@1x.png 1x" src="./images/shoes/M3@1x.png" alt="model-III">
     </article>
     <article class="card" id="model-IV-href">
       <div class="card__text">
         Model IV
         <a href="#">more</a>
       </div>
-      <img class="card__image" src="./images/shoes/M4.png" alt="">
-      <img src="./images/shoes/M4-hover.png" alt="" class="card-image--hover">
+      <img class="card__image" srcset="./images/shoes/M4@2x.png 2x, ./images/shoes/M4@1x.png 1x" src="./images/shoes/M4@1x.png" alt="model-IV">
+      <img class="card-image--hover" srcset="./images/shoes/M4-hover@2x.png 2x, ./images/shoes/M4-hover@1x.png 1x" src="./images/shoes/M4@1x.png" alt="model-IV">
     </article>
   </section>
 
   <section class="slider-wrapper">
     <div class="slider slider--small">
-      <div style="background-image: url('./images/header/slide--2.png')"></div>
+      <div style="background-image: url('./images/header/slide--2.jpg')"></div>
     </div>
     <a class="slider__icon slider__icon--left"></a>
     <a class="slider__icon slider__icon--right"></a>
@@ -272,7 +255,7 @@
         <div class="cart__buttons">
           <div class="discount-form">
             <div>
-              <input id="promo-code" class="promo-code" type="text" placeholder="Enter a promo code">
+              <input id="promo-code" name="promocode" class="promo-code" type="text" placeholder="Enter a promo code" autocomplete="off">
               <button class="apply-coupon">Apply</button>
             </div>
           </div>
@@ -284,9 +267,11 @@
       </div>
     </div>
   </div>
+  <!-- END MODAL CART-->
 
 <!-- MODAL GUIDE-->
   <div class="shadow modal modal-hidden" id="size-modal"></div>
+<!--END MODAL GUIDE-->
 
   <script src="./js/UI.js"></script>
 </body>

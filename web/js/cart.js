@@ -15,7 +15,8 @@ function Cart() {
     this.discount = {
       code: '',
       value: 0,
-      quantity: 0
+      quantity: 0,
+      totalDiscount: 0
     },
     
     this.addItem = function(model, size, quantity) {
@@ -48,7 +49,8 @@ function Cart() {
       this.items.set(item_id,item);
       console.log(this.items);
       this.updateTotal();
-      this.updateDOM();
+      this.updateDiscount();
+      //this.updateDOM();
     }
   
     this.updateTotal = function() {
@@ -56,7 +58,7 @@ function Cart() {
       var subtotal = 0;
       this.items.forEach(function(item){
         subtotal += item.p.price * Number(item.q);
-        subtotal = parseFloat(subtotal).toFixed(2);
+        subtotal = Number(parseFloat(subtotal).toFixed(2));
       });
 
       this.amount.details.subtotal = subtotal; 
@@ -69,10 +71,14 @@ function Cart() {
     this.updateDiscount = function(discount) {
     
       var that = this;
-      if(!discount.value || !discount.code || !discount.quantity) return;
+      if(!discount)
+        discount = this.discount;
+      
+        if(!discount.value || !discount.code || !discount.quantity) return;
         
       this.discount = {
-        value: Math.min(this.items.size,discount.quantity)*discount.value,
+        totalDiscount: Math.min(this.items.size,discount.quantity)*discount.value,
+        value: discount.value,
         code: discount.code,
         quantity: discount.quantity
       }
@@ -345,4 +351,22 @@ window.addEventListener("load", function(){
   }, '#paypal-button');
 
 
+  cart.updateDiscount({
+    value: -25,
+    quantity: 99,
+    code: 'Summer is here!'
+  })
+
 });
+
+
+
+
+
+// Create real cart 
+// Discount struct 
+// {
+//   value: 21
+//   type: model.code||'all',
+//   quantity: ''
+// }
