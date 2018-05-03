@@ -11,9 +11,11 @@ function Cart() {
         shipping: 0
       }
     };
+
     this.discount = {
       code: '',
-      value: 0
+      value: 0,
+      quantity: 0
     },
     
     this.addItem = function(model, size, quantity) {
@@ -54,13 +56,31 @@ function Cart() {
       var subtotal = 0;
       this.items.forEach(function(item){
         subtotal += item.p.price * Number(item.q);
-        subtotal = Number(subtotal.toPrecision(2));
+        subtotal = parseFloat(subtotal).toFixed(2);
       });
+
       this.amount.details.subtotal = subtotal; 
       this.amount.total =  this.amount.details.subtotal + this.amount.details.tax + this.amount.details.shipping;
-  
+      
+
       this.saveCart();
     }
+
+    this.updateDiscount = function(discount) {
+    
+      var that = this;
+      if(!discount.value || !discount.code || !discount.quantity) return;
+        
+      this.discount = {
+        value: Math.min(this.items.size,discount.quantity)*discount.value,
+        code: discount.code,
+        quantity: discount.quantity
+      }
+
+      this.updateDOM();
+  
+    }
+
   
     // Save Object to localstorage
     this.saveCart = function() {
@@ -193,16 +213,38 @@ function Cart() {
       //       item_list: { items: cart.itemsToString() }
       //     }]
       // }
+      
+      var total = parseFloat(this.amount.total + this.discount.value).toFixed(2);
+      var subtotal = parseFloat(this.amount.details.subtotal + this.discount.value).toFixed(2)
+      var items = this.itemsToString();
+      if(this.discount.value) 
+        items.push({
+          name: 'Promo',
+          quantity: 1,
+          currency: this.amount.currency,
+          price: this.discount.value,
+          description: 'Promo',
+          sku: this.discount.code
+        })
       var payment = {
           transactions: [{
-            amount: this.amount,
+            amount: {
+              total: total,
+              currency: this.amount.currency,
+              details: {
+                subtotal: subtotal,
+                tax: this.amount.details.tax,
+                shipping: this.amount.details.shipping
+              }
+            },
             item_list: {
-              items: this.itemsToString()
+              items: items
             },
             //description: this.orderToString(),
             //soft_descriptor: 'DIOCLETIA_UNIQUE',
           }]
       }
+      
   
       return payment;
     }
@@ -230,7 +272,7 @@ function Cart() {
       });
 
       // HARD CORE SELECTOR
-      var listHTML = Handlebars.templates["cart"]({items, amount: this.amount });
+      var listHTML = Handlebars.templates["cart"]({items, amount: this.amount, discount: this.discount });
        document.getElementById('cart-table').innerHTML = listHTML;
       
     }
@@ -245,17 +287,6 @@ function Cart() {
     return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
   }
   
-  this.applyDicount = function(discount) {
-    
-    if(!discount.value || !discount.code) return;
-    this.discount = discount;
-    
-    
-      this.items.forEach(function(item){
-        item.p.price += Number(this.discount)
-      });
-
-  }
 
   this.currentCart = this.loadCart();
     
@@ -315,13 +346,3 @@ window.addEventListener("load", function(){
 
 
 });
-
-function validateCoupon(code) {
-  var coupons = {
-     'Test': -200
-   }
-   return {
-     value: coupons[coude],
-     code: code
-   }
- }

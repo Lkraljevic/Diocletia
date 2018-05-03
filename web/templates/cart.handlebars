@@ -37,8 +37,22 @@
         <td class="cart__subtitle">Subtotal:
         </td>
         <td></td>
-        <td>{{amount.total}}€</td>
+        <td>{{this.amount.details.subtotal}}€</td>
     </tr>
+    
+    {{#if discount.value}}
+    <tr class="cart__stotal">
+        <td>
+            Promo: {{discount.code}}
+        </td>
+        <td class="cart__subtitle">Discount:
+        </td>
+        <td>
+        </td>
+        <td>{{discount.value}}€</td>
+    </tr>
+    {{/if}}
+
     <tr class="cart__details">
         <td class="cart__space-left">Shipping details</td>
         <td class="cart__space">
@@ -47,8 +61,9 @@
     </tr>
     <tr class="cart__total">
         <td></td>
-        <td>TOTAL:
+        <td>
         </td>
-        <td></td>
-        <td>{{amount.total}}€</td>
+        <td>TOTAL:</td>
+        <td>{{ calcTotal amount.total discount.value}}€</td>
+        
     </tr>

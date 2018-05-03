@@ -55,6 +55,10 @@ Handlebars.registerHelper('loadSVG', function(index) {
 });
 
 
+Handlebars.registerHelper('calcTotal', function(total, discount ) {
+    return parseFloat(total+discount).toFixed(2);
+});
+
 
 
 /* HELPERS */

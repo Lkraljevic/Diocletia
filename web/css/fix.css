@@ -67,12 +67,47 @@ section:nth-of-type(1) {
 }
 
 /* CART */
-
-.cart__buttons div {
+.card__body .cart__buttons {
+    
+}
+.cart__buttons > div {
     padding-left: 5px;
     padding-right: 5px;
+    padding-bottom: 10px;
+}
+.discount-form {
+    flex-grow: 2;
+    justify-content: center;
 }
 
+.discount-form >div {
+    display: flex;
+    max-width: 310px;
+}
+.promo-code {
+    flex-grow: 2;
+    border: none;
+    color: rgba(255,255,255,.6);
+    padding-right: 0;
+    padding-left: 0;
+}
+.apply-coupon {
+    border: 1px solid rgba(255,255,255,.6);
+    color: rgba(255,255,255,.6);
+    padding: 0;
+}
+input.promo-code::-webkit-input-placeholder {
+    color: rgba(255,255,255,.6);
+}
+input.promo-code:-moz-placeholder,input.promo-code::-moz-placeholder {
+    color: rgba(255,255,255,.6);
+}
+input.promo-code:-ms-input-placeholder,input.promo-code::-ms-input-placeholder {
+    color: rgba(255,255,255,.6);
+}
+input.promo-code::placeholder{
+    color: rgba(255,255,255,.6);
+}
 
 /* Size guide */
 

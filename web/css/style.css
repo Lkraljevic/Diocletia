@@ -1838,7 +1838,7 @@ textarea{
         -webkit-flex-basis:100%;
         -ms-flex-preferred-size:100%;
         flex-basis:100%;
-        height:100px
+        height:120px
     }
 }
 .cart__table tr td:not(:first-of-type){
@@ -1993,10 +1993,10 @@ textarea{
     flex-wrap:wrap
 }
 .cart__buttons>div{
-    -webkit-flex-basis:25%;
+    /* -webkit-flex-basis:25%;
     -ms-flex-preferred-size:25%;
     flex-basis:25%;
-    min-width:200px
+    min-width:200px */
 }
 .slider--header{
     height:-webkit-calc(100vh - 30px);

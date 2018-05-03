@@ -228,4 +228,24 @@ onClick('.link-products', scrollToProducts);
 
 
 
+onClick('.apply-coupon', function(){
+    var codeInput = document.getElementById('promo-code');
+    if(!cart || !codeInput) return;
+    cart.updateDiscount(validateCoupon(codeInput.value));
+});
 
+
+
+function validateCoupon(code) {
+    var coupons = {
+       'Test': {
+           quantity:1,
+           value: -89.9
+        },
+     }
+     return {
+       value: coupons[code].value,
+       quantity:coupons[code].quantity,
+       code: code
+     }
+   }
