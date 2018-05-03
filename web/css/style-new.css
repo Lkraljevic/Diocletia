@@ -86,12 +86,28 @@ div#model {
 }
 .model-parent {
     position: relative;
-    background-image: url("../images/wireframe.png");
+    /* background-image: url("../images/wireframe.png");
     background-repeat: no-repeat;
     -moz-background-size: contain;
     background-size: contain;
+    background-position: center; */
+    background: none;
+}
+.model-parent svg.M2, .model-parent svg.M3 {
+    background-image: url("../images/wireframe2.png");
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+    background-size: cover;
     background-position: center;
 }
+.model-parent svg.M1, .model-parent svg.M4 {
+    background-image: url("../images/wireframe.png");
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
 .model-parent svg {
     width: auto;
     height: auto;

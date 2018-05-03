@@ -318,7 +318,8 @@ nav{
     top:-100vh;
     left:0;
     right:0;
-    height:100%;
+    /* height:100%; */
+    height: 100vh;
     display:-webkit-box;
     display:-webkit-flex;
     display:-moz-box;
@@ -1272,7 +1273,7 @@ textarea{
     -moz-box-direction:normal;
     -ms-flex-direction:column;
     flex-direction:column;
-    padding-bottom:50px;
+    padding-bottom:20px;
     position:relative
 }
 .guide-section:before{
@@ -1305,7 +1306,7 @@ textarea{
         -moz-box-orient:horizontal
     }
     .guide-section{
-        padding-top:70px
+        padding-top:30px
     }
     .guide-section .guide__image .guide__title{
         padding-left:90px;
@@ -1352,8 +1353,8 @@ textarea{
     -moz-box-direction:normal;
     -ms-flex-direction:column;
     flex-direction:column;
-    padding-top:50px;
-    padding-bottom:50px;
+    /* padding-top:50px;
+    padding-bottom:50px; */
     position:relative;
     -webkit-box-flex:1;
     -webkit-flex:1;
@@ -1403,6 +1404,7 @@ textarea{
 .guide__text{
     font-size:1em
 }
+/* 
 .size-guide__button{
     display:inline-block;
     width:60px;
@@ -1503,27 +1505,28 @@ textarea{
         bottom:auto;
         top:25%
     }
-}
-.guide__parts,.size-guide__button--third-five,.size-guide__button--third-four,.size-guide__button--third-three,.size-guide__button--third-two{
+} */
+/* .guide__parts,.size-guide__button--third-five,.size-guide__button--third-four,.size-guide__button--third-three,.size-guide__button--third-two{
     position:absolute
-}
+} */
 .guide__parts{
-    top:0;
-    font-style:italic;
-    opacity:.6;
-    right:0;
-    color:#d3ac46
+    font-style: italic;
+    opacity: .6;
+    color: #d3ac46;
+    font-size: 1.6em;
+    text-align: center;
+    padding-bottom: 30px;
 }
-.guide__parts--second{
+/* .guide__parts--second{
     left:25%;
     top:50px
 }
 @media screen and (min-width:1024px){
-    .guide__parts--second{
+     .guide__parts--second{
         top:0;
         left:auto;
         right:50%
-    }
+    } 
 }
 @media screen and (min-width:1440px){
     .guide__parts--second{
@@ -1544,7 +1547,7 @@ textarea{
     .guide__parts--third{
         right:40%
     }
-}
+} */
 .guide__part{
     margin-top:5px;
     -webkit-transition:all .35s ease-in-out;
@@ -1782,8 +1785,8 @@ textarea{
     -ms-flex-direction:row;
     flex-direction:row;
     border-bottom:1px solid rgba(255,255,255,.6);
-    padding-top:30px;
-    padding-bottom:40px;
+    padding-top:10px;
+    padding-bottom:10px;
     -webkit-flex-wrap:wrap;
     -ms-flex-wrap:wrap;
     flex-wrap:wrap

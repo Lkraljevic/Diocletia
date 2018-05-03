@@ -1,27 +1,27 @@
 /* GENERAL */
-path {
+.model-parent svg path {
   stroke-width: 2.5;
 }
 
 
-svg #root:hover .strips path {
+.model-parent svg #root:hover .strips path {
   opacity: 0.7;
   transition: .4s;
 }
-svg.focused .strips path {
+.model-parent svg.focused .strips path {
   opacity: 0.7;
   transition: .4s;
 }
-svg.focused .strips.active path {
+.model-parent svg.focused .strips.active path {
   opacity: 1 !important;
   transition: .4s;
 }
 
-svg .strips:hover > path {
+.model-parent svg .strips:hover > path {
   opacity: 1 !important;
   transition: .4s;
 }
-.strips {
+.model-parent .strips {
   cursor: pointer;
 }
 

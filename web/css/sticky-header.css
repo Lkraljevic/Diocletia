@@ -5,11 +5,11 @@
   }
   .nav--desktop {
     top: auto;
-    bottom: 44px;
+    bottom: 25px;
   }
   
   .top-background.sticky {
-    background-image: url(../images/pattern.png);
+    background-image: url(../images/pattern.jpg);
     width: 100%;
     height: 30px;
     position: fixed;

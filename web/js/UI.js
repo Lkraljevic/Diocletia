@@ -68,7 +68,7 @@ function onScroll() {
     var range = 200;
 
     if (logo && desktopNav)
-        if (window.pageYOffset >= header.offsetHeight - 100) {
+        if (window.pageYOffset >= header.offsetHeight - 80) {
             logo.classList.remove('sticky');
             desktopNav.classList.remove('sticky');
         } else {
@@ -77,7 +77,7 @@ function onScroll() {
         }
 
     if (topBG) {
-        if (window.pageYOffset >= header.offsetHeight + 150) topBG.classList.remove('sticky');
+        if (window.pageYOffset >= header.offsetHeight + 35) topBG.classList.remove('sticky');
         else topBG.classList.add('sticky');
     }
 
@@ -215,6 +215,11 @@ onClick('.link-about', goToLocation('/about/'));
 onClick('.link-contact', goToLocation('/contact/'));
 
 
+onClick('.link-sizeguide', showSizeGuide);
+
+
+
+onClick('.link-products', scrollToProducts);
 function scrollToProducts() {
     var target = document.getElementById('choose-model');
         if (target) {
@@ -224,18 +229,12 @@ function scrollToProducts() {
         }
 }
 
-onClick('.link-products', scrollToProducts);
-
-
 
 onClick('.apply-coupon', function(){
     var codeInput = document.getElementById('promo-code');
     if(!cart || !codeInput) return;
     cart.updateDiscount(validateCoupon(codeInput.value));
 });
-
-
-
 function validateCoupon(code) {
     var coupons = {
        'Test': {
