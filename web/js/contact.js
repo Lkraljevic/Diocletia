@@ -2,6 +2,7 @@ var contact_submit = document.getElementById('contact_submit');
 
 if(contact_submit)
 contact_submit.onclick = function(event) {
+    event.preventDefault();
     grecaptcha.execute();
 }
 
