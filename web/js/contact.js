@@ -18,10 +18,7 @@ function contact_onSubmit(token) {
     console.log(name, email, subject, message);
 
     submitMesage({
-        name,
-        email,
-        subject,
-        message,
+        formData: { name,email,subject,message },
         'g-recaptcha-response': token
     })
 
