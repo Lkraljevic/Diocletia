@@ -20,14 +20,16 @@ function contact_onSubmit(response) {
     submitMesage({
         formData: { name,email,subject,message },
         response: response
+    },function(){
+        var response =  document.getElementById('contact-response');
+        if(response) response.classList.add('contact__message--visible');
+        contactForm.style.display = 'none';
     })
 
 
 
     // UI logic
-    var response =  document.getElementById('contact-response');
-    if(response) response.classList.add('contact__message--visible');
-    contactForm.style.display = 'none';
+    
 
 } 
 
