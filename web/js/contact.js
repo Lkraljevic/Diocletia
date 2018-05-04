@@ -17,6 +17,15 @@ function contact_onSubmit(token) {
     console.log(token);
     console.log(name, email, subject, message);
 
+    submitMesage({
+        name,
+        email,
+        subject,
+        message,
+        'g-recaptcha-response': token
+    })
+
+
 
     // UI logic
     var response =  document.getElementById('contact-response');
@@ -24,3 +33,20 @@ function contact_onSubmit(token) {
     contactForm.style.display = 'none';
 
 } 
+
+
+ function submitMesage(data) {
+    var that = this;
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        console.log(this.responseText);
+      }
+    };
+    console.log(data);
+
+    xhttp.open("POST", "https://diocletia.hr/googlevalidate.php", true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify(data));
+  }
