@@ -1,26 +1,9 @@
-c = document.getElementById('captcha')
-grecaptcha.render(c,
-{
-    sitekey:'6LeHJVcUAAAAAMuPh8-LQHuc7cxCP-TCBzEfpUuK',
-    size: 'invisible'
-});
-
-
-
-
-
-
 var contact_submit = document.getElementById('contact_submit');
 
 if(contact_submit)
 contact_submit.onclick = function(event) {
     event.preventDefault();
-    //grecaptcha.execute();
-
-    var response = grecaptcha.getResponse();
-    if(response) {
-        console.log(response);
-    }
+    grecaptcha.execute();
 }
 
 
@@ -37,21 +20,19 @@ function contact_onSubmit(response) {
     submitMesage({
         formData: { name,email,subject,message },
         response: response
-    },function(){
-        var response =  document.getElementById('contact-response');
-        if(response) response.classList.add('contact__message--visible');
-        contactForm.style.display = 'none';
     })
 
 
 
     // UI logic
-    
+    var response =  document.getElementById('contact-response');
+    if(response) response.classList.add('contact__message--visible');
+    contactForm.style.display = 'none';
 
 } 
 
 
-function submitMesage(data) {
+ function submitMesage(data) {
     var that = this;
 
     var xhttp = new XMLHttpRequest();
@@ -65,5 +46,4 @@ function submitMesage(data) {
     xhttp.open("POST", "https://diocletia.hr/googlevalidate.php", true);
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify(data));
-}
-
+  }

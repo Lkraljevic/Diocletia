@@ -18,7 +18,7 @@
 
   <!-- ********* SCRIPTS  ********** -->
   <!-- PAY PAL-->
-  <script src="https://www.paypalobjects.com/api/checkout.js?render=explicit"></script>
+  <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
@@ -161,16 +161,15 @@
       <input type="text" name="subject" class="input--white" placeholder="Subject:" required>
       <textarea name="message" placeholder="Message:" class="input--white" required></textarea>
 
-      <!--<div id='recaptcha' class="g-recaptcha"
+      <div id='recaptcha' class="g-recaptcha"
           data-sitekey="6LeHJVcUAAAAAMuPh8-LQHuc7cxCP-TCBzEfpUuK"
           data-callback="contact_onSubmit"
-          data-size="invisible"></div> -->
+          data-size="invisible"></div>
 
       <button id="contact_submit">
         send
       </button>
     </form>
-    <div id="captcha"></div>
     <div class="contact__lists">
       <div class="contact__list">
         <a href="#" class="contact__item">
