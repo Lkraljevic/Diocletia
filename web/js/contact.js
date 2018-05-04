@@ -24,10 +24,7 @@ function contact_onSubmit(response) {
 
 
 
-    // UI logic
-    var response =  document.getElementById('contact-response');
-    if(response) response.classList.add('contact__message--visible');
-    contactForm.style.display = 'none';
+    
 
 } 
 
@@ -38,7 +35,11 @@ function contact_onSubmit(response) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        console.log(this.responseText);
+        if(this.responseText.success) {
+            var response =  document.getElementById('contact-response');
+            if(response) response.classList.add('contact__message--visible');
+            contactForm.style.display = 'none';
+        }
       }
     };
     console.log(data);
