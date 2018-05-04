@@ -19,6 +19,8 @@
   <!-- ********* SCRIPTS  ********** -->
   <!-- PAY PAL-->
   <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
   <!-- MODELS -->
   <script type="text/javascript" src="./js/models/m1.js"></script>
   <script type="text/javascript" src="./js/models/m2.js"></script>
@@ -34,8 +36,10 @@
   <!-- APP-->
   <!-- <script type="text/javascript" src="./js/models/model.js"></script> -->
   <script type="text/javascript" src="./js/cart.js"></script>
+
   <!-- Global SCRIPTs-->
   <script type="text/javascript" src="./js/smooth-scroll.js"></script>
+ 
 
 
 
@@ -150,15 +154,20 @@
     <h3 class="contact__subtitle">Feel free to contact us about any inquery :)</h3>
     <h2 class="contact__title">Let's Talk! Contact us</h2>
     <div class="contact__message contact__message--visible">Thank you for contacting us!</div>
-    <form class="container contact">
-      <input type="text" class="input--white" placeholder="Name:" required>
-      <input type="email" class="input--white" placeholder="Email:" required>
-      <input type="text" class="input--white" placeholder="Subject:" required>
-      <textarea placeholder="Message:" class="input--white" required></textarea>
-      <button>
+    <form class="container contact" action="https://diocletia.hr/googlevalidate.php" method="POST" name="contact-form" id="contact-form">
+      <input type="text" name="name" class="input--white" placeholder="Name:" required>
+      <input type="email" name="email" class="input--white" placeholder="Email:" required>
+      <input type="text" name="subject" class="input--white" placeholder="Subject:" required>
+      <textarea name="message" placeholder="Message:" class="input--white" required></textarea>
+      <button class="g-recaptcha" data-sitekey="6LeHJVcUAAAAAMuPh8-LQHuc7cxCP-TCBzEfpUuK" data-callback="YourOnSubmitFn">
         send
       </button>
     </form>
+    <script>
+      function YourOnSubmitFn(data) {
+        console.log(data);
+      } 
+    </script>
     <div class="contact__lists">
       <div class="contact__list">
         <a href="#" class="contact__item">
@@ -274,6 +283,7 @@
 <!--END MODAL GUIDE-->
 
   <script src="./js/UI.js"></script>
+  <script type="text/javascript" src="./js/contact.js"></script>
 </body>
 
 </html>

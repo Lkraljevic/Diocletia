@@ -27,7 +27,8 @@
 /* Modal pages */
 .modal {
     z-index: 3;
-    /* background-image: url(../images/pattern.jpg); */
+     background-image: url(../images/pattern.png);
+     opacity: 0.9; 
 }
 .modal.modal-hidden {
     display: none;
