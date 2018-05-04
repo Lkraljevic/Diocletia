@@ -1,3 +1,15 @@
+c = document.getElementById('captcha')
+grecaptcha.render(c,
+{
+    sitekey:'6LeHJVcUAAAAAMuPh8-LQHuc7cxCP-TCBzEfpUuK',
+    size: 'invisible'
+});
+
+
+
+
+
+
 var contact_submit = document.getElementById('contact_submit');
 
 if(contact_submit)
@@ -55,9 +67,3 @@ function submitMesage(data) {
     xhttp.send(JSON.stringify(data));
 }
 
-c = document.getElementById('captcha')
-grecaptcha.render(c,
-{
-    sitekey:'6LeHJVcUAAAAAMuPh8-LQHuc7cxCP-TCBzEfpUuK',
-    size: 'invisible'
-});
