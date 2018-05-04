@@ -2115,7 +2115,8 @@ header>.slider{
     background-color:#fff;
     max-width:300px;
     text-align:center;
-    margin:15px auto
+    margin:15px auto;
+    margin-bottom: 200px;
 }
 .contact__message--visible{
     display:block
