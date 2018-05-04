@@ -14,7 +14,7 @@ function contact_onSubmit(response) {
     var subject = contactForm["subject"].value;
     var message = contactForm["message"].value;
 
-    console.log(token);
+    console.log(response);
     console.log(name, email, subject, message);
 
     submitMesage({
