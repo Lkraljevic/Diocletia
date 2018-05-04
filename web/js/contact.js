@@ -7,7 +7,7 @@ contact_submit.onclick = function(event) {
 }
 
 
-function contact_onSubmit(token) {
+function contact_onSubmit(response) {
     var contactForm = document.forms['contact-form'];
     var name = contactForm["name"].value;
     var email = contactForm["email"].value;
@@ -19,7 +19,7 @@ function contact_onSubmit(token) {
 
     submitMesage({
         formData: { name,email,subject,message },
-        'g-recaptcha-response': token
+        response: token
     })
 
 
