@@ -1,14 +1,18 @@
-var contactForm = document.forms['contact-form'];
+var contact_submit = document.getElementById('contact_submit');
 
-if(contactForm)
-    contactForm.onsubmit = function(data) {
-        console.log(data)
-        var name = this["name"].value;
-        var email = this["email"].value;
-        var subject = this["subject"].value;
-        var message = this["message"].value;
+if(contact_submit)
+contact_submit.onclick = function(event) {
+    grecaptcha.execute();
+}
 
 
-        console.log(name, email, subject, message);
-        //return false;
-    }
+function contact_onSubmit(token) {
+    var contactForm = document.forms['contact-form'];
+    var name = contactForm["name"].value;
+    var email = contactForm["email"].value;
+    var subject = contactForm["subject"].value;
+    var message = contactForm["message"].value;
+
+    console.log(token);
+    console.log(name, email, subject, message);
+} 
