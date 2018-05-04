@@ -16,4 +16,11 @@ function contact_onSubmit(token) {
 
     console.log(token);
     console.log(name, email, subject, message);
+
+
+    // UI logic
+    var response =  document.getElementById('contact-response');
+    if(response) response.classList.add('contact__message--visible');
+    contactForm.style.display = 'none';
+
 } 
