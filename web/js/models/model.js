@@ -330,7 +330,8 @@ function locationHashChanged() {
         modelWrapper.prepend(model.el);
         var svg = model.el.querySelector('svg');
         window.activeModel = new Model(svg, model.config);
-        loadModelList();
+        setTimeout(loadModelList, 1000);
+        
     }
 
     function loadModelList() {
@@ -353,18 +354,31 @@ function locationHashChanged() {
         models.forEach(function(m){
           m.onclick = function(e) {
             location.hash = m.dataset.hash;
-            var target = window.activeModel ? window.activeModel.modelEl: null;
-            if( target) {
-              var scroll = new SmoothScroll();
-              scroll.init({offset:-300})
-              scroll.animateScroll( target );
+            // var target = window.activeModel ? window.activeModel.modelEl: null;
+            // if( target) {
+            //   var scroll = new SmoothScroll();
+            //   scroll.init({offset:-300})
+            //   scroll.animateScroll( target );
 
-            }
+            // }
           }
         });
       
     }
     
+
+    // SCROLL TO MODEL 
+    setTimeout(function(){
+      var target = document.getElementById('model');
+      if( target) {
+        var scroll = new SmoothScroll();
+        scroll.init({offset:100})
+        scroll.animateScroll( target );
+      }
+    },500)
+    
+
+
 }
 
 function loadScript(url, callback){
@@ -420,8 +434,6 @@ function initEvents(){
           scroll.init({offset:100})
           scroll.animateScroll( target );
         }
-
-
     };
   }
 }

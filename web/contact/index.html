@@ -41,24 +41,22 @@
 
 </head>
 
-<body class="product">
+<body class="fixed_header product">
   <img src="../images/logo.png" class="logo sticky" alt="">
-  <!--.sticky -->
   <div class="top-background sticky"></div>
-  <!-- .sticky-->
-
   <header>
     <!-- Menu Desktop-->
     <nav class="container nav--desktop sticky">
-      <a class="nav-home nav__link">Home</a>
-      <a class="nav-about nav__link">About us</a>
-      <a class="nav-contact nav__link">Contact</a>
-      <a class="nav__link nav__link--logo"></a>
-      <a id="products_nav_header_d" class="nav__link">Products</a>
-      <a class="nav__link size-guide-link">Size guide</a>
-      <a class="nav__link" id="cart-btn">
+
+      <a class="link-home nav__link">Home</a>
+      <a class="link-about nav__link">About us</a>
+      <a class="link-contact nav__link">Contact</a>
+      <a class="link-home nav__link nav__link--logo"></a>
+      <a class="link-products nav__link">Products</a>
+      <a class="link-sizeguide nav__link">Size guide</a>
+      <a class="link-cart nav__link" id="cart-btn">
         <button id="cart-notification" class="empty-cart" data-cart="0">
-          <img src="./images/icons/cart_icon.png" alt=""> Cart
+          <img src="../images/icons/cart_icon.png" alt=""> Cart
         </button>
       </a>
     </nav>
@@ -69,11 +67,11 @@
       <div class="nav-mobile__icon js-menu"></div>
     </nav>
     <div class="menu">
-      <a href="#" class="menu__item">Home</a>
-      <a href="#" class="menu__item">About us</a>
-      <a href="#" class="menu__item">Contact</a>
-      <a href="#" class="menu__item">Products</a>
-      <a href="#" class="menu__item size-guide-link">Size guide</a>
+      <a class="link-home menu__item">Home</a>
+      <a class="link-about menu__item">About us</a>
+      <a class="link-contact menu__item">Contact</a>
+      <a class="link-products menu__item">Products</a>
+      <a class="link-sizeguide menu__item">Size guide</a>
       <button data-cart="2" class="menu__button">
         <img src="../images/icons/cart_icon.png" alt=""> Cart
       </button>
@@ -88,30 +86,17 @@
     </h1>
     <div class="header__controls"></div>
     <div class="slider slider--header">
-      <!--<div style="background-image: url('./images/header/slide--third.png')"></div> -->
       <ul class="cb-slideshow">
-        <li>
-          <span></span>
-        </li>
-        <li>
-          <span></span>
-        </li>
-        <li>
-          <span></span>
-        </li>
-        <li>
-          <span></span>
-        </li>
-        <li>
-          <span></span>
-        </li>
-        <li>
-          <span></span>
-        </li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
       </ul>
 
     </div>
-    <!-- END SLIDER -->
+    <!-- END SLIDER-->
   </header>
 
   <section class="container section--contact section--contact-us">
@@ -179,30 +164,45 @@
     </div>
   </section>
 
-  <section class="container cards">
-    <article class="card">
-      <img class="card__image" src="../images/shoes/model_4.jpg" alt="">
+  <h2 class="product__title product__title--other">Choose Your model</h2>
+  <section id="choose-model" class="container cards cards--text">
+    <article class="card" id="model-I-href">
+      <div class="card__text">
+        Model I
+        <a href="#">more</a>
+      </div>
+      <img class="card__image" srcset="../images/shoes/M1@2x.png 2x, ./images/shoes/M1@1x.png 1x" src="../images/shoes/M1@1x.png" alt="model-I">
+      <img class="card-image--hover" srcset="../images/shoes/M1-hover@2x.png 2x, ./images/shoes/M1-hover@1x.png 1x" src="../images/shoes/M1-hover@1x.png" alt="model-I">
     </article>
-    <article class="card">
-      <img class="card__image" src="../images/shoes/model_4.jpg" alt="">
+    <article class="card" id="model-II-href">
+      <div class="card__text">
+        Model II
+        <a href="#">more</a>
+      </div>
+      <img class="card__image" srcset="../images/shoes/M2@2x.png 2x, ./images/shoes/M2@1x.png 1x" src="../images/shoes/M2@1x.png" alt="model-II">
+      <img class="card-image--hover" srcset="../images/shoes/M2-hover@2x.png 2x, ./images/shoes/M2-hover@1x.png 1x" src="../images/shoes/M2-hover@1x.png" alt="model-II">
     </article>
-    <article class="card">
-      <img class="card__image" src="../images/shoes/model_4.jpg" alt="">
+    <article class="card" id="model-III-href">
+      <div class="card__text">
+        Model III
+        <a href="#">more</a>
+      </div>
+      <img class="card__image" srcset="../images/shoes/M3@2x.png 2x, ./images/shoes/M3@1x.png 1x" src="../images/shoes/M3@1x.png" alt="model-III">
+      <img class="card-image--hover" srcset="../images/shoes/M3-hover@2x.png 2x, ./images/shoes/M3-hover@1x.png 1x" src="../images/shoes/M3-hover@1x.png" alt="model-III">
     </article>
-    <article class="card">
-      <img class="card__image" src="../images/shoes/model_4.jpg" alt="">
-    </article>
-    <article class="card">
-      <img class="card__image" src="../images/shoes/model_4.jpg" alt="">
-    </article>
-    <article class="card">
-      <img class="card__image" src="../images/shoes/model_4.jpg" alt="">
+    <article class="card" id="model-IV-href">
+      <div class="card__text">
+        Model IV
+        <a href="#">more</a>
+      </div>
+      <img class="card__image" srcset="../images/shoes/M4@2x.png 2x, ./images/shoes/M4@1x.png 1x" src="../images/shoes/M4@1x.png" alt="model-IV">
+      <img class="card-image--hover" srcset="../images/shoes/M4-hover@2x.png 2x, ./images/shoes/M4-hover@1x.png 1x" src="../images/shoes/M4-hover@1x.png" alt="model-IV">
     </article>
   </section>
 
-  <section class="bottom__hero">
+  <!--<section class="bottom__hero">
     View, Follow & Like Diocletia @ Instagram
-  </section>
+  </section> -->
 
   <footer class="footer">
     <div class="container footer__items">

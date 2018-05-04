@@ -7,7 +7,7 @@
         {{name}}
         <a>more</a>
     </div>
-    <img class="card__image" src="../images/shoes/{{code}}.png" alt="">
-    <img src="../images/shoes/{{code}}-hover.png" alt="" class="card-image--hover">
+    <img class="card__image" srcset="../images/shoes/{{code}}@2x.png 2x, ../images/shoes/{{code}}@1x.png 1x" src="../images/shoes/{{code}}@1x.png">
+    <img class="card-image--hover" srcset="../images/shoes/{{code}}-hover@2x.png 2x, ../images/shoes/{{code}}-hover@1x.png 1x" src="../images/shoes/{{code}}-hover@1x.png">
     </article>
 {{/each}}

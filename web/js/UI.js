@@ -56,11 +56,11 @@ window.onscroll = function () {
     onScroll()
 };
 
-var header = document.querySelector('header');
-var headerTitle = document.querySelectorAll('.header__title')[0];
-var logo = document.querySelectorAll('.logo')[0];
-var topBG = document.querySelectorAll('.top-background')[0];
-var desktopNav = document.querySelectorAll('.container.nav--desktop')[0];
+var header = document.querySelector('.sticky_header header');
+var headerTitle = document.querySelectorAll('.sticky_header .header__title')[0];
+var logo = document.querySelectorAll('.sticky_header .logo')[0];
+var topBG = document.querySelectorAll('.sticky_header .top-background')[0];
+var desktopNav = document.querySelectorAll('.sticky_header .container.nav--desktop')[0];
 
 
 function onScroll() {
@@ -97,30 +97,7 @@ function onScroll() {
 /* DIV AS LINKS */
 /* This will be used on all pages except models page */
 
-var M1link = document.getElementById("model-I-href");
-if (M1link)
-    M1link.onclick = function () {
-        window.location = "./models/#model-I";
-        return false;
-    }
-var M2link = document.getElementById("model-II-href");
-if (M2link)
-    M2link.onclick = function () {
-        window.location = "./models/#model-II";
-        return false;
-    }
-var M3link = document.getElementById("model-III-href");
-if (M3link)
-    M3link.onclick = function () {
-        window.location = "./models/#model-III";
-        return false;
-    }
-var M4link = document.getElementById("model-IV-href");
-if (M4link)
-    M4link.onclick = function () {
-        window.location = "./models/#model-IV";
-        return false;
-    }
+
 
 /* NAVIGATION */
 
@@ -209,6 +186,7 @@ function onClick(elementSelector, clickHandlert) {
 
 
 
+
 // MENU 
 onClick('.link-home', goToLocation('/'));
 onClick('.link-about', goToLocation('/about/'));
@@ -247,4 +225,9 @@ function validateCoupon(code) {
        quantity:coupons[code].quantity,
        code: code
      }
-   }
+}
+
+onClick('#model-I-href', goToLocation('/models/#model-I'));
+onClick('#model-II-href', goToLocation('/models/#model-II'));
+onClick('#model-III-href', goToLocation('/models/#model-III'));
+onClick('#model-IV-href', goToLocation('/models/#model-IV'));
