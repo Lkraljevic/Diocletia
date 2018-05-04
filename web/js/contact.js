@@ -1,11 +1,12 @@
 var contactForm = document.forms['contact-form'];
 
 if(contactForm)
-    contactForm.onsubmit = function() {
-        var name = this["name"];
-        var email = this["email"];
-        var subject = this["subject"];
-        var message = this["message"];
+    contactForm.onsubmit = function(data) {
+        console.log(data)
+        var name = this["name"].value;
+        var email = this["email"].value;
+        var subject = this["subject"].value;
+        var message = this["message"].value;
 
 
         console.log(name, email, subject, message);
