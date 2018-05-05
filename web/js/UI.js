@@ -211,7 +211,8 @@ function scrollToProducts() {
 onClick('.apply-coupon', function(){
     var codeInput = document.getElementById('promo-code');
     if(!cart || !codeInput) return;
-    cart.updateDiscount(validateCoupon(codeInput.value));
+    if(codeInput.value)
+        cart.updateDiscount(validateCoupon(codeInput.value));
 });
 function validateCoupon(code) {
     var coupons = {

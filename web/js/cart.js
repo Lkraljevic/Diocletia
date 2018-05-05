@@ -334,8 +334,11 @@ window.addEventListener("load", function(){
         console.log(data);
         console.log(actions);
         return actions.payment.execute().then(function(payment) {
-          if(payment)
+          if(payment) {
             cart.saveOrderDB(payment);
+            hideCart();
+          }
+            
 
             // The payment is complete!
             // You can now show a confirmation message to the customer
