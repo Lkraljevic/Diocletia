@@ -20,7 +20,19 @@ function Cart() {
     },
     
     this.addItem = function(model, size, quantity) {
-  
+      var sale_price;
+      if(model.sale_price && model.sale_price.price > model.sale_price.promo_price )
+        sale_price = {
+          price: model.sale_price.promo_price,
+          currency: 'EUR'
+        }
+      else 
+        sale_price = {
+          price: model.sale_price.price,
+          currency: 'EUR'
+        }
+      
+
       var item = {
         code: model.code,
         id: this.guid(),
@@ -28,7 +40,7 @@ function Cart() {
         q: quantity, 
         s: size,
         c: model.currentTheme,
-        p: model.sale_price
+        p: sale_price
       }
   
       this.items.set(item.id,item);
