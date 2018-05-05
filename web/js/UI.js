@@ -1,4 +1,4 @@
-const basePath = '/';
+const basePath = '';
 
 
 /* Mobile navigation @Dražen Barić */
