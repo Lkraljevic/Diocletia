@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'fontawesome';
-	src:url('../fonts/fontawesome/fontawesome.eot?-e43dk9');
-	src:url('../fonts/fontawesome/fontawesome.eot?#iefix-e43dk9') format('embedded-opentype'),
-		url('../fonts/fontawesome/fontawesome.woff?-e43dk9') format('woff'),
-		url('../fonts/fontawesome/fontawesome.ttf?-e43dk9') format('truetype'),
-		url('../fonts/fontawesome/fontawesome.svg?-e43dk9#fontawesome') format('svg');
+	src:url('./fonts/fontawesome/fontawesome.eot?-e43dk9');
+	src:url('./fonts/fontawesome/fontawesome.eot?#iefix-e43dk9') format('embedded-opentype'),
+		url('./fonts/fontawesome/fontawesome.woff?-e43dk9') format('woff'),
+		url('./fonts/fontawesome/fontawesome.ttf?-e43dk9') format('truetype'),
+		url('./fonts/fontawesome/fontawesome.svg?-e43dk9#fontawesome') format('svg');
 	font-weight: normal;
 	font-style: normal;
 } /* Made with http://icomoon.io/app */
@@ -69,7 +69,9 @@
 /* Slideshow style */
 .slideshow {
 	position: fixed;
-	background: rgba(0,0,0,0.6);
+	/* background: rgba(0,0,0,0.6); */
+	background-image: url(../images/pattern.png);
+    opacity: 0.9;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -133,7 +135,8 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: rgba(255,255,255,0.8);
+	/*background: rgba(255,255,255,0.8);*/
+	background: transparent;
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 }
@@ -145,20 +148,18 @@
 	transition: opacity 0.3s, visibility 0s 0.3s;
 }
 
-/* @Luka */
-.slideshow li.current {
-	width: 700px;
-}
-
 .slideshow figure {
 	width: 100%;
 	height: 100%;
 	/* background: #fff;
 	border: 20px solid #fff; */
 	overflow: hidden;
+	display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .slideshow figure img {
-	border: 15px solid #fff;
+	border: 5px solid #fff;
 }
 
 /* .slideshow figcaption {
