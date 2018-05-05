@@ -204,7 +204,10 @@ function scrollToProducts() {
             var scroll = new SmoothScroll();
             scroll.init({ offset: 0 })
             scroll.animateScroll(target);
+        } else {
+            goToLocation('/#choose-model')();
         }
+    
 }
 
 

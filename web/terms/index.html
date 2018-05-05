@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400,500|Alegreya+Sans:300i,400,400i" rel="stylesheet">
+  <title>Terms and Conditions</title>
+  <link rel="stylesheet" href="./terms.css">
+  <!-- PAY PAL-->
+  <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <!-- MODELS -->
+  <script type="text/javascript" src="../js/models/m1.js"></script>
+  <script type="text/javascript" src="../js/models/m2.js"></script>
+  <script type="text/javascript" src="../js/models/m3.js"></script>
+  <script type="text/javascript" src="../js/models/m4.js"></script>
+  <script type="text/javascript" src="../js/size-guide/size-models.js"></script>
+
+  <!-- TEMPLATES -->
+  <script type="text/javascript" src="../js/handlebars.runtime.js"></script>
+  <script type="text/javascript" src="../templates/handlebars-helpers.js"></script>
+  <script type="text/javascript" src="../templates/model-list.js"></script>
+  <script type="text/javascript" src="../templates/cart.js"></script>
+  <script type="text/javascript" src="../templates/size-guide.js"></script>
+
+  <!-- APP-->
+  <!-- <script type="text/javascript" src="../js/models/model.js"></script> -->
+  <script type="text/javascript" src="../js/cart.js"></script>
+
+  <link rel="stylesheet" href="../css/fix.css">
+  <link rel="stylesheet" href="../css/leather.css">
+  <link rel="stylesheet" href="../css/sticky-header.css">
+  <link rel="stylesheet" href="../css/cb-slideshow.css">
+
+
+  <!-- Global SCRIPTs-->
+  <script type="text/javascript" src="../js/smooth-scroll.js"></script>
+
+</head>
+
+<body class="fixed_header product">
+  <img src="../images/logo.png" class="logo sticky" alt="">
+  <div class="top-background sticky"></div>
+  <header>
+    <!-- Menu Desktop-->
+    <nav class="container nav--desktop sticky">
+
+      <a class="link-home nav__link">Home</a>
+      <a class="disabled link-about nav__link">About us</a>
+      <a class="link-contact nav__link">Contact</a>
+      <a class="link-home nav__link nav__link--logo"></a>
+      <a class="link-products nav__link">Products</a>
+      <a class="link-sizeguide nav__link">Size guide</a>
+      <a class="link-cart nav__link" id="cart-btn">
+        <button id="cart-notification" class="empty-cart" data-cart="0">
+          <img src="../images/icons/cart_icon.png" alt=""> Cart
+        </button>
+      </a>
+    </nav>
+    <!-- END Menu Desktop-->
+
+    <!-- Menu Mobile-->
+    <nav class="nav--mobile">
+      <div class="nav-mobile__icon js-menu"></div>
+    </nav>
+    <div class="menu">
+      <a class="link-home menu__item">Home</a>
+      <a class="link-about menu__item">About us</a>
+      <a class="link-contact menu__item">Contact</a>
+      <a class="link-products menu__item">Products</a>
+      <a class="link-sizeguide menu__item">Size guide</a>
+      <button data-cart="2" class="menu__button">
+        <img src="../images/icons/cart_icon.png" alt=""> Cart
+      </button>
+    </div>
+    <!-- END Mobile menu-->
+
+    <!-- SLIDER -->
+    <h1 class="header__title">
+      <div class="header__title--small">Made in Dalmatia</div>
+      <img src="../images/header.png" alt="">
+      <div class="header__title--small">the Online Store for Women's Shoes</div>
+    </h1>
+    <div class="header__controls"></div>
+    <div class="slider slider--header">
+      <ul class="cb-slideshow">
+        <li>
+          <span></span>
+        </li>
+        <li>
+          <span></span>
+        </li>
+        <li>
+          <span></span>
+        </li>
+        <li>
+          <span></span>
+        </li>
+        <li>
+          <span></span>
+        </li>
+        <li>
+          <span></span>
+        </li>
+      </ul>
+
+    </div>
+    <!-- END SLIDER-->
+  </header>
+
+  <h2 class="terms__title">TERMS & CONDITIONS</h2>
+
+  <section class="container section--shipping">
+    <h2 class="terms__subtitle">SHIPPING POLICY</h2>
+    <p>DIOCLETIA ships worlwide. Sandals are handcrafted made to order, so we ask that you allow approximately 3 to 5 days for
+      shipment of your order.</p>
+    <p>Please notice that you can cancel your order within 24 hours since you purchased your Diocletia's sandals. So after that
+      24 hours passes, we will start with producing shoes and proceed to sending them to your address. Items are shipped
+      after receiving payment.</p>
+    <p>Deliveries are made in cooperation with the postal services (Post of Croatia) and their partners in other countries around
+      the world.</p>
+    <p>It shouldn't take more than 3 days for cities in Croatia, 7-15 days to Europe or 15-21 days to U.S.A. for Register Air
+      Mail.
+    </p>
+    <table class="shipping_cost">
+      <tr>
+        <th>Shipping and handling</th>
+        <th>To</th>
+        <th>Service</th>
+      </tr>
+      <tr>
+        <td>€4.00</td>
+        <td>Croatia</td>
+        <td>Economy Shipping (Hrvatska pošta)</td>
+      </tr>
+      <tr>
+        <td>€13.00</td>
+        <td>Australia</td>
+        <td>Economy Shipping (Hrvatska pošta)</td>
+      </tr>
+      <tr>
+        <td>€13.00</td>
+        <td>Canada</td>
+        <td>Economy Shipping (Hrvatska pošta)</td>
+      </tr>
+      <tr>
+        <td>€12.00</td>
+        <td>Europe non-EU</td>
+        <td>Economy Shipping (Hrvatska pošta)</td>
+      </tr>
+      <tr>
+        <td>€12.00</td>
+        <td>European Union</td>
+        <td>Economy Shipping (Hrvatska pošta)</td>
+      </tr>
+      <tr>
+        <td>€13.00</td>
+        <td>United States</td>
+        <td>Economy Shipping (Hrvatska pošta)</td>
+      </tr>
+      <tr>
+        <td>€15.00</td>
+        <td>Other</td>
+        <td>Economy Shipping (Hrvatska pošta)</td>
+      </tr>
+
+    </table>
+
+  </section>
+
+
+  <section class="container section--returns">
+      <h2 class="terms__subtitle">POLICES/RETURNS</h2>
+      <p>Please read the following information carefully before buying the product.</p>
+      <p> The insoles of your DIOCLETIA shoes are made of a leather and may therefore naturally wear down with extensive wear. This is not a manufacturing defect, it is a natural process and part of the normal wear of the shoes.</p>
+      <p>It is only natural for the shape of the shoe to change over time. Not only will your DIOCLETIA shoes mold to the shape of your own foot but they may stretch further with extensive wear. As leather is indeed a skin, after extensive wear it may begin to wrinkle.</p>
+      <p>A simple method for prolonging the suppleness of the leather is to stuff your shoes with tissue paper after being worn.</p> 
+      <p><b>Please notice that we have made every effort to display the colors of  DIOCLETIA products as accurately as possible. However, as computer monitors, tablets and mobile devices vary, we cannot guarantee that your monitor's display of a color will be completely accurate.</b></p>
+      <p> DIOCLETIA shoes are completely handmade, therefore tiny imperfections are possible. Damage or incorrect goods / products must be reported within 24 hour after delivery. If your product is damaged in transport you must report this as soon as possible by sending us detailed descriptions and images.
+          Diocletia sandals can be returned or exchanged in a week of arrival. Prior to return, please contact us explaining the reason and we will tell you how to proceed.</p>
+      <ul>
+        <li>	You have the right to return/exchange any/all DIOCLETIA products you have purchased directly from our website within 7 days of receiving the item.</li>
+        <li>	All goods will be inspected on return.</li>
+        <li>	The product(s) must be unused – in its original packaging with labels and protective stickers intact – and still in the same new condition as when the product was received. </li>
+        <li>	If you want a different item, or the item you want is a different price to the price at which you bought the original product, then you'll need to return the unwanted item for a refund and place a new order.</li>
+        <li>	Depending on the options available in your country, you'll be responsible for all the cost of returning any items.</li>
+        <li>	The goods are your responsibility until they reach our warehouse, so make sure it’s packed up properly and can’t get damaged on the way! </li>
+        <li>	DIOCLETIA does not take responsibility for any items lost during the return shipping.</li>
+        <li>	Make sure you use a postal service that insures you for the value of the items you are returning and obtain proof of posting.</li>
+        <li>	We are not responsible for any items that are returned to us by mistake.</li>
+        <li>	In the unlikely event that an item is returned to us in an unsuitable condition, we may have to send it back to you.</li>
+        <li>	Items can be exchanged only when a different size or a different color of the same item is available. If the item is returned a second time, the compensation will be a partial refund.</li>
+        <li>	Any customs fees for the shipment of a new size are the responsibility of the Client and must be paid at the time of delivery.</li>
+      </ul>
+  
+  </section>
+
+  <section class="container section--warranty">
+      <h2 class="terms__subtitle">WARRANTY</h2>
+      <p>The warranty for the DIOCLETIA shoes is valid for a period of six (6) months from the date of purchase. Upon expiration of the warranty period, any repairs will be subject to a service charge. If the product is returned during the warranty period, DIOCLETIA will repair or replace any defect, at no additional expense, within a reasonable time, after the product is returned. </p>
+      <p>In the case of defective or incorrect merchandise,  reserves the right to request photographic support regarding defective or incorrect merchandise before authorizing a return for full reimbursement of shipping and import fees.</p>
+      <p>All items that are returned as faulty are thoroughly inspected by our quality control experts to deem whether an item is faulty or whether it is fair wear and tear. We may be able to offer to repair your item but please note that repairs are not guaranteed.</p>
+      <p>If in the rare event that your item is faulty due to a design error, we may be able to replace your item.</p> 
+      <p>DIOCLETIA will not honor any warranty claims for products purchased from an unauthorized retailer.</p>
+      <p> DIOCLETIA does not cover:</p>
+      <ul>
+        <li>	Defects and damages due to loss, theft, fire, water, or a natural disaster </li>
+        <li>	Failure or damage caused by improper use or carelessness (knocks, dents, crushing, etc.) </li>
+        <li>	Failure or damage caused by unjustifiable repair or modification </li>
+        <li>	Aesthetic changes that occur during normal wear and tear and aging. </li>
+      </ul>
+  </section>
+
+  <section class="container section--size">
+      <h2 class="terms__subtitle">SIZE CHAPTER</h2>
+      <p>If you send us your own measurements, we will make sandals only for you. It is very important to measure your feet as accurately as possible and get your DIOCLETIA`s in the right size.However, if you are not happy with your measurements, we are able to exchange.
+         Buyer is responsible for return expenses. After we receive the sandals back, we will ship a new pair.</p>
+      <p>Also,  you have an option to order shoes entering the size you want. We are currently producing DIOCLETIA shoes in EU sizes 36, 37, 38, 39, 40 and 41. <br>For smaller or larger sizes, please contact us.</p>
+      <p class="strong italic">Please, be aware that if you are not happy with your chosen size, these sandals can not be exchanged, returned or refunded because of wrong size! </p>
+      <p>Women`s footwear size guide and measurement chart </p>
+      <table class="shoesizes">
+        <tr>
+          <th>EU SIZE</th>
+          <th>UK SIZE</th>
+          <th>US SIZE</th>
+          <th>FOOT LENGTH (cm)</th>
+        </tr>
+        <tr>
+          <td>36</td>
+          <td>3</td>
+          <td>6</td>
+          <td>22 – 22.9</td>
+        </tr>
+        
+        <tr>
+            <td>37</td>
+            <td>4</td>
+            <td>7</td>
+            <td>23.2 – 23.9</td>
+          </tr>
+          <tr>
+              <td>38</td>
+              <td>5</td>
+              <td>8</td>
+              <td>24.2 – 24.9</td>
+            </tr>
+            <tr>
+                <td>39</td>
+                <td>6</td>
+                <td>9</td>
+                <td>25.2 – 25.9</td>
+              </tr>
+              <tr>
+                  <td>40</td>
+                  <td>7</td>
+                  <td>10</td>
+                  <td>26.2 – 26.9</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>8</td>
+                    <td>11</td>
+                    <td>27.2 – 27.9</td>
+                  </tr>
+  
+      </table>
+  
+    </section>
+
+
+
+
+  <footer class="footer">
+    <div class="container footer__items">
+      <a href="" class="footer__item footer__item--empty"></a>
+      <a href="#" class="disabled link-about footer__item">about us</a>
+      <a href="#" class=" link-products footer__item">products</a>
+      <a href="#" class="footer__item link-sizeguide">size guide</a>
+      <a href="#" class="link-terms footer__item">terms & conditions</a>
+      <a href="" class="footer__item footer__item--empty"></a>
+    </div>
+    <div class="footer__information">
+      MB: 91870909 . OIB: 48400130246 . IBAN: HR83 2330 0031 1000 7763 4 . SWIFT: SOGEHR22
+    </div>
+  </footer>
+
+  <!-- MODAL CART -->
+  <div class="shadow shadow--cart modal modal-hidden" id="cart-modal">
+    <div class="container cart">
+      <div class="cart__controls">
+        <a href="#" class="cart__back">Continue Shopping</a>
+        <a href="#" class="cart__close"></a>
+      </div>
+      <div class="card__body">
+        <table class="cart__table" id="cart-table">
+        </table>
+        <div class="cart__buttons">
+          <div class="discount-form">
+            <div>
+              <input id="promo-code" name="promocode" class="promo-code" type="text" placeholder="Enter a promo code" autocomplete="off">
+              <button class="apply-coupon">Apply</button>
+            </div>
+          </div>
+          <div>
+            <button>Send Request</button>
+          </div>
+          <div>
+            <div id="paypal-button"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END MODAL CART-->
+
+  <!-- MODAL GUIDE-->
+  <div class="shadow modal modal-hidden" id="size-modal"></div>
+  <!--END MODAL GUIDE-->
+
+
+  <!-- POP MODAL-->
+  <!-- The Modal -->
+  <div id="modal-popup" class="modal-popup">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="close">&times;</div>
+      <p>Pssst! You should not see me :)</p>
+    </div>
+
+  </div>
+  <!-- END POP MODAL-->
+
+  <script src="../js/UI.js"></script>
+  <script type="text/javascript" src="../js/contact.js"></script>
+
+</body>
+
+</html>

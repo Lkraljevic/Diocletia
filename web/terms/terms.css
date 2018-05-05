@@ -1,0 +1,55 @@
+.terms__title {
+    color: #94183c;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 2.26em;
+    line-height: 2.8em;
+    text-align: center;
+}
+
+.terms__subtitle {
+    color: #94183c;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 2.26em;
+    line-height: 2.8em;
+    /* text-align: center; */
+}
+
+.section--shipping, .section--returns, .section--warranty, .section--size {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.section--shipping p, .section--returns p, .section--warranty p, .section--size p  {
+    font-size: 1.13em;
+    line-height: 1.33em;
+    /* padding-left: 45px;
+    padding-right: 45px; */
+    text-align: left;
+    margin-top: 10px;
+}
+/* ----------------------------*/
+
+table.shipping_cost, table.shoesizes {
+    font-size: 1.13em;
+    line-height: 1.33em;
+    /* padding-left: 45px;
+    padding-right: 45px; */
+    text-align: center;
+    margin-top: 10px;
+}
+tr.shipping_cost, tr.shoesizes {
+    padding: 15px;
+}
+
+.section--returns ul, .section--warranty ul {
+    margin: 25px;
+    list-style-type: circle;
+}   
+
+.section--returns li, .section--warranty li {
+    font-size: 1.13em;
+    line-height: 1.33em;
+    text-align: left;
+    margin-top: 10px;
+}
