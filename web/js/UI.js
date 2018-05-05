@@ -191,6 +191,7 @@ function onClick(elementSelector, clickHandlert) {
 onClick('.link-home', goToLocation('/'));
 onClick('.link-about', goToLocation('/about/'));
 onClick('.link-contact', goToLocation('/contact/'));
+onClick('.link-terms', goToLocation('/terms/'));
 
 
 onClick('.link-sizeguide', showSizeGuide);
