@@ -142,3 +142,47 @@ input.promo-code::placeholder{
 }
 
 
+
+/* PRICE */
+
+.item__price {
+    margin-top: 15px;
+}
+.item__price del {
+    color: #605a54;
+    text-decoration: none;
+    position: relative;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.item__price del:before {
+    content: " ";
+    display: block;
+    width: 100%;
+    border-top: 3px solid #d9b456;
+    height: 4px;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    transform: rotate(-11deg);
+  }
+  .item__price del:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    border-top: 3px solid #d9b456;
+    height: 4px;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    transform: rotate(11deg);
+  }
+      
+  .item__price ins {
+    font-size: 40px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 1em 1em 1em .5em;
+    color: #d9b456;
+  }

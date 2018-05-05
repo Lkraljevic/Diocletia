@@ -101,11 +101,20 @@
   </header>
 
   <article class="container item">
-    <p class="item__about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-    <h3 class="item__model">Model Tres Numero</h3>
-    <h4 class="item-form__title item-form__title--block">Unos mjera stopala</h4>
+    <p class="item__about">Diocletia shoes are handmade leather shoes with a „dash of history“. Playing with the colors and traditional style, these Diocletia's shoes are designed to fulfill the demands of contemporary woman and her lifestyle.</p>
+    <div class="item__model" id="model-info">
+      <h3>Model Tres Numero</h3>
+      <div id="item-price" class="item__price promo">
+          <del>
+            <span class="amount">90€</span>
+          </del>
+          <ins>
+            <span class="amount">65€</span>
+          </ins>
+        </div>
+    </div>
+    
+    <h4 class="item-form__title item-form__title--block">Enter your measurement</h4>
     <div class="item__view" id="model">
       <div class="item__colors" id="colors">
         <a class="item__color" data-color="red" style="background-color: red;" href="#"></a>
@@ -125,7 +134,7 @@
         <input type="text" id="size3" name="s3" placeholder="3 - Waist girth">
         <input type="text" id="size4" name="s4" placeholder="4 - Instep girth">
         <input type="text" id="size5" name="s5" placeholder="5 - Instep girth">
-        <p class="item-form__about size-guide-link">Size guide instructions for each length and girth measurments.</p>
+        <p class="link-sizeguide item-form__about size-guide-link">Size guide instructions for each length and girth measurments.</p>
       </div>
       <div class="item__dropdown">
         <h4 class="item-form__title">ili Odabir veličine stopala</h4>
@@ -139,8 +148,8 @@
     </div>
   </article>
 
-  <h2 class="product__title product__title--gallery">Model no3 Gallery</h2>
-  <section class="container cards cards--no-text">
+  <h2 class="product__title product__title--gallery" id="model-gallery-title">Model no3 Gallery</h2>
+  <section class="container cards cards--no-text" id="model-gallery">
     <article class="card">
       <img class="card__image" src="../images/shoes/model_4.jpg" alt="">
     </article>

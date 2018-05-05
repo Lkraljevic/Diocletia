@@ -970,7 +970,7 @@ textarea{
     display:block;
     min-width:30px;
     min-height:30px;
-    background:url(../images/pattern.png);
+    /*background-image:url(../images/pattern.png);*/
     -webkit-transform:rotate(45deg);
     -moz-transform:rotate(45deg);
     -ms-transform:rotate(45deg);
@@ -1039,10 +1039,11 @@ textarea{
         display:-webkit-flex;
         display:-moz-box;
         display:-ms-flexbox;
-        display:flex
+        display:flex;
+        flex-direction: column;
     }
     .item__dropdown{
-        margin-bottom:90px
+        margin-top:50px
     }
 }
 .item__about{
@@ -1142,10 +1143,10 @@ textarea{
         -ms-flex-direction:column;
         flex-direction:column;
         -webkit-box-pack:justify;
-        -webkit-justify-content:space-between;
+        /* -webkit-justify-content:space-between; */
         -moz-box-pack:justify;
         -ms-flex-pack:justify;
-        justify-content:space-between
+        /* justify-content:space-between */
     }
 }
 .item input,.item option,.item select,.item-form__about{

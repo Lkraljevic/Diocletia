@@ -1,0 +1,70 @@
+.slider-wrapper .slider--small > div {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    animation-name: fadeOutOpacity;
+	animation-iteration-count: 1;
+	animation-duration: 2s;
+}
+
+.slider-wrapper .slider--small  div.show {
+    opacity: 1;
+    animation-name: fadeInOpacity;    
+	animation-iteration-count: 1;
+	animation-duration: 2s;
+}
+
+/* FADE OUT */
+@-webkit-keyframes fadeOutOpacity { 
+    0% { opacity: 1; -webkit-animation-timing-function: ease-in; }
+    100%{ opacity: 0; -webkit-animation-timing-function: ease-out; }
+    
+}
+@-moz-keyframes fadeOutOpacity { 
+    0% { opacity: 1; -moz-animation-timing-function: ease-in; }
+    100% { opacity: 0; -moz-animation-timing-function: ease-out; }
+   
+}
+@-o-keyframes fadeOutOpacity { 
+    0% { opacity: 1; -o-animation-timing-function: ease-in; }
+    100% { opacity: 0; -o-animation-timing-function: ease-out; }
+ 
+}
+@-ms-keyframes fadeOutOpacity { 
+    0% { opacity: 1; -ms-animation-timing-function: ease-in; }
+    100% { opacity: 0; -ms-animation-timing-function: ease-out; }
+   
+}
+@keyframes fadeOutOpacity { 
+    0% { opacity: 1; animation-timing-function: ease-in; }
+    100% { opacity: 0; animation-timing-function: ease-out; }
+}
+
+/*       Fade IN           */
+@-webkit-keyframes fadeInOpacity { 
+    0% { opacity: 0; -webkit-animation-timing-function: ease-in; }
+    100%{ opacity: 1; -webkit-animation-timing-function: ease-out; }
+    
+}
+@-moz-keyframes fadeInOpacity { 
+    0% { opacity: 0; -moz-animation-timing-function: ease-in; }
+    100% { opacity: 1; -moz-animation-timing-function: ease-out; }
+   
+}
+@-o-keyframes fadeInOpacity { 
+    0% { opacity: 0; -o-animation-timing-function: ease-in; }
+    100% { opacity: 1; -o-animation-timing-function: ease-out; }
+ 
+}
+@-ms-keyframes fadeInOpacity { 
+    0% { opacity: 0; -ms-animation-timing-function: ease-in; }
+    100% { opacity: 1; -ms-animation-timing-function: ease-out; }
+   
+}
+@keyframes fadeInOpacity { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    100% { opacity: 1; animation-timing-function: ease-out; }
+}
