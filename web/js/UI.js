@@ -1,4 +1,4 @@
-const basePath = '/dev/web';
+const basePath = '/';
 
 
 /* Mobile navigation @Dražen Barić */
