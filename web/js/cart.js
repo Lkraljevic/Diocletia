@@ -351,12 +351,6 @@ window.addEventListener("load", function(){
   }, '#paypal-button');
 
 
-  cart.updateDiscount({
-    value: -25,
-    quantity: 99,
-    code: 'Summer is here!'
-  })
-
 });
 
 

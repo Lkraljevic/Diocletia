@@ -1,4 +1,4 @@
-const basePath = '/web';
+const basePath = '';
 
 
 /* Mobile navigation @Dražen Barić */
@@ -231,3 +231,39 @@ onClick('#model-I-href', goToLocation('/models/#model-I'));
 onClick('#model-II-href', goToLocation('/models/#model-II'));
 onClick('#model-III-href', goToLocation('/models/#model-III'));
 onClick('#model-IV-href', goToLocation('/models/#model-IV'));
+
+
+
+
+/* MODAL */
+
+
+
+closePopup = function () {
+    var modal = document.getElementById('modal-popup');
+    modal.style.display = "none";
+}
+
+openPopup = function (msg) {
+    var modal = document.getElementById('modal-popup');
+    if(modal) {
+        modal.style.display = "block";
+
+        var span = modal.querySelector("div.close");
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        if(msg) {
+            var p = modal.querySelector('p');
+            p.innerHTML = msg;
+        }
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('modal-popup');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

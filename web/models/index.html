@@ -40,6 +40,10 @@
   <!-- Global SCRIPTs-->
   <script type="text/javascript" src="../js/smooth-scroll.js"></script>
 
+  <!-- Grid Gallery -->
+  <link rel="stylesheet" type="text/css" href="../css/GridGallery.css" />
+  <script src="../js/GridGallery/modernizr.custom.js"></script>
+
 </head>
 
 <body class="sticky_header models">
@@ -50,7 +54,7 @@
     <nav class="container nav--desktop sticky">
 
       <a class="link-home nav__link">Home</a>
-      <a class="link-about nav__link">About us</a>
+      <a class="disabled link-about nav__link">About us</a>
       <a class="link-contact nav__link">Contact</a>
       <a class="link-home nav__link nav__link--logo"></a>
       <a class="link-products nav__link">Products</a>
@@ -69,7 +73,7 @@
     </nav>
     <div class="menu">
       <a class="link-home menu__item">Home</a>
-      <a class="link-about menu__item">About us</a>
+      <a class=" disabled link-about menu__item">About us</a>
       <a class="link-contact menu__item">Contact</a>
       <a class="link-products menu__item">Products</a>
       <a class="link-sizeguide menu__item">Size guide</a>
@@ -103,13 +107,13 @@
   <article class="container item">
     <p class="item__about">Diocletia shoes are handmade leather shoes with a „dash of history“. Playing with the colors and traditional style, these Diocletia's shoes are designed to fulfill the demands of contemporary woman and her lifestyle.</p>
     <div class="item__model" id="model-info">
-      <h3>Model Tres Numero</h3>
+      <h3>Model</h3>
       <div id="item-price" class="item__price promo">
           <del>
-            <span class="amount">90€</span>
+            <span class="amount">&infin;€</span>
           </del>
           <ins>
-            <span class="amount">65€</span>
+            <span class="amount">&infin;€</span>
           </ins>
         </div>
     </div>
@@ -130,45 +134,102 @@
     <div class="item__controls">
       <div class="item__form">
         <input type="text" id="size1" name="s1" placeholder="1 - Foot lenght">
-        <input type="text" id="size2" name="s2" placeholder="2 - Joint girth">
-        <input type="text" id="size3" name="s3" placeholder="3 - Waist girth">
-        <input type="text" id="size4" name="s4" placeholder="4 - Instep girth">
-        <input type="text" id="size5" name="s5" placeholder="5 - Instep girth">
+        <input type="text" id="size2" name="s2" placeholder="2 - Ball circumference">
+        <input type="text" id="size3" name="s3" placeholder="3 - Instep circumference">
+        <input type="text" id="size4" name="s4" placeholder="4 - Heel girth">
+        <input type="text" id="size5" name="s5" placeholder="5 - Ankle girth">
         <p class="link-sizeguide item-form__about size-guide-link">Size guide instructions for each length and girth measurments.</p>
       </div>
       <div class="item__dropdown">
-        <h4 class="item-form__title">ili Odabir veličine stopala</h4>
+        <h4 class="item-form__title">or choose shoe size</h4>
         <select id="size_number" name="size_number">
-          <option value="" disabled selected>Veličina stopala: </option>
-          <option value="a">a</option>
-          <option value="b">b</option>
+          <option value="" disabled selected>EU Size: </option>
+          <option value="36">36</option>
+          <option value="37">37</option>
+          <option value="38">38</option>
+          <option value="39">39</option>
+          <option value="40">40</option>
+          <option value="41">41</option>
         </select>
         <button class="button--gold" id="add_cart">Order Now</button>
       </div>
     </div>
   </article>
 
-  <h2 class="product__title product__title--gallery" id="model-gallery-title">Model no3 Gallery</h2>
-  <section class="container cards cards--no-text" id="model-gallery">
-    <article class="card">
-      <img class="card__image" src="../images/shoes/model_4.jpg" alt="">
-    </article>
-    <article class="card">
-      <img class="card__image" src="../images/shoes/model_4.jpg" alt="">
-    </article>
-    <article class="card">
-      <img class="card__image" src="../images/shoes/model_4.jpg" alt="">
-    </article>
-    <article class="card">
-      <img class="card__image" src="../images/shoes/model_4.jpg" alt="">
-    </article>
-    <article class="card">
-      <img class="card__image" src="../images/shoes/model_4.jpg" alt="">
-    </article>
-    <article class="card">
-      <img class="card__image" src="../images/shoes/model_4.jpg" alt="">
-    </article>
-  </section>
+  <h2 class="product__title product__title--gallery" id="model-gallery-title">Model Gallery</h2>
+  <div id="grid-gallery" class="grid-gallery">
+      <section class="container cards">
+        <article class="card">
+          <figure>
+            <img class="card__image" src="../images/gallery/thumbs/img1@1x.jpg" alt="">
+          </figure>
+        </article>
+        <article class="card">
+          <figure>
+            <img class="card__image" src="../images/gallery/thumbs/img2@1x.jpg" alt="">
+          </figure>
+        </article>
+        <article class="card">
+          <figure>
+            <img class="card__image" src="../images/gallery/thumbs/img3@1x.jpg" alt="">
+          </figure>
+        </article>
+        <article class="card">
+          <figure>
+            <img class="card__image" src="../images/gallery/thumbs/img4@1x.jpg" alt="">
+          </figure>
+        </article>
+        <article class="card">
+          <figure>
+            <img class="card__image" src="../images/gallery/thumbs/img5@1x.jpg" alt="">
+          </figure>
+        </article>
+        <article class="card">
+          <figure>
+            <img class="card__image" src="../images/gallery/thumbs/img8@1x.jpg" alt="">
+          </figure>
+        </article>
+      </section>
+      <section class="slideshow">
+        <ul>
+          <li>
+            <figure>
+              <img src="../images/gallery/1.jpg" alt="img01" />
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="../images/gallery/2.jpg" alt="img01" />
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="../images/gallery/3.jpg" alt="img01" />
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="../images/gallery/4.jpg" alt="img01" />
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="../images/gallery/5.jpg" alt="img01" />
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="../images/gallery/8.jpg" alt="img01" />
+            </figure>
+          </li>
+        </ul>
+        <nav>
+          <span class="icon nav-prev"></span>
+          <span class="icon nav-next"></span>
+          <span class="icon nav-close"></span>
+        </nav>
+      </section>
+    </div>
 
   <h2 class="product__title product__title--other">Choose other shoe Design</h2>
   <section id="choose-model" class="container cards cards--text">
@@ -176,51 +237,78 @@
   </section>
 
   <footer class="footer">
-    <div class="container footer__items">
-      <a href="" class="footer__item footer__item--empty"></a>
-      <a href="#" id="about_nav_footer" class="footer__item">about us</a>
-      <a href="#" id="products_nav_footer" class="footer__item">products</a>
-      <a href="#" class="size-guide-link footer__item">size guide</a>
-      <a href="#" id="terms_nav_footer" class="footer__item">terms & conditions</a>
-      <a href="" class="footer__item footer__item--empty"></a>
-    </div>
-    <div class="footer__information">
-      MB: 3206190 . OIB: 85167032587 . Žiro račun: 2340009-1100241295 . IBAN: HR1423400091100241295 . SWIFT: PBZGHR2X
-    </div>
-  </footer>
-
-   <!-- MODAL CART -->
-   <div class="shadow shadow--cart modal modal-hidden" id="cart-modal">
-    <div class="container cart">
-      <div class="cart__controls">
-        <a href="#" class="cart__back">Continue Shopping</a>
-        <a href="#" class="cart__close"></a>
+      <div class="container footer__items">
+        <a href="" class="footer__item footer__item--empty"></a>
+        <a href="#" class="disabled link-about footer__item">about us</a>
+        <a href="#" class=" link-products footer__item">products</a>
+        <a href="#" class="footer__item link-sizeguide">size guide</a>
+        <a href="#" class=" disabled link-terms footer__item">terms & conditions</a>
+        <a href="" class="footer__item footer__item--empty"></a>
       </div>
-      <div class="card__body">
-        <table class="cart__table" id="cart-table">
-        </table>
-        <div class="cart__buttons">
-          <div class="discount-form">
+      <div class="footer__information">
+        MB: 3206190 . OIB: 85167032587 . Žiro račun: 2340009-1100241295 . IBAN: HR1423400091100241295 . SWIFT: PBZGHR2X
+      </div>
+    </footer>
+  
+    <!-- MODAL CART -->
+    <div class="shadow shadow--cart modal modal-hidden" id="cart-modal">
+      <div class="container cart">
+        <div class="cart__controls">
+          <a href="#" class="cart__back">Continue Shopping</a>
+          <a href="#" class="cart__close"></a>
+        </div>
+        <div class="card__body">
+          <table class="cart__table" id="cart-table">
+          </table>
+          <div class="cart__buttons">
+            <div class="discount-form">
+              <div>
+                <input id="promo-code" name="promocode" class="promo-code" type="text" placeholder="Enter a promo code" autocomplete="off">
+                <button class="apply-coupon">Apply</button>
+              </div>
+            </div>
             <div>
-              <input id="promo-code" name="promocode" class="promo-code" type="text" placeholder="Enter a promo code" autocomplete="off">
-              <button class="apply-coupon">Apply</button>
+              <button>Send Request</button>
+            </div>
+            <div>
+              <div id="paypal-button"></div>
             </div>
           </div>
-          <div>
-            <button>Send Request</button>
-          </div>
-          <div><div id="paypal-button"></div></div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- END MODAL CART-->
-
-  <!-- MODAL GUIDE-->
-  <div class="shadow modal modal-hidden" id="size-modal"></div>
-<!--END MODAL GUIDE-->
-
+    <!-- END MODAL CART-->
+  
+    <!-- MODAL GUIDE-->
+    <div class="shadow modal modal-hidden" id="size-modal"></div>
+    <!--END MODAL GUIDE-->
+  
+  
+    <!-- POP MODAL-->
+    <!-- The Modal -->
+    <div id="modal-popup" class="modal-popup">
+  
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="close">&times;</div>
+          <p>Pssst! You should not see me :)</p>
+        </div>
+      
+      </div>
+    <!-- END POP MODAL-->
+  
     <script src="../js/UI.js"></script>
+  
+  
+    <script type="text/javascript" src="../js/contact.js"></script>
+    <script src="../js/GridGallery/imagesloaded.pkgd.min.js"></script>
+    <script src="../js/GridGallery/classie.js"></script>
+    <script src="../js/GridGallery/cbpGridGallery.js"></script>
+  
+    <script>
+      var gallery = new CBPGridGallery(document.getElementById('grid-gallery'));
+    </script>
+
 </body>
 
 </html>

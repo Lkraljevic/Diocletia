@@ -330,6 +330,8 @@ function locationHashChanged() {
         modelWrapper.prepend(model.el);
         var svg = model.el.querySelector('svg');
         window.activeModel = new Model(svg, model.config);
+        _minnorDOMUpdates();
+
         setTimeout(loadModelList, 1000);
         
     }
@@ -424,8 +426,11 @@ function initEvents(){
           cart.addItem(window.activeModel, sizeData, 1);
         }
       }
-      else
-        console.log("Invalid size");
+      else {
+        openPopup("We need more info! <br> If you don't want to measure your feets it's ok -- The custom fit is completely optional <br> If you tend to fit well into a standard size, no worries! Simply select your standard size and we'll get started on your DIOCLETIA shoes right away!");
+        return;
+      }
+        
 
         // Scroll to cart notification
         var target = document.getElementById('cart-btn');
@@ -440,3 +445,24 @@ function initEvents(){
 
 
 // SIZE CALCULATOR
+
+
+
+
+
+function _minnorDOMUpdates() {
+
+var modelInfo  = document.getElementById('model-info');
+var title = modelInfo.querySelector('h3');
+var oldPrice = modelInfo.querySelector('del');
+var newPrice = modelInfo.querySelector('ins');
+
+if(!window.activeModel) return;
+      
+      title.innerHTML = window.activeModel.name;
+      if(window.activeModel.sale_price.price != window.activeModel.sale_price.promo_price)
+        oldPrice.innerHTML = window.activeModel.sale_price.price + '€';
+      newPrice.innerHTML = window.activeModel.sale_price.promo_price + '€'; 
+
+
+}

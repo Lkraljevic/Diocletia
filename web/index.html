@@ -44,9 +44,9 @@
 
   <!-- <link rel="stylesheet" type="text/css" href="./css/GridGallery/css/demo.css" /> -->
   <link rel="stylesheet" type="text/css" href="./css/GridGallery.css" />
-  <link rel="stylesheet" type="text/css" href="./css/backgroundSlider.css" />
   <script src="./js/GridGallery/modernizr.custom.js"></script>
 
+  <link rel="stylesheet" type="text/css" href="./css/backgroundSlider.css" />
 
 
 
@@ -61,7 +61,7 @@
     <nav class="container nav--desktop sticky">
 
       <a class="link-home nav__link">Home</a>
-      <a class="link-about nav__link">About us</a>
+      <a class="disabled link-about nav__link">About us</a>
       <a class="link-contact nav__link">Contact</a>
       <a class="link-home nav__link nav__link--logo"></a>
       <a class="link-products nav__link">Products</a>
@@ -80,7 +80,7 @@
     </nav>
     <div class="menu">
       <a class="link-home menu__item">Home</a>
-      <a class="link-about menu__item">About us</a>
+      <a class="disabled link-about menu__item">About us</a>
       <a class="link-contact menu__item">Contact</a>
       <a class="link-products menu__item">Products</a>
       <a class="link-sizeguide menu__item">Size guide</a>
@@ -241,6 +241,8 @@
       </div>
     </div>
   </section>
+
+
   <div id="grid-gallery" class="grid-gallery">
     <section class="container cards">
       <article class="card">
@@ -322,10 +324,10 @@
   <footer class="footer">
     <div class="container footer__items">
       <a href="" class="footer__item footer__item--empty"></a>
-      <a href="#" id="about_nav_footer" class="footer__item">about us</a>
-      <a href="#" id="products_nav_footer" class="footer__item">products</a>
-      <a href="#" class="footer__item size-guide-link">size guide</a>
-      <a href="#" id="terms_nav_footer" class="footer__item">terms & conditions</a>
+      <a href="#" class="disabled link-about footer__item">about us</a>
+      <a href="#" class=" link-products footer__item">products</a>
+      <a href="#" class="footer__item link-sizeguide">size guide</a>
+      <a href="#" class=" disabled link-terms footer__item">terms & conditions</a>
       <a href="" class="footer__item footer__item--empty"></a>
     </div>
     <div class="footer__information">
@@ -366,9 +368,24 @@
   <div class="shadow modal modal-hidden" id="size-modal"></div>
   <!--END MODAL GUIDE-->
 
-  <script src="./js/UI.js"></script>
-  <script type="text/javascript" src="./js/contact.js"></script>
 
+  <!-- POP MODAL-->
+  <!-- The Modal -->
+  <div id="modal-popup" class="modal-popup">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="close">&times;</div>
+        <p>Pssst! You should not see me :)</p>
+      </div>
+    
+    </div>
+  <!-- END POP MODAL-->
+
+  <script src="./js/UI.js"></script>
+
+
+  <script type="text/javascript" src="./js/contact.js"></script>
   <script src="./js/GridGallery/imagesloaded.pkgd.min.js"></script>
   <script src="./js/GridGallery/classie.js"></script>
   <script src="./js/GridGallery/cbpGridGallery.js"></script>
@@ -379,6 +396,11 @@
 
   <!-- ONLY FOR INDEX-->
   <script src="./js/backgroundSlider.js"></script>
+  
+
+
+  
+
 
 </body>
 
