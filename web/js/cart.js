@@ -186,7 +186,7 @@ function Cart() {
 
       if(item.s.size_number) dim += 'N:'+ item.s.size_number;
       if(item.s.size1 || item.s.size2 || item.s.size3 || item.s.size4 || item.s.size5)
-        size_string += 'CSi:'+ (item.s.size1||'-') + ':'+ (item.s.size2||'-') + ':'+ (item.s.size3||'-') + ':'+ (item.s.size4||'-') + ':'+ (item.s.size5||'-');
+        dim  += 'CSi:'+ (item.s.size1||'-') + ':'+ (item.s.size2||'-') + ':'+ (item.s.size3||'-') + ':'+ (item.s.size4||'-') + ':'+ (item.s.size5||'-');
       
         var col = 'C_l:'+item.c.l.toString()+'C_r:'+item.c.r.toString();
 
@@ -288,6 +288,14 @@ function Cart() {
       this.items.forEach(function(item){
         items.push(item);
       });
+
+       var cartModal =  document.getElementById('cart-modal');
+       var emptyEL = cartModal.querySelector('.empty-cart');
+      if(!items.length)
+        cartModal.classList.add('cart-empty');
+      else 
+      cartModal.classList.remove('cart-empty');
+
 
       // HARD CORE SELECTOR
       var listHTML = Handlebars.templates["cart"]({items, amount: this.amount, discount: this.discount });

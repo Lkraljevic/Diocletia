@@ -6,7 +6,6 @@ contact_submit.onclick = function(event) {
     grecaptcha.execute();
 }
 
-
 function contact_onSubmit(response) {
     var contactForm = document.forms['contact-form'];
     var name = contactForm["name"].value;
@@ -24,8 +23,6 @@ function contact_onSubmit(response) {
     
 
 } 
-
-
  function submitMesage(data) {
     var that = this;
 

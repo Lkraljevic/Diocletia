@@ -272,3 +272,73 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
+
+
+// CART SEND REQUEST
+
+// Form buttons
+// card-send-request
+// cart-request-cancel
+var cartEL = document.getElementById('cart-modal');
+var request_cart_btn = document.getElementById('cart-sendRequest');
+
+var cancelRequest = document.getElementById('cart-request-cancel');
+if(cancelRequest)
+ cancelRequest.onclick = function(e) {
+    e.preventDefault();
+    var form = cartEL.querySelector('.cart_request_form');
+    var body = cartEL.querySelector('.card__body');
+    if(body) body.classList.remove('hidden');
+    if(form) form.classList.add('hidden');
+}
+
+
+var sendlRequest = document.getElementById('card-send-request');
+if(sendlRequest)
+    sendlRequest.onclick = function(e) {
+    event.preventDefault();
+    grecaptcha.execute();
+}
+
+
+
+
+request_cart_btn.onclick = function(){
+    var form = cartEL.querySelector('.cart_request_form');
+    var body = cartEL.querySelector('.card__body');
+    if(body) body.classList.add('hidden');
+    if(form) form.classList.remove('hidden');
+}
+
+
+
+var contact_submit = document.getElementById('contact_submit');
+
+if(contact_submit)
+contact_submit.onclick = function(event) {
+    event.preventDefault();
+    grecaptcha.execute();
+}
+
+function cart_onSubmitRequest(response) {
+    var contactForm = document.forms['contact-form'];
+    var name = contactForm["name"].value;
+    var email = contactForm["email"].value;
+    var subject = contactForm["subject"].value;
+    var message = contactForm["message"].value;
+
+    console.log({
+        formData: { name,email,subject,message },
+        response: response
+    })
+    //submitMesage()
+
+
+
+    
+
+} 
+ function submitMesage(data) {
+ }
