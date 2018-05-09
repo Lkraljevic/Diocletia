@@ -323,11 +323,11 @@ contact_submit.onclick = function(event) {
 }
 
 function cart_onSubmitRequest(response) {
-    var contactForm = document.forms['contact-form'];
-    var name = contactForm["name"].value;
-    var email = contactForm["email"].value;
-    var subject = contactForm["subject"].value;
-    var message = contactForm["message"].value;
+    var cartForm = document.forms['cart-form'];
+    var name = cartForm["name"].value;
+    var email = cartForm["email"].value;
+    var subject = cartForm["subject"].value;
+    var message = cartForm["message"].value;
 
     console.log({
         formData: { name,email,subject,message },
