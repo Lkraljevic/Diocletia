@@ -340,12 +340,10 @@ function cart_onSubmitRequest(response) {
     submitOrder({
         formData: { name,email,subject,message },
         response: response,
-        data: {
-            order: {
-              amount: cart.amount,
-              items: cart_items
-            }
-          }
+        order: {
+            amount: cart.amount,
+            items: cart_items
+        }
     });
 } 
  function submitOrder(data) {
