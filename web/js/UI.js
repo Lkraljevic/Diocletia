@@ -333,12 +333,41 @@ function cart_onSubmitRequest(response) {
         formData: { name,email,subject,message },
         response: response
     })
-    //submitMesage()
 
+    var cart_items = [];
+    cart.items.forEach(function(item){cart_items.push(item)});
 
-
-    
-
+    submitOrder({
+        formData: { name,email,subject,message },
+        response: response,
+        data: {
+            order: {
+              amount: cart.amount,
+              items: cart_items
+            }
+          }
+    });
 } 
- function submitMesage(data) {
+ function submitOrder(data) {
+
+    var that = this;
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var responseText = JSON.parse(this.responseText);
+        if(responseText.success) {
+            cart.clearCart();
+            alert('Request sent');
+            var form = cartEL.querySelector('.cart_request_form');
+            var body = cartEL.querySelector('.card__body');
+            if(body) body.classList.remove('hidden');
+            if(form) form.classList.add('hidden');
+        }
+      }
+    };
+    
+    xhttp.open("POST", "https://diocletia.hr/save_request.php", true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify(data));
  }
