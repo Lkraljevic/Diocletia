@@ -35,8 +35,8 @@ function hideCart() {
     // HAH FIX, to restore state of the cart and to hide request form
     var form = cartEL.querySelector('.cart_request_form');
     var body = cartEL.querySelector('.card__body');
-    if(body) body.classList.add('hidden');
-    if(form) form.classList.remove('hidden');
+    if(body) body.classList.remove('hidden');
+    if(form) form.classList.add('hidden');
 
 
     var cart_notification = document.getElementById('cart-notification');
