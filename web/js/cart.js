@@ -172,7 +172,7 @@ function Cart() {
   
       console.log(data);
   
-      xhttp.open("POST", "https://diocletia.hr/test_ajax.php", true);
+      xhttp.open("POST", "https://diocletia.hr/save_order.php", true);
       xhttp.setRequestHeader("Content-type", "application/json");
       xhttp.send(JSON.stringify(data));
     }
