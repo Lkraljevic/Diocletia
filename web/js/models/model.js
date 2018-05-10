@@ -263,8 +263,9 @@ function locationHashChanged() {
     var modelWrapper = document.getElementById('model');
     if(!modelWrapper) return;
     removeModel();
-
-    switch(location.hash) {
+    var hash = location.hash;
+    var hashBase =  hash.split('_');
+    switch(hashBase[0]) {
         case "#model-I": 
         // loadScript('../js/models/m1.js', function() {
         //     addModel({
@@ -275,7 +276,7 @@ function locationHashChanged() {
         addModel({
             el: M1El,
             config: M1Config
-         });
+         }, hashBase[1]);
         
         break;
         case "#model-II": 
@@ -288,7 +289,7 @@ function locationHashChanged() {
         addModel({
           el: M2El,
           config: M2Config
-       });
+        }, hashBase[1]);
         break;
         case "#model-III": 
         // loadScript('../js/models/m3.js', function() {
@@ -300,7 +301,7 @@ function locationHashChanged() {
         addModel({
           el: M3El,
           config: M3Config
-       });
+        }, hashBase[1]);
         break;
         case "#model-IV": 
         // loadScript('../js/models/m4.js', function() {
@@ -312,7 +313,7 @@ function locationHashChanged() {
         addModel({
           el: M4El,
           config: M4Config
-       });
+        }, hashBase[1]);
         break;
         default:
             location.hash = "#model-I";
@@ -324,12 +325,17 @@ function locationHashChanged() {
         window.activeModel = null;
     }
 
-    function addModel(model) {
+    function addModel(model,theme) {
         if(!model || !model.el || !model.config) throw new Error('Invalid params');
 
         modelWrapper.prepend(model.el);
         var svg = model.el.querySelector('svg');
         window.activeModel = new Model(svg, model.config);
+
+        if(theme){
+          if(window.activeModel.themes[theme])
+            window.activeModel.changeTheme = theme;
+        }
         _minnorDOMUpdates();
 
         setTimeout(loadModelList, 1000);
@@ -378,10 +384,10 @@ function locationHashChanged() {
         scroll.animateScroll( target );
       }
     },500)
-    
-
-
 }
+
+
+
 
 function loadScript(url, callback){
 
