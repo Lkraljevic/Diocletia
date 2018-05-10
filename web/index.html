@@ -359,7 +359,9 @@
         <a href="#" class="cart__back">Continue Shopping</a>
         <a href="#" class="cart__close"></a>
       </div>
+      
       <div class="card__body">
+        <div class="empty-cart-overlay"></div>
         <table class="cart__table" id="cart-table">
         </table>
         <div class="cart__buttons">
@@ -370,13 +372,34 @@
             </div>
           </div>
           <div>
-            <button id="cart-sendRequest">Send Request</button>
+              <button id="cart-sendRequest">Send Request</button>
           </div>
           <div>
             <div id="paypal-button"></div>
           </div>
         </div>
       </div>
+        <div class="cart_request_form hidden">
+            <h2 class="cart-form__title">Shooping cart request! Drop us a few lines :)</h2>
+            <form class="container cart-form" name="cart-form" id="cart-form">
+                <input type="text" name="name" class="" placeholder="Name:" required="">
+                <input type="email" name="email" class="" placeholder="Email:" required="">
+                <input type="text" name="subject" class="" placeholder="Subject:" required="">
+                <textarea name="message" placeholder="Message:" class="" required=""></textarea>
+          
+                <div id="recaptcha" class="g-recaptcha" data-sitekey="6LeHJVcUAAAAAMuPh8-LQHuc7cxCP-TCBzEfpUuK" data-callback="cart_onSubmitRequest" data-size="invisible"></div>
+                <div class="form-buttons">
+                    <button id="card-send-request">
+                        Send Request
+                      </button>
+                      <div id="cart-request-cancel">
+                          Cancel
+                      </div>
+                </div>
+            </form>
+        </div>
+
+
     </div>
   </div>
   <!-- END MODAL CART-->
