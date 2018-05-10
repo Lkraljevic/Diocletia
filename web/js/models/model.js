@@ -334,7 +334,7 @@ function locationHashChanged() {
 
         if(theme){
           if(window.activeModel.themes[theme])
-            window.activeModel.changeTheme = theme;
+            window.activeModel.changeTheme(window.activeModel.themes[theme]);
         }
         _minnorDOMUpdates();
 
