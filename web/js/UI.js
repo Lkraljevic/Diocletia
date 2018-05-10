@@ -31,6 +31,14 @@ cart_controls.forEach(function (anchor) {
 });
 
 function hideCart() {
+
+    // HAH FIX, to restore state of the cart and to hide request form
+    var form = cartEL.querySelector('.cart_request_form');
+    var body = cartEL.querySelector('.card__body');
+    if(body) body.classList.add('hidden');
+    if(form) form.classList.remove('hidden');
+
+
     var cart_notification = document.getElementById('cart-notification');
     if (cart_notification)
         cart_notification.classList.remove('new-item');
