@@ -180,3 +180,42 @@
   fill: #784f9c;
   stroke: #784f9c;
 }
+
+
+/* 9) --------------- Royal blue ---------------- */
+.royalblue path.c1 {
+  fill: #062cdd;
+  stroke: #062cdd;
+}
+.royalblue path.c2 {
+  fill: #092fdc;
+  stroke:#092fdc;
+}
+
+.royalblue path.c3 {
+  fill: #1f44ea;
+  stroke: #1f44ea;
+}
+.royalblue path.c4 {
+  fill: #0528c7;
+  stroke: #0528c7;
+}
+
+/* 10) --------------- Skyblue ---------------- */
+.skyblue path.c1 {
+  fill: #0bb7e7;
+  stroke: #0bb7e7;
+}
+.skyblue path.c2 {
+  fill: #0cbaea;
+  stroke:#0cbaea;
+}
+
+.skyblue path.c3 {
+  fill: #0fa7d2;
+  stroke: #0fa7d2;
+}
+.skyblue path.c4 {
+  fill: #0cabd8;
+  stroke: #0cabd8;
+}

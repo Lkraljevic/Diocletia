@@ -98,7 +98,9 @@ function Model (modelEl, modelConfig) {
            'y1':'yellow',
            'c1':'crimson',
            'c2':'cyclamen',
-           'p1':'purple'
+           'p1':'purple',
+           'b1': 'skyblue',
+           'b2': 'royalblue'
          } 
   
        var colors_name = colors_code.map(function(color_code) {
@@ -135,7 +137,9 @@ function ColorPicker (model) {
                 'yellow':'y1',
                 'crimson':'c1',
                 'cyclamen':'c2',
-                'purple':'p1'
+                'purple':'p1',
+                'skyblue': 'b1',
+                'royalblue': 'b2'
         } 
         return config[color] || 'default';
     }
@@ -151,8 +155,8 @@ M1Config = {
     code: 'M1',
     nr_strips: 7,
     sale_price: {
-      price: 90,
-      promo_price: 65,
+      price: 95,
+      promo_price: 50,
       currency: 'EUR'
     },
     name: 'Model I',
@@ -176,8 +180,8 @@ M2Config = {
     code: 'M2',
     nr_strips: 4,
     sale_price: {
-      price: 90,
-      promo_price: 65,
+      price: 95,
+      promo_price: 50,
       currency: 'EUR'
     },
     name: 'Model II',
@@ -201,8 +205,8 @@ M3Config = {
   code: 'M3',
   nr_strips: 9,
   sale_price: {
-    price: 90,
-    promo_price: 65,
+    price: 95,
+    promo_price: 50,
     currency: 'EUR'
   },
   name: 'Model III',
@@ -226,8 +230,8 @@ M4Config = {
   code: 'M4',
   nr_strips: 6,
   sale_price: {
-    price: 90,
-    promo_price: 65,
+    price: 95,
+    promo_price: 50,
     currency: 'EUR'
   },
   name: 'Model IV',
