@@ -2248,3 +2248,38 @@ header>.slider{
         margin-right:0
     }
 }
+
+
+
+
+
+
+
+/*  ======================================== */
+/* MY CSS */
+/*  ======================================== */
+.modelHeader {
+    height: 60vh;
+}
+
+.modelHero {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("../_images/header/slide--1.png") center no-repeat;
+    background-size: cover;
+    filter: blur(6px);
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
