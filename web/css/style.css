@@ -2275,7 +2275,12 @@ header>.slider{
 }
 
 
-
+.item__col:first-child {
+    width: 70%
+}
+.item__col:last-child {
+    width: 30%
+}
 
 
 
