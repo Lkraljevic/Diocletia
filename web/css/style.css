@@ -495,7 +495,8 @@ nav{
         background-position:center;
         padding-top:0;
         height:30vw;
-        position:relative
+        position:relative;
+        min-height: 380px;
     }
 }
 .cards{
@@ -2403,3 +2404,104 @@ header>.slider{
     font-size: 17px;
     color: #94183c;
 }
+
+
+/* FOOTER ============================= */
+
+.footerSocial {
+    min-width: 400px;
+    position: absolute;
+    left: 10vw;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+.footerSocial__row {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 20px;
+}
+.footerSocial__col {
+    width: 50%;
+}
+.footerSocial__item {
+    display: flex;
+    align-items: center;
+}
+.footerSocial__item span,
+.footerSocial__item a {
+    color: white;
+    font-size: 17px;
+    font-weight: 300;
+    transition: color .3s ease-in-out;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.footerSocial__item a:hover {
+    color: #d3ac46;
+}
+
+.footerSocial__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    margin-top: 20px;
+}
+.footerSocial__list a {
+    margin: 0;
+}
+.footerSocial__list a svg {
+    width: 26px;
+    height: 26px;
+}
+.footerSocial__list a svg path {
+    fill: #d3ac46;
+    transition: fill .3s ease-in-out;
+}
+.footerSocial__list a:hover svg path {
+    fill: white;
+}
+
+
+
+
+@media only screen and (max-width: 780px), only screen and (max-device-width: 780px) {
+
+    .about {
+        flex-flow: row wrap;
+    }
+    .about .section__col:first-child,
+    .about .section__col:last-child {
+        width: 100%;
+        padding: 0;
+    }
+    .about .section__col:first-child {
+        margin-bottom: 20px;
+    }
+
+    .footerSocial {
+        position: relative;
+        transform: translateY(0);
+        left: auto;
+        min-width: auto;
+        bottom: auto;
+        padding: 50px;
+        box-sizing: border-box;
+    }
+}
+
+@media only screen and (max-width: 460px), only screen and (max-device-width: 460px) {
+
+    .footerSocial__col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .footerSocial__col:last-child {
+        margin-bottom: 0;
+    }
+
+}
+
+
+
+
