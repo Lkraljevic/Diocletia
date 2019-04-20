@@ -1092,24 +1092,15 @@ textarea{
         margin-right:15px
     }
 }
-.item-form__title{
+.item-form__title {
     text-align:center;
-    margin-top:5px;
+    margin-top: 45px;
     color:#d3ac46;
     font-size:1.13em;
     line-height:1.33em;
     font-family:'Alegreya Sans SC',sans-serif
 }
 @media screen and (min-width:1024px){
-    .item-form__title--block{
-        margin-left:65%;
-        margin-bottom:5px;
-        -webkit-flex-basis:35%;
-        -ms-flex-preferred-size:35%;
-        flex-basis:35%;
-        padding-left:5px;
-        margin-top:0
-    }
     .item__controls{
         -webkit-flex-basis:-webkit-calc(32% + 5px);
         -ms-flex-preferred-size:calc(32% + 5px);
@@ -2250,28 +2241,9 @@ header>.slider{
 /*  ======================================== */
 /* MY CSS */
 /*  ======================================== */
-.modelHeader {
-    height: 60vh;
-}
 
-.modelHero {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: url("../images/header/slide--1.png") center no-repeat;
-    background-size: cover;
-    filter: blur(6px);
-    z-index: -1;
-}
-
-
-.item__col:first-child {
-    width: 70%;
-}
-.item__col:last-child {
-    width: 30%;
+.hide {
+    display: none !important;
 }
 
 
@@ -2465,6 +2437,161 @@ header>.slider{
 
 
 
+
+
+
+
+/* MODEL PAGE */
+.modelHeader nav.nav--desktop.sticky {
+    bottom: auto;
+}
+
+.modelHeader {
+    height: 50vh;
+    position: relative;
+    overflow: visible;
+    margin-bottom: 120px;
+}
+
+.modelHero {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("../images/gallery/slider15.jpg") center no-repeat;
+    background-size: cover;
+    filter: blur(6px);
+    z-index: -1;
+}
+
+
+.item__col:first-child {
+    width: 70%;
+}
+.item__col:last-child {
+    width: 30%;
+}
+
+.modelHeaderSlider {
+    position: absolute;
+    bottom: -50px;
+    width: 90vw;
+}
+.modelHeaderSlider .card {
+    width: 17vw;
+    min-width: 200px;
+    max-width: 360px;
+}
+
+.item__model .item__price ins {
+    padding: 0;
+    margin-left: 20px;
+}
+
+#size_number {
+    border-radius: 0;
+    height: 50px;
+    -webkit-appearance: none;
+    padding: 0 20px;
+}
+
+
+
+#mesurments-btn {
+    cursor: pointer;
+}
+#mesurments-btn span {
+    font-weight: 900;
+}
+
+
+
+.pickerNav {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 200px;
+    position: absolute;
+    bottom: 150px;
+    left: 40px;
+}
+.pickerNav__item {
+    width: 48%;
+    border: 2px solid #d3ac46;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color .3s ease-in-out;
+}
+.pickerNav__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+.pickerNav__icon svg {
+    width: 40px;
+    height: 40px;
+}
+.pickerNav__icon svg path {
+    fill: #d3ac46;
+    transition: fill .3s ease-in-out;
+}
+.pickerNav__text {
+    text-align: center;
+    padding: 0 5px 10px 5px;
+    box-sizing: border-box;
+    color: #d3ac46;
+    transition: color .3s ease-in-out;
+    font-size: 14px;
+}
+
+.pickerNav__item.active,
+.pickerNav__item:hover {
+    background-color: #d3ac46;
+}
+.pickerNav__item.active .pickerNav__icon svg path,
+.pickerNav__item:hover .pickerNav__icon svg path {
+    fill: #fff;
+}
+.pickerNav__item.active .pickerNav__text,
+.pickerNav__item:hover .pickerNav__text {
+    color: #fff;
+}
+
+
+.modelSlider {
+    padding: 10px 0;
+}
+.modelSlider .card {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+    border: 1px solid transparent;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+.modelSlider .card:before,
+.modelSlider .card:after {
+    display: none;
+}
+.modelSlider .card:hover {
+    background-color: rgba(211, 171, 70, 0.2);
+}
+.modelSlider .card.active {
+    border-color: #d3ac46;
+}
+
+
+
+
+
+
 @media only screen and (max-width: 780px), only screen and (max-device-width: 780px) {
 
     .about {
@@ -2488,6 +2615,21 @@ header>.slider{
         padding: 50px;
         box-sizing: border-box;
     }
+
+
+
+
+    .item__col:first-child,
+    .item__col:last-child {
+        width: 100%;
+    }
+    .pickerNav__icon svg {
+        width: 30px;
+        height: 30px;
+    }
+    .pickerNav__text {
+        font-size: 12px;
+    }
 }
 
 @media only screen and (max-width: 460px), only screen and (max-device-width: 460px) {
@@ -2498,6 +2640,27 @@ header>.slider{
     }
     .footerSocial__col:last-child {
         margin-bottom: 0;
+    }
+
+
+    .pickerNav {
+        width: 100px;
+        left: 10px;
+    }
+    .pickerNav__icon {
+        padding: 4px 0;
+    }
+    .pickerNav__icon svg {
+        width: 24px;
+        height: 24px;
+    }
+    .pickerNav__text {
+        display: none;
+    }
+
+
+    #model .item__colors {
+        padding: 10px;
     }
 
 }

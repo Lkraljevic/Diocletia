@@ -136,9 +136,6 @@ div#model {
 
 @media screen and (max-width:710px){
 
-    .item__colors {
-        padding: 0;
-    }
     .item__color {
         min-width: 20px;
         min-height: 20px;
